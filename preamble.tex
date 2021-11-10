@@ -1,0 +1,138 @@
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%% Generic LaTeX preamble %%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%% (1) TITLE AND AUTHOR %%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Untitled Shannon information paper}
+% \author{}
+\date{\vspace{-10ex}}
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%% (2) FORMATTING %%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Font
+\usepackage{fontenc}
+\usepackage{graphicx}
+\usepackage{kpfonts,baskervald}
+\graphicspath{{img/}}
+
+%% Margins and line spacing
+\usepackage[
+	%showframe, % for debugging
+	a4paper,
+	total={6in, 8in}
+]{geometry}
+\renewcommand{\baselinestretch}{1.5} % line spread
+\setlength{\voffset}{-0.75in} % top of page
+\setlength{\textheight}{700pt}
+\setlength{\marginparwidth}{0pt}
+
+\usepackage{mathptmx}
+\usepackage{mathtools} % use \coloneqq for definitions
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%% (3) BIBLIOGRAPHY %%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{doi}
+\usepackage[style=authoryear-comp,
+		backend=bibtex,
+		isbn=false,
+		natbib=true,
+    uniquelist=false, % multiple authors need not be identical before et al is used
+    maxcitenames=2] % more than two authors and citation switches to et al
+		{biblatex}
+
+\addbibresource{library.bib}
+
+\renewbibmacro{in:}{}
+
+%% Don't print both DOI and URL
+\renewbibmacro*{doi+eprint+url}{%
+  \iftoggle{bbx:doi}
+    {\iffieldundef{url}{\printfield{doi}}{}}
+    {}%
+  \newunit\newblock
+  \iftoggle{bbx:eprint}
+    {\usebibmacro{eprint}}
+    {}%
+  \newunit\newblock
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}
+    {}}
+
+%% Customise bibliography fields
+\AtEveryBibitem{
+    \clearlist{language}	% Nobody cares
+    \clearfield{urldate}	% Needless `visited on' field
+    \clearfield{urlyear}	% Needless `visited on' field
+    \clearfield{month}	% In bracketed date 
+    \clearfield{timestamp}
+    \clearfield{note}		% Not needed
+    \iffieldequals{doi}{*}{
+    	\clearfield{url}
+    }
+}
+
+%% Custom 'Link' option (instead of printing entire URL or DOI)
+\DeclareFieldFormat{url}{\href{#1}{\underline{Link}}}
+\DeclareFieldFormat{doi}{\href{https://doi.org/#1}{\underline{Link}}}
+
+
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%% (4) ENVIRONMENTS %%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Figure environment
+\newenvironment{myfig}[4]
+% title, width (as proportion of textwidth), label, caption
+{ % Inside these braces is what comes BEFORE the text inside the myfig environment.
+  \begin{figure}
+  \begin{center}
+  \includegraphics[width=#2\textwidth]{#1}
+  \caption{\label{#3} #4}
+}
+{ % Inside these braces is what comes AFTER the text inside the myfig environment.
+  \end{center}
+  \end{figure}
+}
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%% (5) CUSTOM COMMANDS %%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			
+%% Quote environment
+\newenvironment{myquote}
+{ % Inside these braces is what comes BEFORE the text inside the myquote environment.
+  \begingroup
+  \vspace{0.5em}
+  \begin{quote}
+  %\onehalfspacing
+}
+{ % Inside these braces is what comes AFTER the text inside the myquote environment.
+  \end{quote}
+  \endgroup
+}
+
