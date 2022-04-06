@@ -45,7 +45,7 @@ Martinez offers positive arguments in defence of his claim:
 
 But the orthodox claim, not-P, appears to be supported by two very strong positive arguments of its own:
 
-> **not-P**: Communication theory has more relevance for philosophical theories of semantic content than just measures of correlation.
+> **not-P**: Communication theory *does not have* more relevance for philosophical theories of semantic content than just measures of correlation.
 
 Here I undercut those arguments for not-P.
 Together with Martinez's positive arguments for P, my arguments against not-P provide substantive reason to endorse P and thus change the rules of the game for naturalising representation content (etc, etc)...
@@ -63,6 +63,14 @@ Together with Martinez's positive arguments for P, my arguments against not-P pr
 ## The second argument for not-P: Ubiquitous information
 
 [Text that already exists; heavily edited]
+
+1. There are many meanings of `Shannon information'
+1. It is not possible to distinguish signals and cues just by measuring mutual information
+1. What the 2 claim does not imply: that there is some distinct thing semantic info such that "S carries Shannon info" and "S carries semantic info" are logically (or even merely evidentially) distinct. 
+1. Communication theory has heaps more tools than just mutual information
+1. Mutual information is a function of a joint proabability distribution. It's a relation between collections of things. Semantic information is a relation between tokens. 
+ 
+...[more here]...
 
 ### The second argument for not-P fails
 
