@@ -176,7 +176,44 @@ The mathematical results of communication theory are indeed blind to the meaning
 Philosophers have conflated the true claim that source strings need not have semantic content with the false claim that well-functioning signals need not have semantic content.
 
 Why do I say central model signals have content?
-Because teleosemantics entails they do.
+Because standard interpretations of communication theory require that they do.
+Consider the first theorem of communication theory, often called the source coding theorem \citep[$\S$5]{cover2006elements} \citep[$\S$4]{mackay2003information}.
+The theorem gives a lower bound on the number of binary symbols required to record the outputs of a source process.
+% This in turn can be used to define the minimum required size of a signal sent through a noiseless channel to perfectly reproduce the sequence of outcomes.
+The fewest binary symbols required is equal to a certain probabilistic measure of the process called its entropy.
+The theorem clearly embodies a notion of signification or reference: both the question that prompted the theorem (how many symbols are required?) and the result it offers (the entropy of the source) assume that the symbols are being used \emph{to record the outputs of the source process}.
+In their textbook, Cover and Thomas make this clear:
+
+\begin{myquote}
+This theorem provides another justification for the definition of entropy rate -- it is the expected number of bits [=binary symbols in the codestring] per symbol [from the source] required to describe the process.
+\par\hspace*{\fill}\citet[115]{cover2006elements}
+\end{myquote}
+
+\noindent The extent to which ``describ[ing] the process'' is synonymous with the philosophers' notion of semantic content has not to my knowledge been asked often.
+% I contend at the very least it is a special case of the teleosemantic definition of content.
+Indeed, the word ``representation'' appears many times in this context in Cover and Thomas's textbook (see for example pages 5-6, 105, 130, 134, 218-9, 221, 301).
+Obviously the authors cannot be interpreted as taking a stance on philosophical theories of content, but their usage is evidence that such a notion of content is required to make sense of the theorem.
+A similar sentiment is found in MacKay's textbook:
+
+\begin{myquote}
+We now discuss the information content [=entropy] of a source by considering how many bits [=binary symbols] are needed to describe the outcome of an experiment.
+\par\hspace*{\fill}\citet[73]{mackay2003information}
+\end{myquote}
+
+\noindent Again, the sense of the entropy measure is intimately bound up with representation, in this case in describing the outcome of an experiment.
+Similarly, \citet[397]{shannon1948mathematicala} speaks of ``the number of bits [=binary symbols] required to specify the sequence'' of outcomes of the source process.
+% It should be clear that ``specify[ing] the sequence'' means bearing the kind of relation teleosemantics requires a signal to bear to its signified.
+What is more, communication theory provides tools for quantifying the severity of misrepresentation \citep{martinez2020information}.
+\textit{Rate-distortion theory} describes trade-offs between sender effort and receiver accuracy \citep{shannon1959coding}.
+Such results would be uninterpretable without appealing to misrepresentation, or falsity, in signals.
+% Sceptics might wish to argue that this is not the \emph{same} sense of falsity required for a theory of content, but they would have to deny teleosemantics.
+% Since rate-distortion theory has been all but ignored in the relevant philosophical literature, they would have to present novel arguments in order to do so.
+
+Teleosemantics firms up the intuition behind the pretheoretic semantic concepts made use of by \citet{cover2006elements,mackay2003information,shannon1948mathematicala,shannon1959coding}.
+Intuitively, it must be the case that signals in the central model bear some exploitable relation to source strings.
+If the decoder is to perform properly, it must be able to reconstruct the original string from the signal.
+There must therefore be some sense in which the signal indicates or refers to the source string.
+Teleosemantics puts theoretical legs under the intuition in the following way.
 The central model (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}).
 Teleosemantics attributes semantic content to signals when they are intermediaries between cooperating senders and receivers.
 Senders and receivers cooperate when they share a proper function, an outcome they have been designed to bring about.
@@ -186,8 +223,9 @@ The signal has this distal state as its content, because the receiver can achiev
 
 \input{fig_teleo}
 
-In the central model, source strings play the role of both distal and proximate states (a feature shared by signalling games, figure \ref{fig:sr}).\footnote{There are in fact scenarios in communication theory beyond the central model where these states are distinguished, such as the CEO problem \citep{berger1996ceo}.}
-The encoder is a sender and the decoder is a receiver.
+In the central model, source strings play the role of both distal and proximate states (though more recent models in communication theory distinguish those states, e.g \citet{berger1996ceo}).
+Signalling games typically collapse those states too (figure \ref{fig:sr}).
+Applying the basic teleosemantic model to the central model, the encoder is a sender and the decoder is a receiver.
 Clearly, sender and receiver share a proper function as a consequence of design: to reconstruct the source string.
 The basic teleosemantic model does not include noise, but adding a noise variable would not affect the definition of semantic content.
 
@@ -205,47 +243,10 @@ The decoder will fail in its objective to match the symbol it produces with the 
 This failure is attributable to the signal being false.
 In general, a signal is correct to the extent that it accords with the encoding procedure with which the system was designed.
 
-Furthermore, standard interpretations of communication theory assent to the teleosemantic claim that encoded strings signify source strings.
-Consider the first theorem of communication theory, often called the source coding theorem \citep[$\S$5]{cover2006elements} \citep[$\S$4]{mackay2003information}.
-The theorem gives a lower bound on the number of binary symbols required to record the outcomes of a source process.
-% This in turn can be used to define the minimum required size of a signal sent through a noiseless channel to perfectly reproduce the sequence of outcomes.
-The fewest binary symbols required is equal to a certain probabilistic measure of the process called its entropy.
-The theorem clearly embodies a notion of signification or reference: both the question that prompted the theorem (how many symbols are required?) and the result it offers (the entropy) assume that the symbols are being used \emph{to record the events in question}.
-In their textbook, Cover and Thomas make this clear:
-
-\begin{myquote}
-This theorem provides another justification for the definition of entropy rate -- it is the expected number of bits [=binary symbols in the codestring] per symbol [from the source] required to describe the process.
-\par\hspace*{\fill}\citet[115]{cover2006elements}
-\end{myquote}
-
-\noindent The extent to which ``describ[ing] the process'' is synonymous with the philosophers' notion of semantic content has not to my knowledge been asked often.
-I contend at the very least it is a special case of the teleosemantic definition of content.
-Indeed, the word ``representation'' appears many times in this context in Cover and Thomas's textbook (see for example pages 5-6, 105, 130, 134, 218-9, 221, 301).
-Obviously the authors cannot be interpreted as taking a stance on philosophical theories of content, but their usage is evidence that such a notion of content is required to make sense of the theorem.
-A similar sentiment is found in MacKay's textbook:
-
-\begin{myquote}
-We now discuss the information content [=entropy] of a source by considering how many bits [=binary symbols] are needed to describe the outcome of an experiment.
-\par\hspace*{\fill}\citet[73]{mackay2003information}
-\end{myquote}
-
-\noindent Again, the sense of the entropy measure is intimately bound up with representation, in this case in describing the outcome of an experiment.
-Similarly, \citet[397]{shannon1948mathematicala} speaks of ``the number of bits [=binary symbols] required to specify the sequence'' of outcomes of the source process.
-It should be clear that ``specify[ing] the sequence'' means bearing the kind of relation teleosemantics requires a signal to bear to its signified.
-
-Intuitively, it must be the case that signals in the central model bear some exploitable relation to source strings.
-If the decoder is to perform properly, it must be able to reconstruct the original string from the signal.
-There must therefore be some sense in which the signal indicates or refers to the source string.
-Teleosemantics firms up this intuition.
-By dint of joint design, encoder and decoder have as a shared proper function to reconstruct the source string at the target.
+To sum up, by dint of joint design, encoder and decoder have as a shared proper function to reconstruct the source string at the target.
 They do this by means of an intermediary -- the code string as signal.
 % The signal must bear a relation to the source string in order for the decoder to perform its function successfully.
 Teleosemantics identifies the relation between signal and source as the basic form of semantic content.
-What is more, communication theory provides tools for quantifying the severity of misrepresentation \citep{martinez2020information}.
-\textit{Rate-distortion theory} describes trade-offs between sender effort and receiver accuracy.
-Such results would be uninterpretable without appealing to misrepresentation, or falsity, in signals.
-% Sceptics might wish to argue that this is not the \emph{same} sense of falsity required for a theory of content, but they would have to deny teleosemantics.
-% Since rate-distortion theory has been all but ignored in the relevant philosophical literature, they would have to present novel arguments in order to do so.
 
 The relation that enables proper functioning of the decoder is sometimes taken to be purely syntactic.
 But this view begs the question against teleosemantics.
@@ -259,25 +260,6 @@ A similar idea is proposed by \citet{lean2014shannon}, who does not give specifi
 I have argued elsewhere that semantic content does not require intensionality, and that if distinctions like Lean's are to tell against teleosemantics, they must provide clear conditions on semantic content that teleosemantics fails to meet [CITATION REDACTED FOR ANONYMITY].
 I now turn to a more immediate objection.
 
-% In order to derive a conclusion that concerns the relevance of informational measures for the meanings of signals, it is necessary to first derive a conclusion about the relevance of informational measures for meanings in general.
-% That is how the argument above proceeds.
-
-% I will challenge the argument by rejecting (P3).
-
-% Bar-Hillel and Carnap thought that a philosophical theory would deliver the content of source strings in the central model.
-% The problem is that \textit{no} theory could deliver that result.
-% That is because the model does not provide enough detail for a theory to determine what their meanings could be.
-% %
-% % In addition, I will argue that the contents of signals are a crucial part of communication theory (section \ref{subsec:signalContent}).
-% % The content of a signal in the central model -- a code string -- is just the source string from which it was encoded.
-% % This is the result teleosemantics delivers, in agreement with textbook presentations of communication theory.
-% %
-% % (P3) asserted that the theory of semantic information sought by philosophers would deliver the meanings of (among other things) source strings in the central model.
-% % How could such a theory have this result?
-% As defined in that model, source strings are concatenations of symbols.
-% Symbols themselves are formal tokens distinguished only by their relative probabilities.
-% The central model does not include attributes that would allow a semantic theory to identify the alphabet from which those symbols are taken, nor the language in which those strings should be interpreted.
-% No semantic theory could deliver the meanings of such strings.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
