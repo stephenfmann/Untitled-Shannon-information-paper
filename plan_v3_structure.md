@@ -64,11 +64,12 @@ Together with Martinez's positive arguments for P, my arguments against not-P pr
 
 [Text that already exists; heavily edited]
 
-1. There are many meanings of `Shannon information'
-1. It is not possible to distinguish signals and cues just by measuring mutual information
-1. What the 2 claim does not imply: that there is some distinct thing semantic info such that "S carries Shannon info" and "S carries semantic info" are logically (or even merely evidentially) distinct. 
-1. Communication theory has heaps more tools than just mutual information
-1. Mutual information is a function of a joint proabability distribution. It's a relation between collections of things. Semantic information is a relation between tokens. 
++ There are many meanings of `Shannon information'
++ It is not possible to distinguish signals and cues just by measuring mutual information
+  + This does **not** imply that there is some distinct thing semantic info such that "S carries Shannon info" and "S carries semantic info" are logically (or even merely evidentially) distinct. 
++ Does Shannon's fundamental theorem still apply when the two ends of the "channel" are linked by a common cause rather than there being a direct arrow between them? 
++ Communication theory has heaps more tools than just mutual information
++ Mutual information is a function of a joint proabability distribution. It's a relation between collections of things. Semantic information is a relation between tokens. 
  
 ...[more here]...
 
