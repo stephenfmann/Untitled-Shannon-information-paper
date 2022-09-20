@@ -4,29 +4,28 @@
 
 The tools of information theory are statistical tools.
 Chief among them is mutual information, typically interpreted as a measure of the strength of correlation between two variables.
-Mutual information has been employed by a diverse range of scientists, including:
+Mutual information has been employed in a diverse range of sciences, including:
 
 \begin{itemize}
-    \item Behavioural ecologists, to measure the correlation between the honey bee waggle dance and the location of food sources \citep{haldane1954statistical}
-    \item Molecular biologists, to measure the correlation between inputs and outputs of a quorum-sensing bacterium \citep{mehta2009information}
-    \item Evolutionary biologists, to measure the growth rate of an organism conditioning its behaviour on an environmental cue \citep{donaldson-matasci2010fitness}
-    \item Cosmologists, to measure the correlation between galaxies' internal morphology and their local environments \citep{pandey2017how}
-    \item Linguists, to measure the co-occurrence of words in a corpus \citep[$\S$4]{hunston2002corpora}
-    \item Neuroscientists, to measure the correlation between neural firings and environmental states \citep[][and references therein]{rathkopf2017neural}
+    \item Behavioural ecology, to measure the correlation between the honey bee waggle dance and the location of food sources \citep{haldane1954statistical}
+    \item Molecular biology, to measure the correlation between inputs and outputs of a quorum-sensing bacterium \citep{mehta2009information}
+    \item Evolutionary biology, to measure the growth rate of an organism conditioning its behaviour on an environmental cue \citep{donaldson-matasci2010fitness}
+    \item Cosmology, to measure the correlation between galaxies' internal morphology and their local environments \citep{pandey2017how}
+    \item Linguistics, to measure the co-occurrence of words in a corpus \citep[$\S$4]{hunston2002corpora}
+    \item Neuroscience, to measure the correlation between neural firings and environmental states \citep[][and references therein]{rathkopf2017neural}
 \end{itemize}
 
 \noindent That many things correlate in the natural world is a useful fact for science to exploit.
 Correlations increase the opportunity to discover features about a target phenomenon.
 If the target is difficult to observe, it can nonetheless be studied via observing something that correlates with it. 
-
-Correlations play a further role in the functional sciences.
+Furthermore, correlations play a special role in the functional sciences.
 Biological and cognitive agents can themselves make use of correlations.
 The scientist is therefore interested in how correlations are exploited by agents other than scientists themselves.
 
 Mutual information quantifies the strength of a correlation no matter who or what is exploiting that correlation.
 The measure is maximally broad: its application is not limited to the functional sciences.
-
-That a vehicle has positive mutual information with something it correlates with cannot determine whether that vehicle is an environmental cue or a signal.
+Crucially, that a vehicle has positive mutual information with something it correlates with cannot determine whether that vehicle is an environmental cue or a signal.
+This fact leads to the second line of scepticism against the relevance of information theory for naturalist accounts of content.
 
 %%%%%%
 %%%%%%
@@ -34,11 +33,24 @@ That a vehicle has positive mutual information with something it correlates with
 %%%%%%
 \subsection{The argument for insufficiency of information theory}
 
+The argument is weaker than that discussed in the first part.
+Whereas Shannon's Warning was thought to make information theory completely irrelevant to theories of content, the ubiquity of information only constrains information theory's relevance.
+Nonetheless, it is a harsh constraint.
 The argument is as follows: because mutual information cannot distinguish signals and cues, information theory cannot distinguish signals and cues.
 
-The argument requires a premise to the effect that the only tools available to information theory are mutual information and related measures.
-In effect, the sceptic claims that all of the tools of information theory are insufficient to distinguish signals and cues.
+Sceptics then diverge on the consequences of this fact.
+\citet{skyrms2010signals} and \citet{isaac2018semantics} flat-footedly assert that mutual information just \textit{is} semantic content, and that it turns out content inheres in vehicles other than signals after all.
+\citet[SECTION]{shea2018representation} outlines a set of extra conditions that a vehicle must meet in order to be considered a representation. 
+\citet{lean2014shannon} and \citet[CHAPTER]{hutto2017evolving} accept that correlations between signalling vehicles and signifieds can do explanatory work in the functional sciences, but deny that functional correlations amount to semantic content.
 
+Although the conclusions drawn vary widely, all these scholars share a premise: that the only tools available to information theory are mutual information and related measures.
+In effect, the sceptical claim is that all of the tools of information theory are insufficient to distinguish signals and cues.
+
+I wish to argue that it is irrelevant whether or not information theory has the tools to distinguish signals and cues.
+The theory that should be of interest to philosophers is communication theory.
+Whereas information theory is a collection of mathematical tools with wide application across the sciences, communication theory is an engineering discipline with the specific goal of designing efficient signalling techniques.
+Sufficiently generalised, the formal concept of a signal defined in that theory captures many of the features of representations of interest to science -- including their content.
+The role of mutual information is less prominent than has been supposed by philosophers.
 
 %%%%%%
 %%%%%%
@@ -46,6 +58,20 @@ In effect, the sceptic claims that all of the tools of information theory are in
 %%%%%%
 \subsection{Communication theory distinguishes signals and cues}
 
-I wish to argue that it is irrelevant whether or not information theory has the tools to distinguish signals and cues.
-The theory whose application to naturalistic intentionality should be of interest to philosophers is communication theory.
-Whereas information theory is a collection of mathematical tools with wide application across the sciences, communication theory is an engineering discipline with the specific goal of designing efficient signalling techniques.
+The vehicles transmitted in the central model are definitionally signals, not cues.
+The sender produces the vehicle in accordance with an encoding scheme shared with the receiver.
+This definition of `signal' is shared by several sciences \citep{shannon1948mathematicala,maynardsmith2003animal} and philosophical accounts \citep[$\S$6]{millikan2004varieties} \citep{bergstrom2011transmission}.
+
+\begin{itemize}
+    \item Shannon's second and third theorems depend on the vehicles being signals.
+    \item Kelly's theorem works even when the signal is a cue.
+    \item The difference between signals and cues is asymmetric, and the difference between these two kinds of theorems is asymmetric in a way that reflects that.
+\end{itemize}
+
+\subsection{Signal content is not determined by mutual information}
+
+As we saw earlier, communication theorists use a pretheoretic notion of representation.
+The content of a signal is the source string it encodes.
+This result tallies with teleosemantics.
+In this light, it is true but irrelevant that both signals and cues bear mutual information with their signifieds, because the content of a signal is not determined by reference to mutual information.
+
