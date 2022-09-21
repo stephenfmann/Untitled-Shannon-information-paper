@@ -62,16 +62,63 @@ The vehicles transmitted in the central model are definitionally signals, not cu
 The sender produces the vehicle in accordance with an encoding scheme shared with the receiver.
 This definition of `signal' is shared by several sciences \citep{shannon1948mathematicala,maynardsmith2003animal} and philosophical accounts \citep[$\S$6]{millikan2004varieties} \citep{bergstrom2011transmission}.
 
-\begin{itemize}
-    \item Shannon's second and third theorems depend on the vehicles being signals.
-    \item Kelly's theorem works even when the signal is a cue.
-    \item The difference between signals and cues is asymmetric, and the difference between these two kinds of theorems is asymmetric in a way that reflects that.
-\end{itemize}
+Not only does the formal apparatus distinguish signals and cues, the theorems of communication theory distinguish them too.
+Consider, on the one hand, the \textbf{second theorem} and \textbf{third theorem} of communication theory, which require that the vehicles they address be signals, and on the other hand \textbf{Kelly's theorem}, which requires only that the vehicle be a cue.
+The second theorem (sometimes called the noisy channel theorem) determines what level of performance the receiver is able to achieve thanks to the sender's encoding scheme, in the face of a channel that inserts noise into the vehicle.
+The theorem answers a question about receiver performance by attending to the sender's design of the vehicle: different encoding schemes would yield different performance levels.
+The vehicle mentioned in this theorem is definitionally and necessarily a signal.
+The third theorem addresses a similar question, this time with the added benefit that the receiver need not achieve perfect performance.
+Suppose for example that the receiver needs to reconstruct four out of every five source events.
+The third theorem states that it is possible to determine the minimum transmission rate that the sender must ensure in order for the receiver to perform at the specified level.
+Again, the theorem assumes that the transmission rate is tunable by the sender's choice of encoding scheme.
+By invoking a vehicle whose form can be adapted to performance specifications, both the second and third theorems employ a concept of signals rather than cues.
 
+Kelly's theorem, by contrast, concerns the performance of a receiver given a vehicle that bears a fixed level of mutual information with a signified \citep{kelly1956new}.
+The theorem states that the mutual information is an upper bound on the performance \textit{improvement} a receiver can enjoy by using the cue rather than not using it.
+Because the emphasis is on receiver behaviour, and the mutual information is not a quantity that can change, the vehicle is conceptualised as a cue.
+The theorem has been applied in evolutionary biology \citep{donaldson-matasci2010fitness} where again it treats environmental cues rather than signals.
+
+Of course, nothing prevents us applying Kelly's theorem to a signal too.
+The claim is not that theorems about cues do not apply to signals, but that theorems about signals do not apply to cues.
+There is an asymmetry in the definition of signals and cues.
+The two kinds of theorem are asymmetric in a way that reflects that.
+Any vehicle can be treated as a cue simply by ignoring aspects of its production design.
+That is what Kelly's theorem does, in the guise of keeping the mutual information fixed and asking how the receiver can make use of it.
+Shannon's theorems require that vehicles be signals because they assure a level of functional performance that is only available when the sender is able to tune the signal's production to both the features of the channel and the receiver's needs.
+
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
 \subsection{Signal content is not determined by mutual information}
 
 As we saw earlier, communication theorists use a pretheoretic notion of representation.
 The content of a signal is the source string it encodes.
 This result tallies with teleosemantics.
-In this light, it is true but irrelevant that both signals and cues bear mutual information with their signifieds, because the content of a signal is not determined by reference to mutual information.
 
+In this light, it is true but irrelevant that both signals and cues bear mutual information with their signifieds. 
+The content of a signal is not determined by reference to mutual information at all!
+It is determined by the encoding scheme by which it was designed.
+While it is true that the signalling systems we usually discuss do indeed include signals that bear mutual information with source events, it is not in virtue of this that an individual signal has the content it does.
+A signal's content is instead determined by the encoding scheme in accordance with which the sender produced it.
+
+Another reason why signal content should not, is not, and perhaps cannot be determined by mutual information is that mutual information is a measure between types, while semantic content is a relation between tokens.
+
+
+
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+\subsection{Extending communication theory to cognitive science}
+
+The point of this section -- the point of this paper -- is to remove obstacles to the application of communication theory in cognitive science.
+A few words are in order addressing that application.
+What do we actually gain by studying the brain in the light of an engineering discipline?
+
+\begin{itemize}
+    \item Mart\'{i}nez's basic claims
+    \item Examples of comm theory concepts in cog sci proper e.g. Sims on rate-distortion theory
+    \item The general lesson: communication theory is about the cost of representation, and how those costs trade off against the benefits of representation. There is no reason why such a theory would be limited to binary symbols in digital channels. Its claims are universal.
+    \item Future: what we really need is a general theory of function.
+\end{itemize}
