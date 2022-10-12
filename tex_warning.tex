@@ -8,33 +8,34 @@
 
 \subsection{The central model of communication theory}\label{subsec:central}
 
-Prior to the Second World War, communications engineering mainly progressed through practice rather than theory.
+Prior to the Second World War, communications engineering made progress through practice rather than theory.
 While technologies and coding techniques improved, theoretical background was sparse.
 Work by \citet{nyquist1924certain} and \citet{hartley1928transmission}, however, indicated that a generalised mathematical framework for communication was possible.
 In part due to the heavy cryptographic and communicative demands of the war effort, Claude Shannon came to devise the general theory we know today.
 
 The insights of Shannon's foundational texts \parencite*{shannon1948mathematicala,shannon1948mathematicalb} are predicated on a picture of communication we shall call the \textbf{central model} (figure \ref{fig:central}).
-The central model construes the goal of communication as reproduction of a symbol string.
-Communication is successful when the target string is sufficiently similar to the source string.
+The central model construes the goal of communication as reproducing, at a target location, a symbol string produced at a spatiotemporally distant source.
+The goal is achieved by \textbf{encoding} the source string, which means converting it into a sequence of physical events (typically electrical pulses) that can be transmitted from the source to the target.
+The electrical pulses can then be decoded, and communication is deemed successful when the resultant target string is sufficiently similar to the source string.
 How similar the two strings need to be to count as `sufficiently similar' will differ depending on the context.
-What is important is that communication is pitched as a \textit{syntactic} enterprise: it is the transmission of symbols, not the conveyance of their meanings, that is in question.
+What is important is that communication is pitched as a \textit{syntactic} enterprise: it is the transmission and reconstruction of symbol strings, not the conveyance of their meanings, that is in question.
 
 \input{fig_central.tex}
 
-For example, the source lexicon might be the set of symbols of the Latin alphabet $\{A,B,C...\}$ plus a full stop and a space.
+For example, the lexicon from which the source string is constructed might be the set of symbols of the Latin alphabet $\{A,B,C...\}$ plus a full stop and a space.
 The code lexicon might be the binary symbols $\{0,1\}$ that are instantiated by electrical on/off pulses.
-Given an encoding scheme, any string of Latin symbols can be converted into a string of 0s and 1s, and thus transmitted across a wire.
-The decoder is faced with a line-up of Latin symbols, from which it must pick out the right symbols in the right order; the code string enables it to perform this task successfully.
+Given an encoding scheme, any string of Latin symbols can be converted into a code string of 0s and 1s, and thus transmitted as a signal across a wire.
+The decoder is faced with a line-up of Latin symbols, from which it must pick out the right symbols in the right order; the signal enables it to perform this task successfully.
 
 It is costly to transmit encoded symbols.
 Electric wires require power and time to operate.
-At its broadest, communication theory is a collection of tools and methods enabling an optimal trade-off between communicative effort and the benefits of accurate string reconstruction.
+At its broadest, communication theory is a collection of tools and methods enabling an optimal trade-off between signalling effort and the benefits of accurate string reconstruction.
 In the simple case of the central model, the most efficient coding schemes are those that use short sequences of 0s and 1s to represent highly probable source strings.
-That is because minimising communicative effort is here equivalent to minimising the number of code symbols transmitted, on average.
-Pairing probable source strings with short code strings is the most efficient procedure.
+That is because minimising signalling effort is here equivalent to minimising the number of code symbols transmitted, on average.
+Pairing probable source strings with short code strings -- short signals -- is the most efficient procedure.
 Therefore, in order to devise a good code, you need to know the statistical properties of source strings.
 Crucially, that is \textit{all} you need to know.
-Whether or not source strings carry natural language meaning is irrelevant to the problem of designing a code.
+Whether or not source strings also carry natural language meaning is irrelevant to the problem of designing a code.
 Shannon stated this clearly, as the next section details.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,9 +71,9 @@ In fact, two messages, one of which is heavily loaded with meaning and the other
 \noindent Weaver misquotes Shannon (``\emph{the} semantic aspects'' instead of ``\emph{these} semantic aspects''; ``the engineering \textit{aspects}'' instead of ``the engineering \textit{problem}'').
 In context the mistake is insignificant, because the preceding sentences demonstrate that Weaver interprets the claim accurately.
 By `information' he means a certain property of source strings, defined as the number of symbols in the corresponding code string assuming an optimal encoding scheme.
-This measure is more commonly known as \textbf{surprisal}, and is defined as $\log{\frac{1}{p(x)}}$ for a message $x$ that is produced by the source with probability $p(x)$.
+This measure is more commonly known as \textbf{surprisal}, and is defined as $\log{\frac{1}{p(x)}}$ for a message $x$ that is produced at the source with probability $p(x)$.
 It is clear that two messages -- two source strings -- can have the same surprisal, with one being a sentence of a natural language and the other being nonsense.
-One need only find a meaningful sentence and a nonsensical sentence that have the same probability of being produced at the source.
+One need only define a source that produces a meaningful sentence and a nonsensical sentence with the same probability.
 
 In context the misquote is unproblematic, but out of context Weaver can be read as stating what I will eventually deny: that the semantic properties of both the source string \textit{and the code string} are irrelevant to the well-functioning of engineered communication systems.
 To dispel any doubt, I endorse Shannon's original claim.
@@ -160,11 +161,13 @@ As we have stressed, Shannon information does not capture, nor is it intended to
 \end{myquote}
 
 \noindent Again the authors focus on the semantic properties of signals rather than source strings.
-By now, it is possible to cite the distinction between Shannon and semantic information without further argument: ``I will interpret ‘information’ as ‘semantic information’ (i.e. semantic content), not as Shannon information'' \citep[p. 12 n. 14]{artiga2020signals}; see also \citet[6]{cao2020new} and \citet[1]{kolchinsky2018semantic}.
-To my knowledge, no explicit argument has been offered that moves from the original version of {\sc Shannon's Warning} to the conclusion that there exists a concept of information, invoked in communication theory, that is distinct from the concept sought by a philosophical theory of content.
+By now, it is possible to cite the distinction between Shannon and semantic information, as distinct properties of signals, without further argument: ``I will interpret ‘information’ as ‘semantic information’ (i.e. semantic content), not as Shannon information'' \citep[p. 12 n. 14]{artiga2020signals}; see also \citet[6]{cao2020new} and \citet[1]{kolchinsky2018semantic}.
+Weaver's use of the term `information' as synonymous with `surprisal' referred to a property of source strings, not signals.
+To my knowledge, no explicit argument has been offered that moves from the original version of {\sc Shannon's Warning} to the conclusion that there exists a property of signals, invoked in communication theory, that is distinct from the concept sought by a philosophical theory of content.
 
-Perhaps the collective misconstrual would not matter if not for the fact that the mutated form of the claim is false by the lights of a popular theory of content.
-According to teleosemantics, signals in the central model have semantic content.
+Perhaps the collective misconstrual would not matter if not for the fact that the mutated form of the claim is false by the lights of communication theorists themselves.
+It is also false by the lights of a popular theory of content.
+According to both teleosemantics and contemporary communication theory, signals in the central model have semantic content.
 What is more, their content is directly relevant to the engineering problem of communication, as we shall now see.
 
 
@@ -175,17 +178,19 @@ What is more, their content is directly relevant to the engineering problem of c
 %%%%%%%%%%%%%%%%%%%%
 \subsection{The content of a signal in the central model is a source string}\label{subsec:signalContent}
 
-Contemporary proponents of the Shannon/semantic distinction focus on the meanings of signals, and claim that Shannon's measures do not apply to them.
-But that cannot be concluded directly from {\sc Shannon's Warning}, which concerns source strings only.
-The mathematical results of communication theory are indeed blind to the meaning of the source string (if it even has one), but interpretations of the theory require that signals are meaningful: the content of a signal is the identity of a source string.
+Contemporary opponents of the relevance of communication theory for philosophical approaches to content focus on signals.
+But nothing about signals can be concluded directly from {\sc Shannon's Warning}, which concerns source strings only.
+The mathematical tools of communication theory are indeed blind to the meaning of a source string (if it even has one), but interpretations of the theory require that signals are meaningful: the content of a signal is the identity of a source string.
 (For simplicity I assume a one-to-one mapping between source strings and code strings.)
 Philosophers have conflated the true claim that source strings need not have semantic content with the false claim that well-functioning signals need not have semantic content.
 
 Why do I say central model signals have content?
 Because communication theorists say that they do.
-Describing Morse code, \citet[385]{shannon1948mathematicala} says that letters are ``represented by'' sequences of dots and dashes; in their widely cited textbook \citet[105]{cover2006elements} say the same.
+Describing Morse code, \citet[385]{shannon1948mathematicala} says that letters are ``represented by'' sequences of dots and dashes.
+In their widely cited textbook \citet[105]{cover2006elements} say the same.
 Shannon further uses the locution ``represented by'' in this context on pages 402 and 405; Cover \& Thomas use this and related terms (including calling encodings ``representations'') on pages 5-6, 130, 134, 218-9, 221 and 301.
-
+Obviously the authors cannot be interpreted as taking a stance on philosophical theories of content.
+Nevertheless, their usage is evidence of a pretheoretic notion of representation at work -- perhaps something as weak as denotation or indication, but clearly a relation of some kind linking signals with source strings.
 
 Furthermore, standard interpretations of the theorems of communication theory require that signals represent source strings.
 Consider the first theorem of communication theory, often called the source coding theorem \citep[$\S$5]{cover2006elements} \citep[$\S$4]{mackay2003information}.
@@ -206,8 +211,8 @@ We can design source codes for the most efficient representation of the data. [.
 \end{myquote}
 
 \noindent The extent to which their use of these loaded terms corresponds with the philosophers' notion of semantic content has not to my knowledge been asked often.
-Obviously the authors cannot be interpreted as taking a stance on philosophical theories of content.
-Nevertheless, their usage is evidence that such a notion of content is required to make sense of the theorem.
+% Obviously the authors cannot be interpreted as taking a stance on philosophical theories of content.
+Again, their usage is evidence that such a notion of content is required to make sense of the theorem.
 A similar sentiment is found in MacKay's textbook:
 
 \begin{myquote}
@@ -216,7 +221,7 @@ We now discuss the information content [entropy] of a source by considering how 
 \end{myquote}
 
 \noindent Again, the sense of the entropy measure is intimately bound up with representation, in this case in describing the outcome of an experiment.
-Similarly, \citet[397]{shannon1948mathematicala} speaks of ``the number of bits [code symbols] required to specify the sequence'' of outcomes of the source process.
+Similarly, in a discussion of a special case of the theorem, \citet[397]{shannon1948mathematicala} speaks of ``the number of bits [code symbols] required to specify the sequence'' of outcomes of the source process.
 % It should be clear that ``specify[ing] the sequence'' means bearing the kind of relation teleosemantics requires a signal to bear to its signified.
 % What is more, communication theory provides tools for quantifying the severity of misrepresentation \citep{martinez2020information}.
 % \textit{Rate-distortion theory} describes trade-offs between sender effort and receiver accuracy \citep{shannon1959coding}.
@@ -224,15 +229,17 @@ Similarly, \citet[397]{shannon1948mathematicala} speaks of ``the number of bits 
 % Sceptics might wish to argue that this is not the \emph{same} sense of falsity required for a theory of content, but they would have to deny teleosemantics.
 % Since rate-distortion theory has been all but ignored in the relevant philosophical literature, they would have to present novel arguments in order to do so.
 
-Teleosemantics firms up the intuition behind the pretheoretic semantic concepts made use of by \citet{cover2006elements,mackay2003information,shannon1948mathematicala,shannon1959coding}.
-Intuitively, it must be the case that signals in the central model bear some exploitable relation to source strings.
+So communication theorists from Shannon to contemporary textbook authors make use of a notion of semantic content, as indicated by their use of words like `represent', `describe' and `specify'.
+Teleosemantics firms up their pretheoretic usage.
+To see how, first note that it must intuitively be the case that signals in the central model bear some exploitable relation to source strings.
 If the decoder is to perform properly, it must be able to reconstruct the original string from the signal.
 There must therefore be some sense in which the signal indicates or refers to the source string.
+
 Teleosemantics puts theoretical legs under the intuition in the following way.
 The central model (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}).
 Teleosemantics attributes semantic content to signals when they are intermediaries between cooperating senders and receivers.
 Senders and receivers cooperate when they share a proper function, an outcome they have been designed to bring about.
-Roughly, the content of a signal is the state of affairs that, together with the receiver's response to the signal, produces outcomes that satisfy the sender-receiver partnership's shared proper function.
+The content of a signal is the state of affairs that, together with the receiver's response to the signal, produces outcomes that satisfy the sender-receiver partnership's shared proper function.
 In figure \ref{fig:teleo} a distal state sits causally upstream of a target that the receiver has causal influence over.
 The signal has this distal state as its content, because the receiver can achieve greater success by conditioning its act on the signal.
 
