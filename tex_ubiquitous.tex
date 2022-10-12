@@ -2,8 +2,22 @@
 
 \subsection{How scientists use information theory}\label{subsec:scientists}
 
-The tools of information theory are statistical tools.
-Chief among them is mutual information, typically interpreted as a measure of the strength of correlation between two variables.
+Around the same time that Bar-Hillel \& Carnap were discussing the relevance of Shannon's work for philosophy, scientists noticed that his mathematical tools were of use beyond the context of communication.
+Entropy, originally devised as a measure of how many code symbols would be needed to represent the outcomes of a source process, was given a rather more general interpretation as a measure of the uncertainty associated with a probability space.
+Intuitively, when entropy is high, an observer is less sure which outcome will occur, so entropy seems a reasonable measure of uncertainty.
+Further uses can be derived from this more general interpretation.
+For example, entropy has been used in ecology as a measure of diversity \citep{margalef1957information}.
+When we treat the proportions of different species in an ecological population as probabilities, the entropy of that population captures the uncertainty about which species would be observed if one sampled randomly from the population.
+This intuitively captures an aspect of the population diversity.
+
+Shifts in the interpretation of entropy and other measures accompanied the emergence of the term \textbf{information theory} to describe the set of mathematical tools and their more general application across the sciences (see figure \ref{fig:info_theory}).
+Despite the distinctions implied by the figure, it is nowadays customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were devised.
+I will continue to distinguish communication theory from information theory, because the domain of application of the measures affects the truth values of philosophical claims made about them.
+
+\input{fig_info_theory}
+
+Treated as tools of information theory, informational measures are statistical tools.
+Perhaps the most well-known is \textbf{mutual information}, typically interpreted as a measure of the strength of correlation between two variables.
 Mutual information has been employed in a diverse range of sciences, including:
 
 \begin{itemize}
@@ -22,7 +36,15 @@ Furthermore, correlations play a special role in the functional sciences.
 Biological and cognitive agents can themselves make use of correlations.
 Scientists are therefore interested in how correlations are exploited by agents other than scientists themselves.
 
-To demonstrate how the wide applicability of mutual information generates scepticism about the relevance of information theory for accounts of representation, it will help to introduce the \textbf{signal/cue distinction}.
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\subsection{Ubiquity of mutual information generates scepticism about the relevance of information theory}
+
+The wide applicability of mutual information generates scepticism about the relevance of information theory for accounts of representation.
+To demonstrate how, it will help to introduce the \textbf{signal/cue distinction}.
 Originating in behavioural ecology, the distinction highlights the fact that some informational vehicles have an evolutionary function to provide the information they do, whereas some are `accidentally' informational, used opportunistically by their receivers \citep[PAGES]{maynardsmith2003animal}.
 Vehicles selected to serve a communicative role are called signals, while vehicles that fortuitously provide information are called cues.
 (In philosophy the term `natural sign' is sometimes used; I am here using `cue' to cover all cases described by that term.)
