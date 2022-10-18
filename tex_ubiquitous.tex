@@ -1,4 +1,4 @@
-\section{Ubquitous information}\label{sec:ubiquitous}
+\section{Ubiquitous information}\label{sec:ubiquitous}
 
 \subsection{How scientists use information theory}\label{subsec:scientists}
 
@@ -15,14 +15,14 @@ I will continue to distinguish communication theory from information theory, bec
 
 \input{fig_info_theory}
 
-Treated as tools of information theory, informational measures are statistical tools.
+In the context of information theory, informational measures are often treated as statistical tools.
 Perhaps the most well-known is \textbf{mutual information}, typically interpreted as a measure of the strength of correlation between two variables.
 Mutual information has been employed in a diverse range of sciences, including:
 
 \begin{itemize}
-    \item Behavioural ecology, to measure the correlation between the honey bee waggle dance and the location of food sources \citep{haldane1954statistical}
+    \item Behavioural ecology, to measure the correlation between the honeybee waggle dance and the location of food sources \citep{haldane1954statistical}
     \item Molecular biology, to measure the correlation between inputs and outputs of a quorum-sensing bacterium \citep{mehta2009information}
-    \item Evolutionary biology, to measure the growth rate of an organism conditioning its behaviour on an environmental cue \citep{donaldson-matasci2010fitness}
+    \item Evolutionary biology, to show that the correlation between an environmental cue and a fitness-relevant state of affairs is an upper bound on the increased growth rate of an organism conditioning its behaviour on the cue \citep{donaldson-matasci2010fitness}
     \item Cosmology, to measure the correlation between galaxies' internal morphology and their local environments \citep{pandey2017how}
     \item Linguistics, to measure the co-occurrence of words in a corpus \citep[$\S$4]{hunston2002corpora}
     \item Neuroscience, to measure the correlation between neural firings and environmental states \citep[][and references therein]{rathkopf2017neural}
@@ -32,7 +32,7 @@ Mutual information has been employed in a diverse range of sciences, including:
 Correlations increase the opportunity to discover features about a target phenomenon.
 If the target is difficult to observe, it might more easily be studied by observing something that correlates with it. 
 Furthermore, correlations play a special role in the functional sciences.
-Biological and cognitive agents can themselves make use of correlations, and scientists are therefore interested in how correlations are exploited by agents other than scientists themselves.
+Biological and cognitive agents can condition their behaviour on cues and signals that correlate with success-relevant states of affairs, and scientists are therefore interested in how correlations are exploited by agents other than scientists themselves.
 Mutual information and related measures are some of the most common tools employed in these investigations.
 
 %%%%%%%%%%%%%%%%%%
@@ -48,19 +48,21 @@ To demonstrate how, it will help to introduce one more distinction, between \tex
 Originating in behavioural ecology, the signal/cue distinction highlights the fact that some informational vehicles have an evolutionary function to provide the information they do, whereas some are `accidentally' informational, used opportunistically by their receivers \citep[$\S$1.2]{maynardsmith2003animal}.
 Vehicles selected to serve a communicative role are called signals, while vehicles that fortuitously provide information are called cues.
 (In philosophy the term `natural sign' is sometimes used; I am here using `cue' to cover all cases described by that term.)
-For example, the waggle dance is a signal because it evolved in the honeybee lineage to serve as an informational behaviour that enables workers to enjoy greater success at foraging or nest-finding.
+For example, the waggle dance is a signal because it evolved in the honeybee lineage to serve as an informational vehicle that enables workers to enjoy greater success at foraging or nest-finding.
 In contrast, bees' use of the position of the sun in the sky to navigate is a cue, because the sun's location is not an outcome of a process of selection that jointly produced both it and the bees' navigational behaviour.
 
-Scepticism about the relevance of information for naturalist approaches to content gains traction when we note that mutual information quantifies the strength of a correlation no matter whether its vehicles are signals or cues, and no matter who or what is exploiting that correlation.
+Scepticism about the relevance of information theory for naturalist approaches to content gains traction when we note that mutual information quantifies the strength of a correlation no matter whether its vehicles are signals or cues.
 That a vehicle has positive mutual information with an environmental state does not determine whether that vehicle is a cue or a signal.
-The aforementioned uses of mutual information across the sciences emphasises this point.
+The aforementioned uses of mutual information across the sciences emphasise this point.
 While the correlation between the waggle dance and food locations is due to the fact that the waggle dance is a signal, the correlation between galaxies' morphology and their local environment is clearly not.
-The sign in the evolutionary model of \citet{donaldson-matasci2010fitness} is definitionally a cue.
-The co-occurrence of words in a corpus is not itself a signal, though the words themselves are (or compose to produce) representations.
+The vehicle in the evolutionary model of \citet{donaldson-matasci2010fitness} is definitionally a cue.
+The co-occurrence of words in a corpus is not itself a signal, though the words themselves are representations (or at least combine to produce representations).
 Without further detail, it is not clear whether the output of a quorum-sensing bacterium counts as a signal of its input; nonetheless, the mutual information between the two can be measured.
 
 So there is no necessary connection between mutual information and signalhood.
 From the mere fact that two things bear a correlational relationship, no conclusions whatever can be drawn about whether or not one is a signal of the other.
+Many scholars derive from this fact a premise to the effect that information theory itself cannot distinguish signals and cues, though they build from this premise towards different conclusions.
+
 % On the assumption that the naturalist wants to restrict attribution of semantic content at least to signals, mutual information bears no relevance for semantic content.\footnote{A prominent rejection of the assumption that signalhood is necessary for semantic content comes from the work of \citet{skyrms2010signals} and \citet{isaac2018semantics}. Both authors define semantic content in terms of mutual information and related mathematical objects. In Isaac's case, this is because he considers the term `semantics' to refer to the attribution of a formal object to each element in a system of signs, which enables him to define a `semantics' for cues. Because Isaac's goal is very different from that of teleosemantics, I treat him as solving a fundamentally different problem than the one we are concerned with here.}
 
 %%%%%%
@@ -68,6 +70,12 @@ From the mere fact that two things bear a correlational relationship, no conclus
 %%%%%%
 %%%%%%
 \subsection{Diverse conclusions share the premise that information theory cannot distinguish signals and cues}
+
+How does one move from the claim that mutual information cannot distinguish signals and cues to the claim that information theory cannot distinguish signals and cues?
+Typically the move is made by employing the term `Shannon information' to refer to both mutual information specifically and all the concepts and tools of information theory in general.
+Clearly such a move is illicit, but it typically goes unnoticed due to the sheer diversity of definitions of `Shannon information' in the literature (table TABLE).
+
+\input{tab_shannon}
 
 The argument, in a nutshell, is that because mutual information cannot distinguish signals and cues, information theory cannot distinguish signals and cues.
 
