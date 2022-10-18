@@ -2,15 +2,14 @@
 
 \subsection{How scientists use information theory}\label{subsec:scientists}
 
-Around the same time that Bar-Hillel \& Carnap were discussing the relevance of Shannon's work for philosophy, scientists noticed that his mathematical tools were of use beyond the context of communication.
+Around the same time that Bar-Hillel \& Carnap were discussing the relevance of Shannon's work for philosophy, scientists noticed that his mathematical tools were of use beyond the context of communications engineering.
 Entropy, originally devised as a measure of how many code symbols would be needed to represent the outcomes of a source process, was given a rather more general interpretation as a measure of the uncertainty associated with a probability space.
 Intuitively, when entropy is high, an observer is less sure which outcome will occur, so entropy seems a reasonable measure of uncertainty.
 Further uses can be derived from this more general interpretation.
-For example, entropy has been used in ecology as a measure of diversity \citep{margalef1957information}.
-When we treat the proportions of different species in an ecological population as probabilities, the entropy of that population captures the uncertainty about which species would be observed if one sampled randomly from the population.
-This intuitively captures an aspect of the population diversity.
+For example, entropy has been used in ecology as a measure of diversity: when we treat the proportions of different species in an ecological population as probabilities, the entropy of that population measures uncertainty about which species would be observed if one sampled randomly from the population.
+This intuitively captures an aspect of the population diversity \citep{margalef1957information}.
 
-Shifts in the interpretation of entropy and other measures accompanied the emergence of the term \textbf{information theory} to describe the set of mathematical tools and their more general application across the sciences (see figure \ref{fig:info_theory}).
+Shifts in the interpretation of entropy and other measures accompanied the emergence of the term \textbf{information theory} to describe this set of mathematical tools and their more general application across the sciences (see figure \ref{fig:info_theory}).
 Despite the distinctions implied by the figure, it is nowadays customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were devised.
 I will continue to distinguish communication theory from information theory, because the domain of application of the measures affects the truth values of philosophical claims made about them.
 
@@ -33,39 +32,44 @@ Mutual information has been employed in a diverse range of sciences, including:
 Correlations increase the opportunity to discover features about a target phenomenon.
 If the target is difficult to observe, it might more easily be studied by observing something that correlates with it. 
 Furthermore, correlations play a special role in the functional sciences.
-Biological and cognitive agents can themselves make use of correlations.
-Scientists are therefore interested in how correlations are exploited by agents other than scientists themselves.
+Biological and cognitive agents can themselves make use of correlations, and scientists are therefore interested in how correlations are exploited by agents other than scientists themselves.
+Mutual information and related measures are some of the most common tools employed in these investigations.
 
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
-\subsection{Ubiquity of mutual information generates scepticism about the relevance of information theory}
+\subsection{Mutual information cannot distinguish signals and cues}
 
 The wide applicability of mutual information generates scepticism about the relevance of information theory for accounts of representation.
-To demonstrate how, it will help to introduce the \textbf{signal/cue distinction}.
-Originating in behavioural ecology, the distinction highlights the fact that some informational vehicles have an evolutionary function to provide the information they do, whereas some are `accidentally' informational, used opportunistically by their receivers \citep[PAGES]{maynardsmith2003animal}.
+To demonstrate how, it will help to introduce one more distinction, between \textbf{signals} and \textbf{cues}.
+
+Originating in behavioural ecology, the signal/cue distinction highlights the fact that some informational vehicles have an evolutionary function to provide the information they do, whereas some are `accidentally' informational, used opportunistically by their receivers \citep[$\S$1.2]{maynardsmith2003animal}.
 Vehicles selected to serve a communicative role are called signals, while vehicles that fortuitously provide information are called cues.
 (In philosophy the term `natural sign' is sometimes used; I am here using `cue' to cover all cases described by that term.)
-For example, the waggle dance is a signal because it evolved to serve as an informational behaviour that enable workers to enjoy greater success at foraging or nest-finding.
-Bees additionally can use the position of the sun in the sky to navigate.
-This is a cue, because the sun's location is not an outcome of a process of selection that jointly produced both it and the bees' navigational behaviour.
+For example, the waggle dance is a signal because it evolved in the honeybee lineage to serve as an informational behaviour that enables workers to enjoy greater success at foraging or nest-finding.
+In contrast, bees' use of the position of the sun in the sky to navigate is a cue, because the sun's location is not an outcome of a process of selection that jointly produced both it and the bees' navigational behaviour.
 
-Mutual information quantifies the strength of a correlation no matter whether its vehicles are signals or cues, and no matter who or what is exploiting that correlation.
-As a result, that a vehicle has positive mutual information with an environmental state does not determine whether that vehicle is a cue or a signal.
-This fact leads to the second line of scepticism against the relevance of information theory for naturalist accounts of content.
+Scepticism about the relevance of information for naturalist approaches to content gains traction when we note that mutual information quantifies the strength of a correlation no matter whether its vehicles are signals or cues, and no matter who or what is exploiting that correlation.
+That a vehicle has positive mutual information with an environmental state does not determine whether that vehicle is a cue or a signal.
+The aforementioned uses of mutual information across the sciences emphasises this point.
+While the correlation between the waggle dance and food locations is due to the fact that the waggle dance is a signal, the correlation between galaxies' morphology and their local environment is clearly not.
+The sign in the evolutionary model of \citet{donaldson-matasci2010fitness} is definitionally a cue.
+The co-occurrence of words in a corpus is not itself a signal, though the words themselves are (or compose to produce) representations.
+Without further detail, it is not clear whether the output of a quorum-sensing bacterium counts as a signal of its input; nonetheless, the mutual information between the two can be measured.
+
+So there is no necessary connection between mutual information and signalhood.
+From the mere fact that two things bear a correlational relationship, no conclusions whatever can be drawn about whether or not one is a signal of the other.
+% On the assumption that the naturalist wants to restrict attribution of semantic content at least to signals, mutual information bears no relevance for semantic content.\footnote{A prominent rejection of the assumption that signalhood is necessary for semantic content comes from the work of \citet{skyrms2010signals} and \citet{isaac2018semantics}. Both authors define semantic content in terms of mutual information and related mathematical objects. In Isaac's case, this is because he considers the term `semantics' to refer to the attribution of a formal object to each element in a system of signs, which enables him to define a `semantics' for cues. Because Isaac's goal is very different from that of teleosemantics, I treat him as solving a fundamentally different problem than the one we are concerned with here.}
 
 %%%%%%
 %%%%%%
 %%%%%%
 %%%%%%
-\subsection{The argument for insufficiency of information theory}
+\subsection{Diverse conclusions share the premise that information theory cannot distinguish signals and cues}
 
-The argument is weaker than that discussed in the first part.
-Whereas Shannon's Warning was thought to make information theory completely irrelevant to theories of content, the ubiquity of information only constrains information theory's relevance.
-Nonetheless, it is a harsh constraint.
-The argument is as follows: because mutual information cannot distinguish signals and cues, information theory cannot distinguish signals and cues.
+The argument, in a nutshell, is that because mutual information cannot distinguish signals and cues, information theory cannot distinguish signals and cues.
 
 Sceptics then diverge on the consequences of this fact.
 \citet{skyrms2010signals} and \citet{isaac2018semantics} flat-footedly assert that mutual information just \textit{is} semantic content, and that it turns out content inheres in vehicles other than signals after all.
@@ -75,17 +79,18 @@ Sceptics then diverge on the consequences of this fact.
 Although the conclusions drawn vary widely, all these scholars share a premise: that the only tools available to information theory are mutual information and related measures.
 In effect, the sceptical claim is that all of the tools of information theory are insufficient to distinguish signals and cues.
 
-I wish to argue that it is irrelevant whether or not information theory has the tools to distinguish signals and cues.
-The theory that should be of interest to philosophers is communication theory.
-Whereas information theory is a collection of mathematical tools with wide application across the sciences, communication theory is an engineering discipline with the specific goal of designing efficient signalling techniques.
-Sufficiently generalised, the formal concept of a signal defined in that theory captures many of the features of representations of interest to science -- including their content.
-The role of mutual information is less prominent than has been supposed by philosophers.
 
 %%%%%%
 %%%%%%
 %%%%%%
 %%%%%%
 \subsection{Communication theory distinguishes signals and cues}
+
+I wish to argue that it is irrelevant whether or not information theory has the tools to distinguish signals and cues.
+The theory that should be of interest to philosophers is communication theory.
+Whereas information theory is a collection of mathematical tools with wide application across the sciences, communication theory is an engineering discipline with the specific goal of designing efficient signalling techniques.
+Sufficiently generalised, the formal concept of a signal defined in that theory captures many of the features of representations of interest to science -- including their content.
+The role of mutual information is less prominent than has been supposed by philosophers.
 
 The vehicles transmitted in the central model are definitionally signals, not cues.
 The sender produces the vehicle in accordance with an encoding scheme shared with the receiver.
@@ -103,17 +108,18 @@ Again, the theorem assumes that the transmission rate is tunable by the sender's
 By invoking a vehicle whose form can be adapted to performance specifications, both the second and third theorems employ a concept of signals rather than cues.
 
 Kelly's theorem, by contrast, concerns the performance of a receiver given a vehicle that bears a fixed level of mutual information with a signified \citep{kelly1956new}.
-The theorem states that the mutual information is an upper bound on the performance \textit{improvement} a receiver can enjoy by using the cue rather than not using it.
-Because the emphasis is on receiver behaviour, and the mutual information is not a quantity that can change, the vehicle is conceptualised as a cue.
-The theorem has been applied in evolutionary biology \citep{donaldson-matasci2010fitness} where again it treats environmental cues rather than signals.
+The theorem states that the mutual information is an upper bound on the performance improvement a receiver can enjoy by using the cue rather than not using it.
+Because the emphasis is on receiver behaviour, and the mutual information is held fixed, the vehicle is conceptualised as a cue.
+The theorem has been applied in evolutionary biology \citep{donaldson-matasci2010fitness} where again the signs in question are treated as environmental cues rather than signals.
 
 Of course, nothing prevents us applying Kelly's theorem to a signal too.
 The claim is not that theorems about cues do not apply to signals, but that theorems about signals do not apply to cues.
-There is an asymmetry in the definition of signals and cues.
-The two kinds of theorem are asymmetric in a way that reflects that.
-Any vehicle can be treated as a cue simply by ignoring aspects of its production design.
+There is an asymmetry in the definition of signals and cues, and the two kinds of theorem are asymmetric in a way that reflects that.
+Any vehicle can be treated as a cue simply by failing to specify whether or not it was designed for communicative use.
 That is what Kelly's theorem does, in the guise of keeping the mutual information fixed and asking how the receiver can make use of it.
-Shannon's theorems require that vehicles be signals because they assure a level of functional performance that is only available when the sender is able to tune the signal's production to both the features of the channel and the receiver's needs.
+In contrast, the second and third theorems require that vehicles be signals because they assure a level of functional performance that is only available when the sender is able to tune the signal's production to both the features of the channel and the receiver's needs.
+
+In sum, communication theory distinguishes signals from cues both by providing the means to define signals and by employing theorems that require the vehicles in question be signals.
 
 %%%%%%%%%%%%%
 %%%%%%%%%%%%%
@@ -121,33 +127,23 @@ Shannon's theorems require that vehicles be signals because they assure a level 
 %%%%%%%%%%%%%
 \subsection{Signal content is not determined by mutual information}
 
-As we saw earlier, communication theorists use a pretheoretic notion of representation.
-The content of a signal is the source string it encodes.
-This result tallies with teleosemantics.
+What can the naturalist philosopher conclude from the fact that communication theory distinguishes signals and cues?
+
+Before they conclude anything, they should note that nothing we have said so far implies that signal content is determined by mutual information.
+Some contemporary treatments view content as being constructed from mutual information, typically by adding constraints such as that the vehicle has the function to carry it.
+However, as we saw earlier, the pretheoretic notion of representation used in communication theory treats the content of a signal as the source string it encodes.
+This result is given a theoretical underpinning by teleosemantics, and neither the pretheoretic definition nor the teleosemantic account treats mutual information as part of the definition of signal content.
+It is the encoding scheme, not the correlation, that determines the content of a signal.
 
 In this light, it is true but irrelevant that both signals and cues bear mutual information with their signifieds. 
 The content of a signal is not determined by reference to mutual information at all!
 It is determined by the encoding scheme by which it was designed.
-While it is true that the signalling systems we usually discuss do indeed include signals that bear mutual information with source events, it is not in virtue of this that an individual signal has the content it does.
+While it is true that the signalling systems we usually discuss do indeed involve signals that bear mutual information with source events, it is not in virtue of this that an individual signal has the content it does.
 A signal's content is instead determined by the encoding scheme in accordance with which the sender produced it.
 
-Another reason why signal content should not, is not, and perhaps cannot be determined by mutual information is that mutual information is a measure between types, while semantic content is a relation between tokens.
+Once we break the link between mutual information and semantic content we start to notice other differences between the two.
+Mutual information is a measure between types, while semantic content is typically construed as a relation between tokens.
+
+In sum, true premises about the broad application of mutual information in science entail nothing about the relevance of communication theory for naturalist approaches to content.
 
 
-
-%%%%%%%%%%%%%
-%%%%%%%%%%%%%
-%%%%%%%%%%%%%
-%%%%%%%%%%%%%
-\subsection{Extending communication theory to cognitive science}
-
-The point of this section -- the point of this paper -- is to remove obstacles to the application of communication theory in cognitive science.
-A few words are in order addressing that application.
-What do we actually gain by studying the brain in the light of an engineering discipline?
-
-\begin{itemize}
-    \item Mart\'{i}nez's basic claims
-    \item Examples of comm theory concepts in cog sci proper e.g. Sims on rate-distortion theory
-    \item The general lesson: communication theory is about the cost of representation, and how those costs trade off against the benefits of representation. There is no reason why such a theory would be limited to binary symbols in digital channels. Its claims are universal.
-    \item Future: what we really need is a general theory of function.
-\end{itemize}
