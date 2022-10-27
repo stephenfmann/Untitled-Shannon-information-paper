@@ -37,7 +37,7 @@ Pairing probable source strings with short code strings -- short signals -- is t
 Therefore, in order to devise a good code, you need to know the probabilities of each source string being produced.
 Crucially, that is \textit{all} you need to know.
 Whether or not source strings also carry natural language meaning is irrelevant to the problem of designing a code.
-Shannon stated this clearly, as the next section details.
+Shannon stated this clearly, as the next subsection details.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -59,7 +59,7 @@ The fundamental problem of communication is that of reproducing at one point eit
 \noindent Clearly ``message'' in this context refers to a source string.
 Shannon warns that the semantic properties of lexical elements do not affect the process of transmitting and reconstructing them.
 To see why this is true, note that the strings of Latin symbols described in the above example need not form English-language words, nor words of any other language.
-The problem of reconstructing those strings has a distinct mathematical sense, regardless of the string's natural language implications or lack thereof.
+The problem of reconstructing those strings has a distinct mathematical sense, regardless of the string's natural language implications.
 
 In 1949 Shannon's papers were released in a single volume with prefatory remarks by Warren Weaver \citep{shannon1949mathematical}.
 One of Weaver's comments expands on Shannon's earlier technical statement:
@@ -70,10 +70,10 @@ In fact, two messages, one of which is heavily loaded with meaning and the other
 \end{myquote}
 
 \noindent Weaver misquotes Shannon (``\emph{the} semantic aspects'' instead of ``\emph{these} semantic aspects''; ``the engineering \textit{aspects}'' instead of ``the engineering \textit{problem}'').
-In context the mistake is insignificant, because the preceding sentences demonstrate that Weaver interprets the claim accurately.
-By `information' he means a certain property of source strings, defined as the number of symbols in the corresponding code string assuming an optimal encoding scheme.
+In context the mistake is insignificant, because the preceding sentences demonstrate that Weaver interprets the point accurately.
+By `information' he means a certain property of source strings, defined as the optimal number of symbols in the corresponding code string.
 This measure is more commonly known as \textbf{surprisal}, and is defined as $\log{\frac{1}{p(x)}}$ for a message $x$ that is produced at the source with probability $p(x)$.
-It is clear that two messages -- two source strings -- can have the same surprisal, with one being a sentence of a natural language and the other being nonsense.
+It is clear that two messages -- two source strings -- can have the same surprisal, with one being a meaningful sentence of a natural language and the other being nonsense.
 One need only define a source that produces a meaningful sentence and a nonsensical sentence with the same probability.
 
 In context the misquote is unproblematic, but out of context Weaver can be read as stating what I will eventually deny: that the semantic properties of both the source string \textit{and the code string} are irrelevant to the well-functioning of engineered communication systems.
@@ -84,11 +84,11 @@ I take it to be as follows:
 {\sc Shannon's Warning}: In the central model, once the statistical properties of source strings have been taken into account, the semantic properties of source strings are irrelevant to the engineering problem of communication.
 \end{myquote}
 
-\noindent Symbols of a source lexicon consisting of Latin characters can be combined to produce messages that would be meaningful as strings of English, for example.
-But such meanings are irrelevant to the problem of converting those strings into sequences of 0s and 1s from a code lexicon.
-The meanings of source strings are not represented in the mathematics.
-{\sc Shannon's Warning} tells us that those meanings do not play a part in the statement of or solution to the fundamental problem of communication.
-Finding an efficient solution requires knowing only the statistical properties of symbols in the source lexicon, not the meanings of strings constructed therefrom.
+\noindent 
+% Symbols of a source lexicon consisting of Latin characters can be combined to produce messages that would be meaningful as strings of English.
+% But such meanings are irrelevant to the problem of converting those strings into sequences of 0s and 1s from a code lexicon.
+The meanings of source strings are not represented in the mathematics of communication theory.
+{\sc Shannon's Warning} tells us that finding an efficient solution to the fundamental problem of communication requires knowing only the statistical properties of symbols in the source lexicon, not the meanings of strings constructed therefrom.
 
 One might think that the meanings of source strings \emph{could} play a role in reconstructing them efficiently.
 An intelligent observer receiving a noisy signal that decodes to {\sc SHALL I COMPARW TGEE TO A SUMNERS DAY} might be able to reconstruct the original Shakespearean line on the basis of its presumed meaning.
@@ -153,7 +153,7 @@ Like Dretske, the version of the warning operative here is different from the or
 \citet[$\S$6]{dennett2017bacteria} is still pursuing this line, and it is now a standard way to 
 distinguish between two senses of the term `information' in scientific applications.
 The Stanford encyclopedia entry `Biological Information' is organised around the distinction, using the labels ``Shannon's concept of information'' and ``Teleosemantic and other richer concepts'' \citep{godfrey-smith2016biological}.
-Other scholars endorsing the same line include Piccinini and Scarantino:
+Other scholars endorsing the distinction include Piccinini and Scarantino:
 
 \begin{myquote}
 As we have stressed, Shannon information does not capture, nor is it intended to capture, the semantic content, or meaning, of signals. From the fact that Shannon information has been transmitted, no conclusions follow concerning what semantic information, if any, has been transmitted.
@@ -163,15 +163,15 @@ As we have stressed, Shannon information does not capture, nor is it intended to
 \noindent Again the authors focus on the semantic properties of signals rather than source strings.
 By now, it is possible to cite the distinction between Shannon and semantic information, as distinct properties of signals, without further argument: ``I will interpret ‘information’ as ‘semantic information’ (i.e. semantic content), not as Shannon information'' \citep[p. 12 n. 14]{artiga2020signals}; see also \citet[6]{cao2020new} and \citet[1]{kolchinsky2018semantic}.
 
-It might plausibly be argued that these scholars are speaking of mutual information, a measure of correlation.
-They could be read as claiming that signals can bear mutual information without possessing semantic content.
+It could plausibly be argued that the distinction these scholars are aiming for is between semantic information and mutual information.
+Mutual information is a measure of correlation, related to surprisal but formally different from it.
+The authors cited above could be read as claiming that signals can bear mutual information without possessing semantic content.
 I discuss such claims in the second half of the paper; my point here is just that insofar as these writers appeal to Shannon and Weaver to justify their position, they have misinterpreted the communication theorists' remarks.
 Weaver used `information' as synonymous with surprisal, not mutual information; he referred to a property of source strings, not a correlation between signals and signifieds.
 To my knowledge, no explicit argument has been offered that moves from the original version of {\sc Shannon's Warning} to the conclusion that there exists a property of signals, invoked in communication theory, that is distinct from the concept sought by a philosophical theory of content.
 
-
-Perhaps the collective misconstrual would not matter if not for the fact that the mutated form of {\sc Shannon's Warning} is false by the lights of communication theorists themselves.
-It is also false by the lights of a popular theory of content.
+The collective misconstrual would not matter if not for the fact that the mutated form of {\sc Shannon's Warning} is false by the lights of communication theorists themselves.
+It is also false by the lights of teleosemantics, a popular theory of content.
 According to both teleosemantics and contemporary communication theory, signals in the central model have semantic content.
 What is more, their content is directly relevant to the engineering problem of communication, as we shall now see.
 
@@ -185,7 +185,7 @@ What is more, their content is directly relevant to the engineering problem of c
 
 Contemporary discussion of the relevance of communication theory for philosophical approaches to content focuses on signals.
 But nothing about signals can be concluded directly from {\sc Shannon's Warning}, which concerns source strings only.
-The mathematical tools of communication theory are indeed blind to the meaning of a source string, but interpretations of the theory require that signals are meaningful: the content of a signal is the identity of a source string.
+The mathematical tools of communication theory are indeed blind to the meaning of source strings, but interpretations of the theory require that signals are meaningful: the content of a signal is the identity of a source string.
 (For simplicity I assume a one-to-one mapping between source strings and code strings.)
 Philosophers have conflated the true claim that source strings need not have semantic content with the false claim that well-functioning signals need not have semantic content.
 
@@ -201,7 +201,7 @@ Furthermore, standard interpretations of the theorems of communication theory re
 Consider the first theorem of communication theory, often called the source coding theorem \citep[$\S$5]{cover2006elements} \citep[$\S$4]{mackay2003information}.
 The theorem gives a lower bound on the average number of binary symbols required to encode source strings of a certain length.
 % This in turn can be used to define the minimum required size of a signal sent through a noiseless channel to perfectly reproduce the sequence of outcomes.
-The fewest binary symbols required is equal to a probabilistic measure of the process called its \textbf{entropy}.
+The fewest binary symbols required is equal to a probabilistic measure of the source called its \textbf{entropy}.
 The theorem clearly embodies a notion of signification or reference: both the question that prompted the theorem (how many symbols are required?) and the result it offers (the entropy of the source) assume that the symbols are being used to record the outputs of the source.
 Cover \& Thomas make this clear:
 
@@ -215,8 +215,7 @@ We can design source codes for the most efficient representation of the data. [.
 \par\hspace*{\fill}\citet[218]{cover2006elements}
 \end{myquote}
 
-\noindent The extent to which Cover \& Thomas's use of terms like ``describe'' and ``represent'' corresponds with philosophers' notions of semantic content has not to my knowledge been asked often.
-% Obviously the authors cannot be interpreted as taking a stance on philosophical theories of content.
+\noindent The extent to which Cover \& Thomas's use of terms like ``describe'' and ``represent'' corresponds with philosophers' notions of semantic content has not to my knowledge been asked.
 Their usage is evidence that some notion of content is required to make sense of the theorem.
 A similar sentiment is found in MacKay's textbook.
 In the following quote, MacKay is modelling a scientist's experimental setup as a source, and the outcome of the experiment as the source's output:
@@ -241,7 +240,7 @@ It must be the case that signals in the central model bear some exploitable rela
 If the decoder is to perform properly, it must be able to reconstruct the original string from the signal.
 There must therefore be some sense in which the signal indicates or refers to the source string.
 
-Teleosemantics puts theoretical legs under the intuition that signals represent source strings.
+Teleosemantics puts theoretical legs under the intuition that signals indicate or refer to source strings.
 The central model (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}; here and throughout I refer to Millikan's teleosemantic theory).
 Teleosemantics attributes semantic content to signals when they are intermediaries between cooperating senders and receivers.
 Senders and receivers cooperate when they share a proper function, an outcome they have been designed to bring about.
@@ -269,6 +268,16 @@ Suppose the sender transmits signals according to the code $H\rightarrow1,\ T\ri
 Then, assuming no noise, when the decoder receives the signal $101$ it correctly produces the sequence $HTH$.
 Communication is successful because the reproduced string is identical to the original sequence of outcomes.
 The signal $101$ represents the source sequence $HTH$, and that is how the decoder correctly reproduces it.
+
+It might be objected that this is a very thin notion of `representation'.
+Surely philosophers who aim to give a naturalist account of representation are looking for something much richer than the relationship between simple electronic signals and their signifieds?
+Indeed, the liberality debate constitutes an ongoing discussion about this very question \citep{artiga2016liberal,desouzafilho2022dual}.
+Teleosemantics is particularly susceptible to the charge of being too liberal in its attribution of representational status, because the conditions implied by figure \ref{fig:teleo} are very easy to satisfy.
+My argument here does not serve to defend teleosemantics against this charge.
+I am only trying to demonstrate that teleosemantics attributes content to central model signals.
+Detractors may treat this as a mark against teleosemantics; so be it.
+My point is just that those who assert that central model signals do not (or need not) have content are begging the question against teleosemantics, as well as ignoring the pretheoretic usage of communication theorists.
+Appealing to {\sc Shannon's Warning} cannot help make the case, because Shannon was talking about source strings rather than signals.
 
 % Furthermore, 
 % If a 1 is transmitted when the coin comes up tails, the signal is false.
@@ -304,14 +313,14 @@ This cashes out the pretheoretic usage of terms like `represent', `describe' and
 % Of more relevance for the present paper is a similar move, to the conclusion that communication theory cannot aid the naturalist project.
 % This move is similarly unjustified -- and is outright denied by arguments that demonstrate the relevance of the theory for concepts of representation in cognitive science \citep{martinez2019representations}.
 
-Let me conclude this section by zooming out slightly.
-Bar-Hillel and Carnap, and many since them, have argued or assumed that the theory of semantic content sought by philosophers must be distinct from communication theory.
-In the background of my rebuttal to their claims is the idea that the eventual semantic theory will instead be a \textit{generalisation} of communication theory.
-Or to put it the other way round, communication theory will turn out to be a special case of a broader theory of representation.
-If teleosemantics is to be that theory, it should eventually be translated into a formal language comparable with that of Shannon's theory.
-Obviously I cannot pursue that project here, but its conception should at least give the reader a sense of the positive position underlying my negative assertions.
+% Let me conclude this section by zooming out slightly.
+% Bar-Hillel and Carnap, and many since them, have argued or assumed that the theory of semantic content sought by philosophers must be distinct from communication theory.
+% In the background of my rebuttal to their claims is the idea that the eventual semantic theory will instead be a \textit{generalisation} of communication theory.
+% Or to put it the other way round, communication theory will turn out to be a special case of a broader theory of representation.
+% If teleosemantics is to be that theory, it should eventually be translated into a formal language comparable with that of Shannon's theory.
+% Obviously I cannot pursue that project here, but its conception should at least give the reader a sense of the positive position underlying my negative assertions.
 
-In any case, arguments denying the relevance of communication theory for philosophy based on {\sc Shannon's Warning} do not hold water.
+Arguments denying the relevance of communication theory for philosophy based on {\sc Shannon's Warning} do not hold water.
 A stronger argument adverts to the breadth of application of another of Shannon's mathematical measures: mutual information.
 It is to this point I now turn.
 
