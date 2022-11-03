@@ -1,17 +1,26 @@
 \section{Agnostic information}\label{sec:agnostic}
 
+The second route to scepticism about the relevance of communication theory for naturalist representation begins with the claim that mathematical measures defined within communication theory cannot distinguish between representations and non-representations.
+Information is thought to be agnostic to representational status.
+In this section I argue that although this is true of certain mathematical functions like mutual information, communication theory has many more tools at its disposal.
+Communication theory does distinguish between signals and non-signals -- it must do in order for its theorems to have sense.
+The theory is fundamentally about the costs and benefits of representation and how to trade them off judiciously.
+Philosophers undersell the resources available to communication theory by focusing solely on a small set of measures.
+Furthermore, these extra features of communication theory are concealed when philosophers conflate communication theory with information theory.
+
 \subsection{How scientists use information theory}\label{subsec:scientists}
 
-Around the same time that Bar-Hillel \& Carnap were discussing the relevance of Shannon's work for philosophy, scientists noticed that his mathematical tools were of use beyond the context of communications engineering.
+Around the same time Bar-Hillel \& Carnap were discussing the relevance of Shannon's work for philosophy, scientists began to notice that his mathematical tools were of use beyond the context of communications engineering.
 For example, entropy, originally devised as a measure of how many code symbols would be needed to represent a sequence of source outcomes, was given a rather more general interpretation as a measure of the uncertainty associated with a probability space.
 Intuitively, when entropy is high, an observer is less sure which outcome will occur, so entropy seems a reasonable measure of uncertainty.
 Further uses can be derived from this more general interpretation.
-Entropy has been used in ecology as a measure of diversity: when we treat the proportions of different species in an ecological population as probabilities, the entropy of that population measures uncertainty about which species would be observed if one sampled randomly from the population.
+Entropy has been used in ecology as a measure of diversity: when we treat the proportions of different species in an ecological population as probabilities, the entropy of that population measures our uncertainty about which species would be observed if we sampled randomly from the population.
 This intuitively captures an aspect of the population diversity \citep{margalef1957information}.
 
-Shifts in the interpretation of entropy and other measures accompanied the emergence of the term \textbf{information theory} to describe Shannon's mathematical tools and their more general application across the sciences (see figure \ref{fig:info_theory}).
-It is nowadays customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were devised.
-I will continue to distinguish communication theory from information theory, because the domain of application of the measures affects the truth values of philosophical claims made about them. % This is a promissory note which should be paid off!
+Shifts in the interpretation of entropy and other measures accompanied the emergence of the term \textbf{information theory} to describe Shannon's mathematical tools and their more general application across the sciences.
+Today, information theory comprises a set of concepts and measures common to many mathematical and scientific disciplines (see figure \ref{fig:info_theory}).
+For better or worse, it has become customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were devised.
+Since the claims I make below depend on this distinction being upheld, I will continue to use `information theory' and `communication theory' non-synonymously.
 
 \input{fig_info_theory}
 
@@ -28,18 +37,18 @@ Mutual information has been employed in a diverse range of sciences, including:
     \item Neuroscience, to measure the correlation between neural firings and environmental states \citep[][and references therein]{rathkopf2017neural}
 \end{itemize}
 
-\noindent That many things correlate in the natural world is a useful fact for science to exploit.
-Correlations increase the opportunity to discover features about a target phenomenon.
-If the target is difficult to observe, it might more easily be studied by observing something that correlates with it. 
-Furthermore, correlations play a special role in the functional sciences.
-Biological and cognitive agents can condition their behaviour on cues and signals that correlate with success-relevant states of affairs, and scientists are therefore interested in how correlations are exploited in general.
-Mutual information and related measures are some of the most common tools employed in these investigations.
+% \noindent That many things correlate in the natural world is a useful fact for science to exploit.
+% Correlations increase the opportunity to discover features about a target phenomenon.
+% If the target is difficult to observe, it might more easily be studied by observing something that correlates with it. 
+% Furthermore, correlations play a special role in the functional sciences.
+% Biological and cognitive agents can condition their behaviour on cues and signals that correlate with success-relevant states of affairs, and scientists are therefore interested in how correlations are exploited in general.
+% Mutual information and related measures are some of the most common tools employed in these investigations.
 
-The breadth of application of mutual information is at the heart of the second source of scepticism about the relevance of communication theory for naturalist representation.
+\noindent The breadth of application of mutual information is at the heart of a second source of scepticism about the relevance of communication theory for naturalist representation.
 Scholars usually move from a premise about mutual information to a conclusion about information theory as a whole -- which is then seen as encompassing communication theory.
 Because philosophers are rarely explicit about the dialectical moves required to reach this conclusion, in the next few subsections I have tried to tease apart the intended argument in order to refute it.
-As a result, my discussion concerns one possible way of moving from claims about mutual information to scepticism about the relevance of communication theory.
-There may be other, better arguments that my account here does not affect.
+As a result, my discussion focuses on one possible way of moving from claims about mutual information to scepticism about the relevance of communication theory.
+There may be other, better arguments that my account does not affect.
 
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
@@ -48,33 +57,32 @@ There may be other, better arguments that my account here does not affect.
 %%%%%%%%%%%%%%%%%%
 \subsection{Mutual information cannot distinguish signals and cues}
 
-The wide applicability of mutual information generates scepticism about the relevance of communication theory for accounts of representation.
-To demonstrate how, it will help to introduce the distinction between \textbf{signals} and \textbf{cues}.
+Let us begin with a premise that sceptics and optimists alike should agree on: mutual information cannot distinguish between \textbf{signals} and \textbf{cues}.
 
 Originating in behavioural ecology, the signal/cue distinction highlights the fact that some informational vehicles have the function to provide the information they do, whereas some are `accidentally' informational, used opportunistically by their receivers \citep[$\S$1.2]{maynardsmith2003animal}.
 Vehicles selected to serve a communicative role are called signals, while vehicles that fortuitously provide information are called cues.
 (In philosophy the term `natural sign' is sometimes used; I am here using `cue' to cover all cases described by that term.)
-For example, the waggle dance is a signal because it evolved in the honeybee lineage to serve as an informational vehicle that enables workers to enjoy greater success at foraging or nest-finding \citep{gould1975honey,riley2005flight}.
+The waggle dance is a signal because it evolved in the honeybee lineage to serve as an informational vehicle that enables workers to enjoy greater success at foraging or nest-finding \citep{gould1975honey,riley2005flight}.
 In contrast, bees' use of the position of the sun in the sky to navigate is a cue, because the sun's location is not an outcome of a process of selection that jointly produced both it and the bees' navigational behaviour.
 
-Scepticism about the relevance of communication theory for naturalist representation gains traction when we note that mutual information quantifies the strength of a correlation no matter whether its vehicles are signals or cues.
+Mutual information quantifies the strength of a correlation no matter whether its vehicles are signals or cues.
 That a vehicle has positive mutual information with an environmental state does not determine whether that vehicle is a cue or a signal.
-The aforementioned uses of mutual information across the sciences emphasise this point.
-While the correlation between the waggle dance and food locations is due to the fact that the waggle dance is a signal, the correlation between galaxies' morphology and their local environment is clearly not.
+The sheer variety of scientific contexts in which mutual information is used emphasises this point.
+While the correlation between the waggle dance and food locations is due to the fact that the waggle dance is a signal, the correlation between galaxies' morphology and their local environment clearly is not.
 The vehicle in the evolutionary model of \citet{donaldson-matasci2010fitness} is definitionally a cue.
 The co-occurrence of words in a corpus is not itself a signal, though the words themselves are representations (or at least combine to produce representations).
 Without further detail, it is not clear whether the output of a quorum-sensing bacterium counts as a signal of its input; nonetheless, the mutual information between the two can be measured.
 Neural firings are sometimes claimed to be representations, but simply measuring the correlation between them and environmental states is not sufficient to establish this \citep{rathkopf2017neural}.
 
-So one cannot move from a claim about mutual information to a claim about signalhood.
 From the mere fact that two things bear a correlational relationship, no conclusion can be drawn about whether one is a signal of the other.
+% In other words, one cannot move from a claim about mutual information to a claim about signalhood.
 For the avoidance of doubt, I agree with this point, and suggest encapsulating it as follows:
 
 \begin{myquote}
 {\sc Agnostic Mutual Information}: Mutual information cannot distinguish signals and cues.
 \end{myquote}
 
-\noindent Treating {\sc Agnostic Mutual Information} as uncontroversially true, the following subsections discuss whether it is possible to establish either of the following claims:
+\noindent The path to scepticism I want to explore now is the move from {\sc Agnostic Mutual Information} to one or both of the following claims:
 
 \begin{myquote}
 {\sc Agnostic Information Theory}: Information theory cannot distinguish signals and cues.
@@ -84,30 +92,27 @@ For the avoidance of doubt, I agree with this point, and suggest encapsulating i
 {\sc Agnostic Communication Theory}: Communication theory cannot distinguish signals and cues.
 \end{myquote}
 
-\noindent In order to determine whether the latter claims derive from the former, in the following three subsections I undertake the following tasks:
+\noindent The latter claim would certainly challenge the relevance of communication theory for theories of representation.
+If communication theory cannot distinguish signals and cues, then there is little hope of it distinguishing any of the more sophisticated kinds of representation of interest to cognitive scientists and philosophers.
 
-\begin{enumerate}
-    \item Demonstrate that many scholars move from {\sc Agnostic Mutual Information} to {\sc Agnostic Information Theory} by employing the vague term `Shannon information'.
-    \item Demonstrate that scholars diverge widely on the conclusions they draw from {\sc Agnostic Information Theory}.
-    \item Demonstrate that, regardless of the propriety of the above move, a further move from {\sc Agnostic Information Theory} to {\sc Agnostic Communication Theory} should be roundly rejected because {\sc Agnostic Communication Theory} is false.
-\end{enumerate}
-
-\noindent A concluding subsection discusses what lessons naturalist philosophers should draw.
+I am going to argue firstly that {\sc Agnostic Mutual Information} does not entail {\sc Agnostic Communication theory}, and secondly that {\sc Agnostic Communication Theory} is false.
+Of course, the second argument would immediately entail the first (because we are treating {\sc Agnostic Mutual Information} as uncontroversially true), but in laying out the first argument we can explore the intermediate claim {\sc Agnostic Information Theory}.
+This allows us to untangle some of the contemporary philosophical landscape and to better emphasise the difference between information theory and communication theory.
+The two arguments commence in the following two subsections.
 
 %%%%%%
 %%%%%%
 %%%%%%
 %%%%%%
-\subsection{\sloppy Philosophers move from {\sc Agnostic Mutual Information} to {\sc Agnostic Information Theory} by employing the vague term `Shannon information'}
+\subsection{\sloppy {\sc Agnostic Mutual Information} does not entail {\sc Agnostic Communication theory}}
 
-Several authors appear to move from {\sc Agnostic Mutual Information}, a claim about a specific measure, to {\sc Agnostic Information Theory}, a claim about a collection of mathematical tools and concepts.
-How do they achieve this?
-I believe the move is made by employing the term `Shannon information' to refer to both mutual information specifically and all the concepts and tools of information theory in general.
+Let me lay out my suspicions clearly: I suspect that philosophers move from {\sc Agnostic Mutual Information} to {\sc Agnostic Information Theory} by employing the term `Shannon information' to mean both `mutual information' and `all of the tools and concepts available to information theory'.
+I further suspect that philosophers then move from {\sc Agnostic Information Theory} to {\sc Agnostic Communication Theory} by treating `information theory' and `communication theory' as synonymous.
+These moves are almost always made implicitly, and almost always by invoking the term `Shannon information'.
+
 Because `Shannon information' is given diverse definitions, demonstrably true claims about mutual information can be interpreted as unsupported claims about information theory as a whole.
-
 Table \ref{tab:shannon} lists some of the definitions of `Shannon information' in contemporary philosophy.
 
-%% I'm putting the table here because it was causing a huge gap in the text.
 \input{tab_shannon}
 
 %%%%%%%%%%%%%%%%%
@@ -115,7 +120,7 @@ Table \ref{tab:shannon} lists some of the definitions of `Shannon information' i
 %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%
-\subsection{\sloppy Philosophers diverge on the conclusions drawn from {\sc Agnostic Information Theory}}
+% \subsection{\sloppy Philosophers diverge on the conclusions drawn from {\sc Agnostic Information Theory}}
 
 Contemporary scholars draw different conclusions from {\sc Agnostic Information Theory}.
 \citet{skyrms2010signals} and \citet{isaac2018semantics} flat-footedly assert that mutual information just \textit{is} semantic content, and that it turns out content inheres in vehicles other than signals after all.
@@ -124,10 +129,22 @@ Contemporary scholars draw different conclusions from {\sc Agnostic Information 
 Although the conclusions drawn vary widely, all these scholars share a premise: that the only tools available to information theory are mutual information and related measures.
 In effect, the sceptical claim is that all of the tools of information theory are insufficient to distinguish signals and cues.
 
-Although I believe the move from {\sc Agnostic Mutual Information} to {\sc Agnostic Information Theory} is illicit without further premises, and that the term `Shannon information' should be used more consistently, I am going to set these points aside.
-I'm not concerned with the truth value of the intermediate claim: what I want to show is that despite {\sc Agnostic Mutual Information} being true, {\sc Agnostic Communication Theory} is false.
+Note that mutual information is a measure between types, while semantic content is typically construed as a relation between tokens.
+To define one in terms of the other requires linking a type definition to a token definition.
+Skyrms does this by defining a specific formal object, what Isaac calls an s-vector, that defines a property of a token vehicle and that bears a clear formal relationship to mutual information.
+Similarly, \citet[$\S$4]{shea2018representation} carefully distinguishes token definitions from type definitions.
 
-In sum, scepticism about the relevance of communication theory for naturalist approaches to content results from two illicit moves: first, from a claim about mutual information to a claim about the whole of information theory via the term `Shannon information'; second, from the resultant claim about information theory to a claim about communication theory via treating the two disciplines as identical.
+\begin{itemize}
+    \item Neander? Dretske?
+\end{itemize}
+
+The prevalence of accounts that seek to build semantic content out of a definition of information might make it seem that that is the only way to do it.
+I emphasise the possibility of defining semantic content in terms of encoding, before any mention of informational measures has been made.
+
+% Although I believe the move from {\sc Agnostic Mutual Information} to {\sc Agnostic Information Theory} is illicit without further premises, and that the term `Shannon information' should be used more consistently, I am going to set these points aside.
+% I'm not concerned with the truth value of the intermediate claim: what I want to show is that despite {\sc Agnostic Mutual Information} being true, {\sc Agnostic Communication Theory} is false.
+
+In sum, scepticism about the relevance of communication theory for naturalist representation results from two illicit moves: first, from {\sc Agnostic Mutual Information} to {\sc Agnostic Information Theory} via the term `Shannon information'; second, from {\sc Agnostic Information Theory} to {\sc Agnostic Communication Theory} via treating the two disciplines as identical.
 The next section shows that the resultant claim about communication theory is simply false.
 Communication theory can and does distinguish signals and cues.
 
@@ -147,7 +164,8 @@ Not only does the formal apparatus of communication theory distinguish signals a
 Consider, on the one hand, the \textbf{second theorem} and \textbf{third theorem} of communication theory, which require that the vehicles they address be signals, and on the other hand \textbf{Kelly's theorem}, which requires only that the vehicle be a cue.
 We shall introduce them in turn.
 
-The second theorem of communication theory (sometimes called the noisy channel theorem) determines what level of performance the receiver is able to achieve thanks to the sender's encoding scheme, in the face of a channel that inserts noise into the vehicle.
+The second theorem of communication theory (sometimes called the noisy channel theorem) determines what level of performance a receiver is able to achieve thanks to the sender's encoding scheme.
+It is assumed that the channel over which their signals are transmitted and received inserts noise into the signal.
 The theorem answers a question about receiver performance by attending to the sender's design of the vehicle: different encoding schemes would yield different performance levels.
 The vehicle mentioned in this theorem is definitionally a signal.
 
@@ -167,34 +185,31 @@ My claim is not that theorems about cues do not apply to signals, but that theor
 There is an asymmetry in the definition of signals and cues, and the two kinds of theorem are asymmetric in a way that reflects that.
 Any vehicle can be treated as a cue simply by failing to specify whether or not it was designed for communicative use.
 That is what Kelly's theorem does, in the guise of keeping the mutual information fixed and asking how the receiver can make use of it.
-In contrast, the second and third theorems require that vehicles be signals because they assure a level of functional performance that is only available when the sender is able to tune the signal's production to both the features of the channel and the receiver's needs.
+Kelly's prose implies that the vehicle in question is a signal, but on closer inspection the theorem does not require it to be one.
+The second and third theorems by contrast require that their vehicles be signals, because they assure a level of functional performance that is only available when the sender tunes the vehicle's production to the features of the channel.
 By definition, the second and third theorems cannot be applied to cues.
 
-\begin{itemize}
-    \item These points are reflected in the mathematics: when you do $\max_{p(x)}I(X;Y)$ in the second theorem you are treating $X$ and $Y$ as either end of a signalling channel; when you keep $I(X;Y)$ fixed in Kelly's theorem you are treating $Y$ as a cue of $X$.
-    \item There is not yet a mathematical measure that determines whether a thing is a signal or a cue, but the mathematics does distinguish whether something is being modelled as a signal or a cue, and that's good enough for philosophers to care about it.
-\end{itemize}
+Furthermore, these points are reflected in the mathematical formalism of each theorem.
+The second theorem discusses maximising the transmission rate of a channel by changing the encoding scheme, which changes the distribution of input symbols.
+This can be written formally as $\max_{p(x)}I(X;Y)$.
+In this set-up, $X$ and $Y$ are either end of a signalling channel.
+In contrast, Kelly's theorem keeps $I(X;Y)$ fixed.
+There is no $\max_{p(x)}I(X;Y)$; in this set-up, $Y$ is a cue for $X$.
+As we have seen, measuring the mutual information between $X$ and $Y$ does not tell you whether one is a signal of the other.
+And yet there exists formalism, in this case $\max_{p(x)}I(X;Y)$, that does distinguish whether a vehicle is being treated as a signal rather than a cue.
 
 In sum, communication theory distinguishes signals from cues both by providing the means to define signals and by employing theorems that require the vehicles in question be signals.
+The fact that communication theory also contains theorems like Kelly's whose vehicles need only be cues makes this point all the more stark.
 
-%%%%%%%%%%%%%
-%%%%%%%%%%%%%
-%%%%%%%%%%%%%
-%%%%%%%%%%%%%
-\subsection{Signal content is not determined by mutual information}
-
-What can the naturalist philosopher conclude from the fact that communication theory distinguishes signals and cues?
-
-Before they conclude anything, they should note that nothing we have said so far implies that signal content is determined by mutual information.
-Some contemporary treatments view content as being constructed from mutual information, typically by adding constraints such as that the vehicle has the function to carry it.
-However, as we saw earlier, the pretheoretic notion of representation used in communication theory treats the content of a signal as the source string it encodes.
-This notion is bolstered by teleosemantics, and neither the pretheoretic definition nor the teleosemantic account treats mutual information as part of the definition of signal content.
-In this light, it is true but irrelevant that both signals and cues bear mutual information with their signifieds, because the content of a signal is not determined by reference to mutual information at all!
-While the signalling systems we usually discuss involve signals that bear mutual information with source events, it is not in virtue of this that an individual signal has the content it does.
-It is the encoding scheme, not the correlation, that determines the content of a signal.
+%%%%%%%%%%%
+%%%%%%%%%%%
+%%%%%%%%%%%
+%%%%%%%%%%%
+\subsection{A sceptical riposte: channel capacity}
 
 \begin{itemize}
-    \item Mutual information is a measure between types, while semantic content is typically construed as a relation between tokens.
+    \item Sceptic: We can measure the capacity of a channel without knowing what its signals are about
+    \item My response: That is true, but does not affect any of the points I make above. You would have to establish that communication theory can ONLY measure channel capacity. That does indeed seem to be what Dennett implies, but if he really means it, he is wrong.
 \end{itemize}
 
 To summarise the entire section, true premises about the broad application of mutual information in science entail nothing about the relevance of communication theory for naturalist approaches to content.
