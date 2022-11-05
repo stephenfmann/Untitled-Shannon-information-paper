@@ -1,5 +1,6 @@
 % \begin{center}
 \begin{table}
+\resizebox{\textwidth}{!}{ % from https://tex.stackexchange.com/questions/27097/changing-the-font-size-in-a-table
 \begin{tabular}{|c | l | l|}
 \hline
 \thead{Definition} & \thead{Citation} & \thead{Note}\\
@@ -46,13 +47,13 @@ Mutual information & \makecell{
 }&
 \makecell{
     \citet{godfrey-smith2016biological}\\
-    \citet{floridi2019semantic}\\
     \citet[328]{rathkopf2017neural}\\
     \citet{lombardi2015shannon}
 }
 &\\
 \hline
 \end{tabular}
+}
 \caption{\label{tab:shannon} Definitions of Shannon information in the philosophy literature and in MacKay's \parencite*{mackay2003information} textbook. Of the communication theorists discussed in this paper, neither \citet{shannon1948mathematicalc} nor \citet{cover2006elements} use the term, while \citet{mackay2003information} uses it consistently (in the form ``Shannon information content'') as a synonym for surprisal.}
 \end{table}
 % \end{center}
