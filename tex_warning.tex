@@ -13,10 +13,10 @@ As it turns out, Shannon asserted a pretheoretic notion of meaning for communica
 
 \subsection{The central model of communication theory}\label{subsec:central}
 
-Prior to the Second World War, communications engineering made progress through practice rather than theory.
-While technologies and coding techniques improved, theoretical background was sparse.
-Work by \citet{nyquist1924certain} and \citet{hartley1928transmission}, however, indicated that a generalised mathematical framework for communication was possible.
-In part due to the heavy cryptographic and communicative demands of the war effort, Claude Shannon came to devise the general theory we know today.
+% Prior to the Second World War, communications engineering made progress through practice rather than theory.
+% While technologies and coding techniques improved, theoretical background was sparse.
+% Work by \citet{nyquist1924certain} and \citet{hartley1928transmission}, however, indicated that a generalised mathematical framework for communication was possible.
+% In part due to the heavy cryptographic and communicative demands of the war effort, Claude Shannon came to devise the general theory we know today.
 
 The insights of Shannon's foundational text \parencite*{shannon1948mathematicalc} are predicated on a picture of communication we shall call the \textbf{central model} (figure \ref{fig:central}).
 The central model construes the goal of communication as reproducing, at a target location, a symbol string produced at a spatiotemporally distant source.
@@ -118,18 +118,11 @@ The Mathematical Theory of Communication, often referred to also as Theory (of T
 \par\hspace*{\fill}\citet[147]{bar-hillel1953semantic}
 \end{myquote}
 
-\noindent The job of philosophers, as Bar-Hillel and Carnap saw it, was to provide a theory that would capture the aspect Shannon ignored.
-Their goal was to develop a \textit{semantic theory of information}, characterised as follows:
-
-\vbox{
-\begin{myquote}
-The contents of the symbols will be decisively involved in the definition of the basic concepts of this theory and an application of these concepts and of the theorems concerning them to fields involving semantics thereby warranted.
-\par\hspace*{\fill}\citet[148]{bar-hillel1953semantic}
-\end{myquote}
-}
-
-\noindent The authors explicitly distinguish two kinds of theory, implying a distinction between two entities or concepts.
-Both concepts are indicated by the term `information', but the theory of information pursued by mathematicians and engineers targets a different kind of entity from that which philosophers seek.
+\noindent Like Weaver, Bar-Hillel and Carnap likely understood {\sc Shannon's Warning} correctly; like Weaver, the words they used could be misconstrued.
+By referring only to `symbols' they risked conflating source symbols and code symbols.
+Nonetheless, the job of philosophers, as Bar-Hillel and Carnap saw it, was to provide a theory of \textit{semantic information} that would capture the aspect Shannon ignored.
+They explicitly distinguish two kinds of theory, implying a distinction between two entities or concepts.
+% Both concepts are indicated by the term `information', but the theory of information pursued by mathematicians and engineers targets a different kind of entity from that which philosophers seek.
 
 Bar-Hillel and Carnap's exposition had a significant influence on philosophical understanding of communication theory.
 \citet[p. 241, n.
@@ -158,21 +151,14 @@ Like Dretske, the version of the warning operative here is different from the or
 \citet[$\S$6]{dennett2017bacteria} is still pursuing this line, and it is now a standard way to 
 distinguish between two senses of the term `information' in scientific applications.
 The Stanford encyclopedia entry `Biological Information' is organised around the distinction, using the labels ``Shannon's concept of information'' and ``Teleosemantic and other richer concepts'' \citep{godfrey-smith2016biological}.
-Other scholars endorsing the distinction include Piccinini and Scarantino:
-
-\begin{myquote}
-As we have stressed, Shannon information does not capture, nor is it intended to capture, the semantic content, or meaning, of signals. From the fact that Shannon information has been transmitted, no conclusions follow concerning what semantic information, if any, has been transmitted.
-\par\hspace*{\fill}\citet[21]{piccinini2011information}
-\end{myquote}
-
-\noindent Again the authors focus on the semantic properties of signals rather than source strings.
-By now, it is possible to cite the distinction between Shannon and semantic information, as different properties of signals, without further argument: ``I will interpret ‘information’ as ‘semantic information’ (i.e. semantic content), not as Shannon information'' \citep[p. 12 n. 14]{artiga2020signals}; ``Shannon offers no analysis of the relation in virtue of which a sign carries information \textit{about} a state of affairs (his interest was in other issues)''  \citep[7]{neander2017mark}; ``One of the most cited quotes by Shannon is that referred to the independence of his theory with respect to semantic issues [...] Shannon’s theory, taken in itself, is purely quantitative: it ignores any issue related to informational content'' \citep[1988-9]{lombardi2015shannon}; see also \citet[6]{cao2020new} and \citet[1]{kolchinsky2018semantic}.
+\citet[21]{piccinini2011information} say ``Shannon information does not capture, nor is it intended to capture, the semantic content, or meaning, of signals,'' again focusing on signals rather than source strings.
+By now, it is possible to cite the distinction between Shannon and semantic information, as different properties of signals, without further argument: ``I will interpret ‘information’ as ‘semantic information’ (i.e. semantic content), not as Shannon information'' \citep[p. 12 n. 14]{artiga2020signals}; ``Shannon offers no analysis of the relation in virtue of which a sign carries information \textit{about} a state of affairs (his interest was in other issues)''  \citep[p. 7, emphasis original]{neander2017mark}; ``One of the most cited quotes by Shannon is that referred to the independence of his theory with respect to semantic issues [...] Shannon’s theory, taken in itself, is purely quantitative: it ignores any issue related to informational content'' \citep[1988-9]{lombardi2015shannon}; see also \citet[6]{cao2020new} and \citet[1]{kolchinsky2018semantic}.
 
 It could plausibly be argued that the distinction these scholars are aiming for is between semantic information and mutual information.
 Mutual information is a measure of correlation, related to surprisal but formally different from it.
 The authors cited above could be read as claiming that signals can bear mutual information without possessing semantic content.
 I discuss such claims in the second half of the paper; my point here is just that insofar as these writers appeal to Shannon and Weaver to justify their position, they have misinterpreted the communication theorists' remarks.
-Weaver used `information' as synonymous with surprisal, not mutual information; he referred to a property of source strings, not a correlation between signals and signifieds.
+Weaver used `information' as synonymous with surprisal, not mutual information; both he and Shannon were referring to a property of source strings, not a correlation between signals and signifieds.
 To my knowledge, no explicit argument has been offered that moves from the original version of {\sc Shannon's Warning} to the conclusion that there exists a property of signals, invoked in communication theory, that is distinct from the concept sought by a philosophical theory of content.
 
 The collective misconstrual would not matter if not for the fact that the mutated form of {\sc Shannon's Warning} is false by the lights of communication theorists themselves.
@@ -222,8 +208,7 @@ We can design source codes for the most efficient representation of the data. [.
 
 \noindent The extent to which Cover \& Thomas's use of terms like ``describe'' and ``represent'' corresponds with philosophers' notions of semantic content has not to my knowledge been asked.
 Their usage is evidence that some notion of content is required to make sense of the theorem.
-A similar sentiment is found in MacKay's textbook.
-In the following quote, MacKay is modelling a scientist's experimental setup as a source, and the outcome of the experiment as the source's output:
+A similar sentiment is found in MacKay's textbook, wherein he models a scientist's experimental setup as a source and the outcome of the experiment as the source's output:
 
 \begin{myquote}
 We now discuss the information content [entropy] of a source by considering how many bits [code symbols] are needed to describe the outcome of an experiment.
@@ -244,9 +229,10 @@ There is an intuitive sense to this usage.
 It must be the case that signals in the central model bear some exploitable relation to source strings.
 If the decoder is to perform properly, it must be able to reconstruct the original string from the signal.
 There must therefore be some sense in which the signal indicates or refers to the source string.
+The specific mapping from signal to source -- the `semantics' of the signalling system -- is determined by the encoding scheme.
 
 Teleosemantics puts theoretical legs under the intuition that signals indicate or refer to source strings.
-The central model (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}; here and throughout I refer to Millikan's teleosemantic theory).
+The central model (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}; here and throughout I refer to Millikan's \parencite*[$\S$6]{millikan2004varieties} teleosemantic theory).
 Teleosemantics attributes semantic content to signals when they are intermediaries between cooperating senders and receivers.
 Senders and receivers cooperate when they share a proper function, an outcome they have been designed to bring about.
 The content of a signal is the state of affairs that, together with the receiver's response to the signal, produces outcomes that satisfy the sender-receiver partnership's shared proper function.
@@ -258,7 +244,7 @@ The signal has this distal state as its content, because the receiver can achiev
 In the central model, source strings play the role of both distal and proximate states (though more recent models in communication theory distinguish those states, e.g \citet{berger1996ceo}).
 Signalling games typically collapse those states too (figure \ref{fig:sr}).
 Applying the basic teleosemantic model to the central model, the encoder is a sender and the decoder is a receiver.
-By definition, sender and receiver share a proper function as a consequence of design: to reconstruct the source string.
+Sender and receiver share a proper function as a consequence of design: to reconstruct the source string.
 The basic teleosemantic model does not include noise, but adding a noise variable would not affect the definition of semantic content.
 
 \input{fig_sr}
@@ -272,7 +258,7 @@ Each time the coin is tossed at the source, the eventual task of the decoder is 
 Suppose the sender transmits signals according to the code $H\rightarrow1,\ T\rightarrow0$, and the result of three coin tosses is $H, T, H$.
 Then, assuming no noise, when the decoder receives the signal $101$ it correctly produces the sequence $HTH$.
 Communication is successful because the reproduced string is identical to the original sequence of outcomes.
-The signal $101$ represents the source sequence $HTH$, and that is how the decoder correctly reproduces it.
+The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target.}
 
 It might be objected that this is a very thin notion of `representation'.
 Surely philosophers who aim to give a naturalist account of representation are looking for something much richer than the relationship between simple electronic signals and their signifieds?
@@ -281,8 +267,7 @@ Teleosemantics is particularly susceptible to the charge of being too liberal in
 My argument here does not serve to defend teleosemantics against this charge.
 I am only trying to demonstrate that teleosemantics attributes content to central model signals.
 Detractors may treat this as a mark against teleosemantics; so be it.
-My point is just that those who assert that central model signals do not (or need not) have content are begging the question against teleosemantics, as well as ignoring the pretheoretic usage of communication theorists.
-Appealing to {\sc Shannon's Warning} cannot help make the case, because Shannon was talking about source strings rather than signals.
+My point is just that the sceptic cannot appeal to {\sc Shannon's Warning} to make their case, because Shannon was talking about source strings rather than signals.
 
 % Furthermore, 
 % If a 1 is transmitted when the coin comes up tails, the signal is false.
@@ -290,7 +275,7 @@ Appealing to {\sc Shannon's Warning} cannot help make the case, because Shannon 
 % This failure is attributable to the signal being false.
 % In general, a signal is correct to the extent that it accords with the encoding procedure with which the system was designed.
 
-To sum up, by dint of joint design, encoder and decoder have as a shared proper function to reconstruct the source string at the target.
+To sum up, by dint of joint design, encoder and decoder have a shared proper function to reconstruct the source string at the target.
 They do this by means of an intermediary -- the code string as signal.
 Teleosemantics identifies the relation between signal and source string as the basic form of semantic content.
 This cashes out the pretheoretic usage of terms like `represent', `describe' and `specify' used by communication theorists.

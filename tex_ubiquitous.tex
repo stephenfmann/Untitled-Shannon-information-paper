@@ -10,7 +10,7 @@ Philosophers undersell the resources available to communication theory by focusi
 \subsection{How scientists use information theory}\label{subsec:scientists}
 
 Around the same time Bar-Hillel \& Carnap were discussing the relevance of Shannon's work for philosophy, scientists began to notice that his mathematical tools were of use beyond the context of communications engineering.
-For example, entropy, originally devised as a measure of how many code symbols would be needed to represent a sequence of source outcomes, was given a rather more general interpretation as a measure of the uncertainty associated with a probability space.
+Entropy, originally devised as a measure of how many code symbols would be needed to represent a sequence of source outcomes, was given a rather more general interpretation as a measure of the uncertainty associated with a probability space.
 Intuitively, when entropy is high, an observer is less sure which outcome will occur, so entropy seems a reasonable measure of uncertainty.
 Further uses can be derived from this more general interpretation.
 Entropy has been used in ecology as a measure of diversity: when we treat the proportions of different species in an ecological population as probabilities, the entropy of that population measures our uncertainty about which species would be observed if we sampled randomly from the population.
@@ -23,14 +23,13 @@ Since the claims I make below depend on this distinction being upheld, I will co
 
 \input{fig_info_theory}
 
-In the context of information theory, informational measures are often treated as statistical tools.
-Perhaps the most well-known is \textbf{mutual information}, typically interpreted as a measure of the strength of correlation between two variables.
+Perhaps the most well-known informational measure is \textbf{mutual information}, typically interpreted as the strength of correlation between two variables.
 Mutual information has been employed in a diverse range of sciences, including:
 
 \begin{itemize}
     \item Behavioural ecology, to measure the correlation between the honeybee waggle dance and the location of food sources \citep{haldane1954statistical}
-    \item Evolutionary biology, to show that the correlation between an environmental cue and a fitness-relevant state of affairs is an upper bound on the increased growth rate of an organism conditioning its behaviour on the cue \citep{donaldson-matasci2010fitness}
     \item Cosmology, to measure the correlation between galaxies' internal morphology and their local environments \citep{pandey2017how}
+    \item Evolutionary biology, to show that the correlation between an environmental cue and a fitness-relevant state of affairs is an upper bound on the increased growth rate of an organism conditioning its behaviour on the cue \citep{donaldson-matasci2010fitness}
     \item Linguistics, to measure the co-occurrence of words in a corpus \citep[$\S$4]{hunston2002corpora}
     \item Molecular biology, to measure the correlation between inputs and outputs of a quorum-sensing bacterium \citep{mehta2009information}
     \item Neuroscience, to measure the correlation between neural firings and environmental states \citep[][and references therein]{rathkopf2017neural}
@@ -69,7 +68,7 @@ That a vehicle has positive mutual information with an environmental state does 
 The sheer variety of scientific contexts in which mutual information is used emphasises this point.
 While the correlation between the waggle dance and food locations is due to the fact that the waggle dance is a signal, the correlation between galaxies' morphology and their local environment clearly is not.
 The vehicle in the evolutionary model of \citet{donaldson-matasci2010fitness} is definitionally a cue.
-The co-occurrence of words in a corpus is not itself a signal, though the words themselves are representations (or at least combine to produce representations).
+The co-occurrence of words in a corpus is not a signal (though the words themselves are representations, or at least combine to produce representations).
 Without further detail, it is not clear whether the output of a quorum-sensing bacterium counts as a signal of its input; nonetheless, mutual information between the two can be measured.
 Neural firings are sometimes claimed to be representations, but simply measuring the correlation between them and environmental states is not sufficient to establish this \citep{rathkopf2017neural}.
 
@@ -107,7 +106,12 @@ The two arguments commence in the following two subsections.
 %%%%%%
 \subsection{\sloppy \ami{} does not entail \act{}}
 
-Let me lay out my suspicions clearly: I suspect that philosophers move from \ami{} to the intermediate claim \ait{} by employing the term `Shannon information' to mean both `mutual information' and `all of the tools and concepts available to information theory'.
+\begin{myquote}
+Philosophy has understood information theory as a mostly definitional effort: for all philosophers have typically cared, the theory begins and ends with a presentation of what it takes for one random variable (or the worldly feature it models) to carry information about another.
+\par\hspace*{\fill}\citet[1216]{martinez2019representations}
+\end{myquote}
+
+\noindent Let me lay out my suspicions clearly: I suspect that philosophers move from \ami{} to the intermediate claim \ait{} by employing the term `Shannon information' to mean both `mutual information' and `all of the tools and concepts available to information theory'.
 I further suspect that philosophers then move from \ait{} to \act{} by treating `information theory' and `communication theory' as synonymous.
 
 `Shannon information' is given diverse definitions in philosophy (table \ref{tab:shannon}).
@@ -133,7 +137,7 @@ Although \ait{} is generally agreed upon, different authors draw very different 
 I want to mention three popular lines of thought in order to distinguish them from the account that this paper is ultimately designed to support:
 
 \begin{itemize}
-    \item Information theory cannot distinguish signals and cues, but since information theory is our best chance of naturalising semantic content, informational measures alone must define semantic content (hence even cues possess semantic content) \citep{skyrms2010signals,isaac2018semantics}
+    \item Information theory cannot distinguish signals and cues, but since information theory is our best chance of naturalising semantic content, informational measures alone must define content (hence even cues are contentful) \citep{skyrms2010signals,isaac2018semantics}
     \item Information theory cannot distinguish signals and cues, but since information theory is a promising route to naturalising semantic content, extra conditions should be added to informational measures to construct semantic content \citep[$\S$3-4]{shea2018representation}; \citep[pp. 6-9,34-36]{neander2017mark}
     \item Information theory cannot distinguish signals and cues, therefore informational measures are not the right way to naturalise semantic content \citep{lean2014shannon}; \citep[$\S$4]{hutto2013radicalizing} 
 \end{itemize}
@@ -150,8 +154,8 @@ The view I proposed in the section on Shannon's Warning can therefore be underst
 In effect, the sceptical claim is that all of the tools of information theory are insufficient to distinguish signals and cues.
 This may be true depending on how the limits of information theory are drawn, but it leads to a false conclusion when information theory is conflated with communication theory.
 In failing to distinguish the theories, most of the works cited in table \ref{tab:shannon} shorten the path to this further inference.
-Two exceptions are \citet[17-20]{piccinini2011information}, which explicitly distinguishes the theories, and Rathkopf, who takes pains to distinguish communication-theoretic models of signals from cue-like ``idle correlations'' that could be measured by mutual information \citep[p. 324 passim]{rathkopf2017neural}.
-In the other works cited in table \ref{tab:shannon}, one can find the following terms describing an indiscriminate hybrid of information theory and communication theory:
+Two exceptions are \citet[17-20]{piccinini2011information}, who explicitly distinguish the theories, and Rathkopf, who takes pains to distinguish communication-theoretic models of signals from cue-like ``idle correlations'' that could be measured by mutual information \citep[p. 324 passim]{rathkopf2017neural}.
+In the other works cited in table \ref{tab:shannon}, one can find the following terms describing what I suggest is an indiscriminate hybrid of information theory and communication theory:
 
 \begin{itemize}
     \item Information theory \citep[p. 3 passim]{adriaans2019information}, \citep[12]{shea2018representation}, \citep[614]{timpson2006grammar}, \citep[2]{baker2021natural}, \citep[3]{kirchhoff2021universal}, \citep[$\S$6]{dennett2017bacteria}, \citep[1]{isaac2018semantics}, \citep[8]{godfrey-smith2016biological}, \citep[p. 777 as ``this formal information theory'']{owren2010redefining}, \citep[p. 1991 as ``the theory of information'']{lombardi2015shannon}
@@ -189,7 +193,7 @@ The examples are cherry-picked and only indicative; I am treating them as eviden
 % \citet{lean2014shannon} and \citet[CHAPTER]{hutto2017evolving} accept that correlations between signalling vehicles and signifieds can do explanatory work in the functional sciences, but deny that functional correlations amount to semantic content.
 % [REST OF THIS PARA: concede that teleosemantics uses `semantic content' in a very liberal sense; tie back to the extreme liberality of Skyrms/Isaac. Upshot: perhaps we are ALL running different projects and using the term `semantic content' in different ways.]
 
-It may be that the four kinds of projects characterised above -- the one I endorse, plus the three motivated by an assumption about information theory that I reject -- would be consistent with each other if only proponents agreed they meant different things by `semantic content'.
+Before moving on, I recognise that the four kinds of projects characterised above -- the one I endorse, plus the three motivated by an assumption about information theory that I reject -- would be consistent with each other if only proponents agreed they meant different things by `semantic content'.
 The Skyrms-Isaac project is to assign to vehicles a formal object capturing their correlational relationships.
 Nobody thinks this is a bad idea; the controversial claim is that the property described by this object is \textit{the same property} that philosophers seek under the name `semantic content'.
 The teleosemantic project is to define explanatorily relevant differences between signals and cues, rooted in the fact that signals have functions and cues do not.
@@ -210,26 +214,21 @@ Communication theory can and does distinguish signals and cues.
 %%%%%%
 \subsection{\act{} is false}
 
-\begin{myquote}
-Philosophy has understood information theory as a mostly definitional effort: for all philosophers have typically cared, the theory begins and ends with a presentation of what it takes for one random variable (or the worldly feature it models) to carry information about another.
-\par\hspace*{\fill}\citet[1216]{martinez2019representations}
-\end{myquote}
-
 Whereas information theory is a collection of mathematical tools with wide application across the sciences, communication theory is an engineering discipline with the specific goal of designing efficient signalling techniques.
 The vehicles transmitted in the central model are signals, not cues.
 The sender produces the vehicle in accordance with an encoding scheme shared with the receiver.
 This definition of `signal' is shared by several sciences \citep{shannon1948mathematicalc,maynardsmith2003animal} and philosophical accounts \citep[$\S$6]{millikan2004varieties} \citep{bergstrom2011transmission}.
-(Some sciences (especially historical sciences) use the word `signal' when referring to cues, but this is a difference in terminology and not a substantive dispute over definitions.)
+(The historical sciences sometimes use the word `signal' when referring to cues, but this is a difference in terminology and not a substantive dispute over definitions.)
 
 Not only does the formal apparatus of communication theory distinguish signals and cues, its theorems distinguish them too.
 Consider, on the one hand, the \textbf{second theorem} and \textbf{third theorem} of communication theory, which require that the vehicles they address be signals, and on the other hand \textbf{Kelly's theorem}, which requires only that the vehicle be a cue.
 We shall introduce them in turn.
 
-The second theorem of communication theory (sometimes called the noisy channel theorem or the channel coding theorem) determines how accurately a receiver is able to reconstruct the source string thanks to the sender's encoding scheme.
+The second theorem of communication theory (sometimes called the noisy channel theorem or the channel coding theorem) determines how accurately a receiver is able to reconstruct a source string thanks to the sender's encoding scheme.
 It is assumed that the channel over which signals are transmitted inserts noise into the signal.
 Better encodings combat noise by building redundancy into the signal, enabling the receiver to more accurately reconstruct the source.
 The theorem answers a question about receiver performance by attending to the sender's design of the vehicle: different encoding schemes would yield different performance levels.
-The vehicle mentioned in this theorem is definitionally a signal.
+The vehicle mentioned in this theorem is definitionally a signal; the theorem does not apply to cues.
 
 The third theorem of communication theory (also known as the rate-distortion theorem) addresses a similar question, this time with the added benefit that the receiver need not achieve perfect performance.
 Suppose for example that the receiver only needs to correctly reconstruct four out of every five outcomes produced by the source.
@@ -247,7 +246,7 @@ My claim is not that theorems about cues do not apply to signals, but that theor
 There is an asymmetry in the definition of signals and cues, and the two kinds of theorem are asymmetric in a way that reflects that.
 Any vehicle can be treated as a cue simply by failing to specify whether or not it was designed for communicative use.
 That is what Kelly's theorem does, in the guise of keeping the mutual information fixed and asking how the receiver can make use of it.
-Kelly's prose implies that the vehicle in question is a signal, but on closer inspection the theorem does not require it to be one.
+(In fact Kelly's prose implies that the vehicle in question is a signal; on closer inspection, the theorem does not require it to be one.)
 The second and third theorems by contrast require that their vehicles be signals, because they assure a level of functional performance that is only available when the sender tunes the vehicle's production to the features of the channel.
 By definition, the second and third theorems cannot be applied to cues.
 
@@ -262,7 +261,7 @@ And yet there exists formalism, in this case $\max_{p(x)}I(X;Y)$, that does dist
 \citet{rathkopf2017neural} makes a similar argument in the specific case of neurobiology.
 
 In sum, communication theory distinguishes signals from cues both by providing the means to define signals and by employing theorems that require the vehicles in question be signals.
-The fact that communication theory also contains theorems like Kelly's whose vehicles need only be cues sharpens the point.
+The fact that communication theory also contains theorems like Kelly's whose vehicles need only be cues serves to sharpen the point.
 
 %%%%%%%%%%%
 %%%%%%%%%%%
@@ -286,9 +285,10 @@ Before responding, I accept that the premise of the sceptical riposte is true:
 \noindent Channels, characterised by the conditional distribution of output symbols given input symbols $p(y|x)$, are general-purpose in the sense that the outcomes of any source can be encoded by the set of input symbols $X$.
 Any channel can in principle be used to communicate anything.
 The honeybee waggle dance could be used to communicate military instructions if the field commander sending the message had sufficiently fine-grained control over the placement of food sources in the bees' locale.
+Measuring the capacity of the dance cannot tell you what, on a given occasion, is being communicated by it.
 
 However, the general-purpose nature of channels does not entail that communication theory does not or cannot attribute content to signals.
-Signals in the central model (for example) do have content as soon as a source is specified: the contents of signals are the different outcomes of the source.
+Signals in the central model (for example) do have content as soon as a source and an encoding scheme are specified: the contents of signals are the different outcomes of the source.
 If an army managed to employ the waggle dance to transmit military instructions, each dance would gain a specific instruction as its one of its semantic contents in accordance with the code devised ahead of time by the human communicators.
 As discussed in the section on Shannon's Warning, communication theory and teleosemantics both deliver this result.
 That a channel can be used to transmit anything does not mean communication theory remains forever agnostic about what is actually being transmitted in a given circumstance.
