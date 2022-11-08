@@ -258,7 +258,7 @@ Each time the coin is tossed at the source, the eventual task of the decoder is 
 Suppose the sender transmits signals according to the code $H\rightarrow1,\ T\rightarrow0$, and the result of three coin tosses is $H, T, H$.
 Then, assuming no noise, when the decoder receives the signal $101$ it correctly produces the sequence $HTH$.
 Communication is successful because the reproduced string is identical to the original sequence of outcomes.
-The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target.}
+The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target. In general, teleosemantics claims not that content explains behaviour, but that content explains success.}
 
 It might be objected that this is a very thin notion of `representation'.
 Surely philosophers who aim to give a naturalist account of representation are looking for something much richer than the relationship between simple electronic signals and their signifieds?
@@ -310,7 +310,31 @@ This cashes out the pretheoretic usage of terms like `represent', `describe' and
 % If teleosemantics is to be that theory, it should eventually be translated into a formal language comparable with that of Shannon's theory.
 % Obviously I cannot pursue that project here, but its conception should at least give the reader a sense of the positive position underlying my negative assertions.
 
-Arguments denying the relevance of communication theory for philosophy based on {\sc Shannon's Warning} do not hold water.
+\subsection{A sceptical riposte: symbol manipulation does not bestow content}
+
+Encoding, the sceptic will notice, is the transformation of symbols from one lexicon into another.
+Since I am claiming it is the encoding scheme that confers content, my position appears to entail that any process by which symbols of one lexicon are converted into symbols of another confers content.
+That is a big problem: it is very implausible that manipulating symbols from lexicon 1 into lexicon 2 bestows the symbols of lexicon 2 with the content `symbol such-and-such from lexicon 1'.
+If that is all that is happening in an encoding scheme, then it is very implausible that central model signals really do have the contents I ascribe.
+
+To respond, I accept that the initial premise is true:
+
+\begin{myquote}
+\smi{}: Converting symbols of lexicon 1 into symbols of lexicon 2 does not bestow the symbols of lexicon 2 with content.
+\end{myquote}
+
+\noindent I think we can all agree on \smi{}.
+After all, teleosemantics is liberal, but it is not that liberal.
+The question is whether symbol manipulation is all there is to encoding.
+While the term `encoding' might be used in different ways in different branches of science and philosophy, including in ways that imply only symbol manipulation, I contend that its use in communication theory implies something stronger.
+Encoded strings are designed to be decoded. 
+That makes all the difference, because it makes the whole system fit the teleosemantic template. Shuffling symbols does not bestow content; putting five causal nodes in a sequential chain does not bestow content. 
+Only joint design of sender and receiver bestows content.
+Further, source outcomes need not be symbols at all. 
+And the actions of the receiver need not be exact duplicates of the outputs at the source; they need only be actions that, combined with source outcomes, yield a cost function for the system as a whole.
+If this sounds like the sender-receiver framework associated with \citet{skyrms2010signals} and \citet{lewis1969convention}, that's because it is all but formally equivalent to it \citep{martinez2019deception}.
+
+To summarise the entire section, arguments denying the relevance of communication theory for philosophy based on {\sc Shannon's Warning} do not hold water.
 A stronger argument adverts to the breadth of application of another of Shannon's mathematical measures: mutual information.
 It is to this point I now turn.
 
