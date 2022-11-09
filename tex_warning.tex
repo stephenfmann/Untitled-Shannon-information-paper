@@ -233,7 +233,7 @@ The specific mapping from signal to source -- the `semantics' of the signalling 
 
 Teleosemantics puts theoretical legs under this intuition.
 The central model (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}; here and throughout I refer to Millikan's \parencite*[$\S$6]{millikan2004varieties} teleosemantic theory).
-Teleosemantics attributes semantic content to signals when they are intermediaries between cooperating senders and receivers.
+Teleosemantics attributes semantic content to signals when they are intermediaries between cooperating senders and receivers, such that receivers condition their behaviour on the form of the intermediary.
 Senders and receivers cooperate when they share a proper function, an outcome they have been designed to bring about.
 The content of a signal is the state of affairs that, together with the receiver's response to the signal, produces outcomes that satisfy the sender-receiver partnership's shared proper function.
 In figure \ref{fig:teleo} a distal state sits causally upstream of a target that the receiver has causal influence over.
@@ -246,6 +246,8 @@ Signalling games typically collapse those states too (figure \ref{fig:sr}).
 Applying the basic teleosemantic model to the central model, the encoder is a sender and the decoder is a receiver.
 Sender and receiver share a proper function as a consequence of design: to reconstruct the source string.
 The basic teleosemantic model does not include noise, but adding a noise variable would not affect the definition of semantic content.
+The basic teleosemantic model makes explicit the fact that acts are judged successful or unsuccessful depending on a distal state.
+This `Success?' variable, and the causal link to it from the relevant distal state, is omitted from figures \ref{fig:central} and \ref{fig:sr}.
 
 \input{fig_sr}
 
@@ -258,7 +260,7 @@ Each time the coin is tossed at the source, the eventual task of the decoder is 
 Suppose the sender transmits signals according to the code $H\rightarrow1,\ T\rightarrow0$, and the result of three coin tosses is $H, T, H$.
 Then, assuming no noise, when the decoder receives the signal $101$ it correctly produces the sequence $HTH$.
 Communication is successful because the reproduced string is identical to the original sequence of outcomes.
-The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target. In general, teleosemantics claims not that content explains behaviour, but that content explains success.}
+The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target. In general, teleosemantics claims not that content explains behaviour, but that content explains success. Figure \ref{fig:teleo} makes that explicit by distinguishing the Act variable from the Success? variable.}
 
 It might be objected that this is a very thin notion of `representation'.
 Surely philosophers who aim to give a naturalist account of representation are looking for something much richer than the relationship between simple electronic signals and their signifieds?
@@ -315,6 +317,7 @@ This cashes out the pretheoretic usage of terms like `represent', `describe' and
 Encoding, the sceptic will notice, is the transformation of symbols from one lexicon into another.
 Since I am claiming it is the encoding scheme that confers content, my position appears to entail that any process by which symbols of one lexicon are converted into symbols of another confers content.
 That is a big problem: it is very implausible that manipulating symbols from lexicon $L_1$ into lexicon $L_2$ bestows the symbols of $L_2$ with the content `symbol such-and-such from $L_1$'.
+Symbol manipulation is a matter of syntax, not semantics.
 If that is all that is happening in an encoding scheme, then it is very implausible that central model signals really do have the contents I ascribe.
 
 To respond, I accept that the initial premise is true:
@@ -324,15 +327,16 @@ To respond, I accept that the initial premise is true:
 \end{myquote}
 
 \noindent I think we can all agree on \smi{}.
-Teleosemantics is liberal, but it is not that liberal.
+Teleosemantics is liberal, but not that liberal.
 The question is whether symbol manipulation is all there is to encoding.
 While the term `encoding' might be used in different ways in different branches of science and philosophy, including in ways that imply only symbol manipulation, I contend that its use in communication theory implies something stronger.
 Encoded strings are produced as part of a sender-receiver system, in order to be decoded during performance of a joint function.
-That makes all the difference, because it makes the whole system fit the teleosemantic template.
-Shuffling symbols does not bestow content, only joint design of sender and receiver bestows content.
+That makes a difference, because it ensures the system fits the teleosemantic template.
+Shuffling symbols does not bestow content, but joint design of sender and receiver does.
 
-Furthermore, although I have focused on symbols in the exposition so far, it turns out that source outcomes need not be symbols at all. 
-And the actions of the receiver need not be exact duplicates of the outputs at the source; they need only be actions that, combined with source outcomes, yield a cost function for the system as a whole.
+Furthermore, although I have focused on symbols in the exposition so far, it turns out that source outcomes need not be symbols at all.
+They could be dance steps, military manoeuvres, restaurant locations; anything over which a probability distribution can be defined.
+It also turns out that the actions of the receiver need not be exact duplicates of the outcomes at the source; they need only be actions that, combined with source outcomes, yield a cost function for the system as a whole.
 If this sounds like the sender-receiver framework associated with \citet{skyrms2010signals} and \citet{lewis1969convention}, that's because it is formally equivalent to it \citep{martinez2019deception}.
 Source and target need not be symbols.
 They are just commonly described as such because that is part of the typical use case of communication theory.

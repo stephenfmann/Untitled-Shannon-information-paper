@@ -113,6 +113,7 @@ Philosophy has understood information theory as a mostly definitional effort: fo
 
 \noindent Let me lay out my suspicions clearly: I suspect that philosophers move from \ami{} to the intermediate claim \ait{} by employing the term `Shannon information' to mean both `mutual information' and `all of the tools and concepts available to information theory'.
 I further suspect that philosophers move from \ait{} to \act{} by treating information theory and communication theory as identical.
+Take these moves in turn.
 
 `Shannon information' is given diverse definitions in philosophy (table \ref{tab:shannon}).
 By invoking it, demonstrably true claims about mutual information can be interpreted as unsupported claims about information theory as a whole.
@@ -142,15 +143,15 @@ I want to mention three popular lines of thought in order to distinguish them fr
     \item Information theory cannot distinguish signals and cues, therefore informational measures are not the right way to naturalise semantic content \citep{lean2014shannon}; \citep[$\S$4]{hutto2013radicalizing} 
 \end{itemize}
 
-\noindent These three views share a premise: that the only tools available to information theory are mutual information and related measures.
-I reject the assumption that the only resources offered by Shannon's formal work to naturalist theories of representation are measures of correlational information.\footnote{\citet[$\S$5]{shea2018representation} discusses structural correspondence as a non-correlational source of semantic content, and suggests other possible sources \citep[p. 76 n. 1]{shea2018representation}. But he appears to share the premise that, among the tools devised by Shannon, measures of correlation are all that is relevant for naturalist representation.}
-The view I proposed in the section on Shannon's Warning implies:
+\noindent These three views share a premise: that the only way Shannon's formal work could contribute to naturalistic representation is via measures of correlation.\footnote{\citet[$\S$5]{shea2018representation} discusses structural correspondence as a non-correlational source of semantic content, and suggests other possible sources \citep[p. 76 n. 1]{shea2018representation}. But he appears to share the premise that, among the tools devised by Shannon, measures of correlation are all that is relevant for naturalist representation.}
+I reject this assumption.
+The view I propose in the section on Shannon's Warning implies:
 
 \begin{itemize}
     \item Regardless whether information theory can distinguish signals and cues, the semantic content of a signal is not defined in terms of measures of correlation.
 \end{itemize}
 
-\noindent This contradicts orthodoxy, but my point is that this particular orthodoxy was never well-motivated.
+\noindent This contradicts orthodoxy, but my point is that this particular orthodoxy, though tempting, is wrong-headed.
 
 Before moving on, I recognise that these four projects would be consistent with each other if only proponents agreed they meant different things by `semantic content'.
 The Skyrms-Isaac project is to assign to vehicles a formal object capturing their correlational relationships.
@@ -246,13 +247,13 @@ Of course, nothing prevents us applying Kelly's theorem to signals too.
 My claim is not that theorems about cues do not apply to signals, but that theorems about signals do not apply to cues.
 There is an asymmetry in the definition of signals and cues, and the two kinds of theorem are asymmetric in a way that reflects that.
 Any vehicle can be treated as a cue simply by failing to specify whether or not it was designed for communicative use.
-That is what Kelly's theorem does, in the guise of keeping the mutual information fixed and asking how the receiver can make use of it.
+That is what Kelly's theorem does, in the guise of keeping mutual information fixed and asking how the receiver can make use of it.
 (In fact Kelly's prose implies that the vehicle in question is a signal; close inspection reveals the theorem does not require it to be one.)
 The second and third theorems by contrast require that their vehicles be signals, because they assure a level of functional performance that is only available when the sender tunes the vehicle's production to the features of the channel.
 By definition, the second and third theorems cannot be applied to cues.
 
 Furthermore, these points are reflected in the mathematical formalism of each theorem.
-The second theorem discusses maximising the transmission rate of a channel by changing the encoding scheme thereby changing the distribution of input symbols.
+The second theorem discusses maximising the transmission rate of a channel by changing the encoding scheme, thereby changing the distribution of input symbols.
 This can be written formally as $\max_{p(x)}I(X;Y)$.
 In this set-up, $X$ and $Y$ are causally connected at either end of a signalling channel.
 In contrast, Kelly's theorem keeps $I(X;Y)$ fixed and assumes nothing about the causal connection between $X$ and $Y$.
@@ -275,7 +276,7 @@ But the sceptic knows that $\max_{p(x)}I(X;Y)$ is the \textbf{capacity} of the c
 The capacity is defined only in terms of the signal before noise ($X$) and the signal after noise ($Y$); it is oblivious to the source and target strings -- oblivious to what the signal is actually about.
 If the second theorem and the channel capacity it defines are agnostic to the content of signals, is not the sceptic justified in asserting that the definition of semantic content must be found elsewhere than communication theory?
 \citet[344]{dennett1983intentional} seemed to be making this point when he distinguished between the ``\textit{capacity} of information-transmission and information-storage vehicles'' and their contents, stating that Shannon's theory deals only with capacity.
-More recently he presses the point:
+More recently he reasserts the claim:
 
 \begin{myquote}
 Shannon devised a way of \textit{measuring} information, independently of what the information was \textit{about}, rather like measuring \textit{volume} of liquid, independently of which liquid was being measured. (Imagine someone bragging about owning lots of quarts and gallons and not having an answer when asked, ``Quarts of what -- paint, wine, milk, gasoline?'')
@@ -290,7 +291,7 @@ Before responding, I accept that one of the premises of the sceptical riposte is
 \cia{}: Channel capacity can be measured without specifying the contents of signals transmitted through the channel.
 \end{myquote}
 
-\noindent Channels, characterised by the conditional distribution of output symbols given input symbols $p(y|x)$, are general-purpose in the sense that the outcomes of any source can be encoded by the set of input symbols $X$.
+\noindent Channels, characterised by the conditional distribution of signals-after-noise given signals-before-noise $p(y|x)$, are general-purpose in the sense that the outcomes of any source can be encoded by the set of code symbols $X$.
 Storage devices like hard drives and transmission media like fibre-optic cables can be assigned measures of capacity without regard to what they are storing or transmitting.
 Any channel can in principle be used to communicate anything.
 The honeybee waggle dance could be used to communicate military instructions if the field commander sending the message had sufficiently fine-grained control over the placement of food sources in the bees' locale.
@@ -301,7 +302,7 @@ Signals in the central model (for example) do have content as soon as a source a
 If an army managed to employ the waggle dance to transmit military instructions, each dance would gain a specific instruction as its one of its semantic contents in accordance with the code devised ahead of time by the human communicators.
 As discussed in the section on Shannon's Warning, communication theory and teleosemantics both deliver this result.
 That a channel can be used to transmit anything does not mean communication theory remains forever agnostic about what is actually being transmitted in a given circumstance.
-In terms of Dennett's analogy, the theory both measures the volume of a liquid and tells you which liquid is being measured.
+In terms of Dennett's analogy, the theory both measures the volume of a liquid and tells you what liquid is being measured.
 Dennett really does appear to be saying that communication theory (or information theory, or ``Shannon-Weaver theory'') involves only measures like mutual information and channel capacity.
 If he means to say this, he is wrong.
 
