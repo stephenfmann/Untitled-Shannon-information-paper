@@ -6,15 +6,778 @@
 
 \maketitle
 
-\input{tex_abstract}
+%%%
+%%%
+%%%
+\begin{abstract}
+\noindent Prominent views about cognitive representations share a premise: that the only relevance communication theory could have for representational content is via measures of correlation. Here I challenge that premise by rejecting two common misconceptions: that Claude Shannon said that the meanings of signals are irrelevant for communication theory (he didn't and they aren't), and that since correlational measures can't distinguish representations from natural signs, communication theory can't distinguish them either (the premise is true but the conclusion is false and the argument is invalid).
+\end{abstract}
 
-\input{tex_intro}
+%%%
+%%%
+%%%
+\section{Introduction: blocking the path to scepticism}\label{sec:intro}
 
-\input{tex_warning}
+Communication theory measures the costs and benefits of representation, and describes judicious representational trade-offs. 
+There is a popular idea that the aspects of representation communication theory deals with are strictly distinct from representational content:
 
-\input{tex_agnostic}
+\begin{myquote}
+[Communication theory] ignores questions having to do with the \emph{content} of signals, what \emph{specific information} they carry, in order to describe \emph{how much} information they carry.
+\par\hspace*{\fill}\citet[41]{dretske1981knowledge}, emphasis original
+\end{myquote}
 
-\input{tex_conclusion}
+\begin{myquote}
+Shannon-Weaver theory measures the \emph{capacity} of information-transmission and information-storage vehicles, but is mute about the \emph{contents} of those channels and vehicles, which will be the topic of the still-to-be-formulated theory of semantic information.
+\par\hspace*{\fill}\citet[344]{dennett1983intentional}, emphasis original
+\end{myquote}
+
+\begin{myquote}
+Shannon’s theory, taken in itself, is purely quantitative: it ignores any issue related to informational content.
+\par\hspace*{\fill}\citet[1989]{lombardi2015shannon}
+\end{myquote}
+
+\begin{myquote}
+Shannon offers no analysis of the relation in virtue of which a sign carries information \textit{about} a state of affairs (his interest was in other issues).
+\par\hspace*{\fill}\citet[7]{neander2017mark}, emphasis original
+\end{myquote}
+
+The quotes refer to signals and signs, and it is nowadays commonplace to extend the same idea to cognitive representations.
+Cognitive scientists apply mathematical tools derived from communication theory to study representations in the brain, but these applications are in some important sense orthogonal to the determination of representational content.
+
+This paper rejects the orthodox separation of communication theory from theories of representational content, by undercutting its two primary justifications.
+I'll refer to my opponents as "sceptics", by which is meant scepticism about the relevance of communication theory for philosophical theories of content.
+The remainder of this introduction outlines the two main ways this scepticism is justified and indicates where each goes wrong.
+
+First, scholars often appeal to a warning given by Claude Shannon, the founder of communication theory, that the term `information' as applied in the theory should be sharply distinguished from the colloquial term `meaning'.
+While Shannon certainly did make this claim, philosophers have come to interpret him as saying something stronger: that signals in communication-theoretic models need not mean anything.
+Properly interpreted, Shannon's warning in no way justifies that claim, and therefore does not justify currently prevalent scepticism.
+It turns out that Shannon made use of a pretheoretic notion of content in describing signals, and that contemporary communication theorists continue to use terms like `represent' and `describe' in these contexts.
+I argue that teleosemantics captures their usage because it treats signals in communication-theoretic models as representations.
+
+Second, many authors note that certain mathematical tools developed by Shannon can be applied in contexts far removed from signalling systems.
+They conclude that these tools are insufficient on their own to capture what is philosophically interesting about representation.
+I argue that although it is true that measures like entropy and mutual information cannot distinguish the signal-signified relationship from other correlational relationships, sceptics undersell the resources available to communication theory.
+The theory involves models that define signals, and theorems that describe the costs and benefits of transmitting and responding to signals.
+These theoretical results apply specifically to signalling systems, not just any correlational relationship, and can therefore describe more interesting properties of representations than just quantities of mutual information.
+
+Communication theory ought to be expanded to describe representations in cognitive systems, and ought to be embedded in naturalist approaches to content.
+I note that the use of communication-theoretic tools in cognitive science is commonplace, and sceptics are not generally complaining about that.
+Rather, sceptical assertions imply that all of the theoretical and practical work of communication theory could go on without any reference to the contents of representations, and without any consideration of the way in which representations acquire their contents.
+It is this that I take to be orthodoxy, and it is the justification of this kind of claim that I argue against here.
+
+%%%
+%%%
+%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%% Shannon's Warning %%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Shannon's Warning}\label{sec:warning}
+
+The first route to scepticism about the relevance of communication theory for naturalist representation begins with the claim that Claude Shannon, the founder of communication theory, warned that his theory had nothing to do with meaning.
+In this section I argue that what Shannon actually said has been misconstrued by philosophers.
+He was not talking about signals, but about a different aspect of his model.
+As it turns out, Shannon asserted a pretheoretic notion of content for communication-theoretic signals, which contemporary communication theorists still endorse, and which teleosemantics captures.
+
+\subsection{The central model of communication theory}\label{subsec:central}
+
+% Prior to the Second World War, communications engineering made progress through practice rather than theory.
+% While technologies and coding techniques improved, theoretical background was sparse.
+% Work by \citet{nyquist1924certain} and \citet{hartley1928transmission}, however, indicated that a generalised mathematical framework for communication was possible.
+% In part due to the heavy cryptographic and communicative demands of the war effort, Claude Shannon came to devise the general theory we know today.
+
+The heavy cryptographic and communicative demands of the Second World War led mathematicians and engineers, spearheaded by Claude Shannon, to develop the discipline known today as communication theory.
+Published soon after the war's conclusion, the insights of Shannon's foundational text \parencite*{shannon1948mathematicalc} are predicated on a picture of communication we shall call the \textbf{central model} (figure \ref{fig:central}).
+The central model construes the goal of communication as reproducing, at a target location, a symbol string produced at a spatiotemporally distant source.
+The goal is achieved by \textbf{encoding} the source string, which means converting it into a sequence of physical events (typically electrical pulses) that can be transmitted as a signal across a channel.
+At the far end of the channel the signal is decoded, producing a target string.
+Communication is deemed successful when the target string is sufficiently similar to the source string.
+How similar the two strings need to be to count as `sufficiently similar' will differ depending on the context.
+What is important is that communication is pitched as a \textit{syntactic} enterprise: it is the transmission and reconstruction of symbol strings, not the conveyance of their meanings, that is in question.
+
+\input{fig_central.tex}
+
+For example, the lexicon from which the source string is constructed might be the set of symbols of the Latin alphabet $\{A,B,C...\}$ plus a full stop and a space.
+The code lexicon might be the binary symbols $\{0,1\}$ that are instantiated by electrical on/off pulses.
+Given an encoding scheme, any string of Latin symbols can be converted into a sequence of 0s and 1s, and thus transmitted as a signal across a wire.
+The decoder has a duplicate set of Latin symbols from which it must pick out the right symbols in the right order; the signal enables it to perform this task successfully.
+
+It is costly to transmit encoded symbols.
+Electrical wires require power and time to operate.
+Communication theory can be thought of as a collection of tools and methods enabling an optimal trade-off between signalling effort and the benefits of accurate string reconstruction.
+In the simple case of the central model, the most efficient coding schemes are those that use short sequences of 0s and 1s to represent highly probable source strings.
+That is because minimising signalling effort means minimising the number of code symbols transmitted, on average.
+Pairing probable source strings with short code strings -- short signals -- is the most efficient procedure.
+Therefore, in order to devise a good code, you need to know the probabilities of each source string being produced.
+Crucially, that is \textit{all} you need to know.
+Whether or not source strings also carry natural language meaning is irrelevant to the problem of designing a code.
+Shannon stated this clearly, as the next subsection details.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Shannon's Warning}\label{subsec:warning}
+
+Communication theory makes heavy use of the term `information'.
+Shannon understood the semantic connotations of the term and took care to fend off misinterpretation.
+In the introduction to the first of his foundational papers he writes:
+
+\begin{myquote}
+The fundamental problem of communication is that of reproducing at one point either exactly or approximately a message selected at another point. Frequently the messages have \emph{meaning}; that is they refer to or are correlated according to some system with certain physical or conceptual entities. These semantic aspects of communication are irrelevant to the engineering problem.
+\par\hspace*{\fill}\citet[379]{shannon1948mathematicalc}, emphasis original
+\end{myquote}
+
+\noindent Clearly ``message'' in this context refers to a source string.
+Shannon warns that the semantic properties of lexical elements do not affect the process of transmitting and reconstructing them.
+To see why this is true, note that the strings of Latin symbols described in the above example need not form English-language words, nor words of any other language.
+The problem of reconstructing those strings has a distinct mathematical sense, regardless of the strings' natural language implications.
+
+In 1949 Shannon's papers were released in a single volume with prefatory remarks by Warren Weaver \citep{shannon1949mathematical}.
+One of Weaver's comments expands on Shannon's earlier technical statement:
+
+\begin{myquote}
+In fact, two messages, one of which is heavily loaded with meaning and the other of which is pure nonsense, can be exactly equivalent, from the present viewpoint, as regards information. It is this, undoubtedly, that Shannon means when he says that ``the semantic aspects of communication are irrelevant to the engineering aspects.''
+\par\hspace*{\fill}\citet[8]{shannon1949mathematical}
+\end{myquote}
+
+\noindent Weaver misquotes Shannon (``\emph{the} semantic aspects'' instead of ``\emph{these} semantic aspects''; ``the engineering \textit{aspects}'' instead of ``the engineering \textit{problem}'').
+In context the mistake is insignificant, because the preceding sentences demonstrate that Weaver interprets the point accurately.
+By `information' he means a certain property of source strings, defined as the optimal number of symbols in the corresponding code string.
+This measure is more commonly known as \textbf{surprisal}, and is defined as $\log{\frac{1}{p(x)}}$ for a message $x$ that is produced at the source with probability $p(x)$.
+It is clear that two messages -- two source strings -- can have the same surprisal, with one being a meaningful sentence of a natural language and the other being nonsense.
+One need only define a source that produces a meaningful sentence and a nonsensical sentence with the same probability.
+
+In context the misquote is unproblematic, but out of context Weaver can be read as stating what I will eventually deny: that the semantic properties of both the source string \textit{and the code string} are irrelevant to the well-functioning of engineered communication systems.
+To dispel any doubt, I endorse Shannon's original claim.
+I take it to be as follows:
+
+\begin{myquote}
+{\sc Shannon's Warning}: In the central model, once the statistical properties of source strings have been taken into account, the semantic properties of source strings are irrelevant to the engineering problem of communication.
+\end{myquote}
+
+\noindent 
+% Symbols of a source lexicon consisting of Latin characters can be combined to produce messages that would be meaningful as strings of English.
+% But such meanings are irrelevant to the problem of converting those strings into sequences of 0s and 1s from a code lexicon.
+The meanings of source strings are not represented in the mathematics of communication theory.
+{\sc Shannon's Warning} tells us that finding an efficient solution to the fundamental problem of communication requires knowing only the statistical properties of symbols in the source lexicon, not the meanings of strings constructed therefrom.
+
+One might think that the meanings of source strings \emph{could} play a role in reconstructing them efficiently.
+An intelligent observer receiving a noisy signal that decodes to {\sc SHALL I COMPARW TGEE TO A SUMNERS DAY} might be able to reconstruct the original Shakespearean line on the basis of its presumed meaning.
+The point of {\sc Shannon's Warning} is not to rule this out, but to circumscribe the statistical aspects of the problem.
+(In fact, it might not take much sophistication to design an error-correcting receiver that makes use of the fact that {\sc RW} rarely occurs in the messages it receives to correct {\sc COMPARW} to {\sc COMPARE} on purely statistical grounds.
+Weaver's remarks include an extensive discussion of such issues \citep[$\S$2]{shannon1949mathematical}.)
+
+Philosophers took heed of {\sc Shannon's Warning}.
+But Weaver's misquote led to widespread misinterpretation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Philosophers' interpretations of the warning}\label{subsec:warningPhil}
+
+Soon after Shannon's initial publications, \citet{bar-hillel1953semantic} set the standard for philosophical interpretation of communication theory:
+
+\begin{myquote}
+The Mathematical Theory of Communication, often referred to also as Theory (of Transmission) of Information, as practised nowadays, is not interested in the content of the symbols whose information it measures. The measures, as defined, for instance, by Shannon, have nothing to do with what these symbols symbolise, but only with the frequency of their occurrence.
+\par\hspace*{\fill}\citet[147]{bar-hillel1953semantic}
+\end{myquote}
+
+\noindent Like Weaver, Bar-Hillel and Carnap likely understood {\sc Shannon's Warning} correctly; like Weaver, the words they used could be misconstrued.
+By referring only to `symbols' they risked conflating source symbols and code symbols.
+Nonetheless, the job of philosophers, as Bar-Hillel and Carnap saw it, was to provide a theory of \textit{semantic information} that would capture the aspect Shannon ignored.
+They explicitly distinguish two kinds of theory, implying a distinction between two entities or concepts.
+% Both concepts are indicated by the term `information', but the theory of information pursued by mathematicians and engineers targets a different kind of entity from that which philosophers seek.
+
+Bar-Hillel and Carnap's exposition had significant influence.
+\citet[p. 241, n.
+1]{dretske1981knowledge} cited them as the best-known sceptics about the relevance of communication theory for philosophical questions about content.
+Dretske also offered an interpretation of {\sc Shannon's Warning}:
+
+\begin{myquote}
+Communication theory does not tell us what information is.
+It ignores questions having to do with the \emph{content} of signals, what \emph{specific information} they carry, in order to describe \emph{how much} information they carry.
+In this sense Shannon is surely right: the semantic aspects are irrelevant to the engineering problems.
+\par\hspace*{\fill}\citet[41]{dretske1981knowledge}, emphasis original
+\end{myquote}
+
+\noindent Two things are worth noticing.
+First, Dretske is talking about the content of \textit{signals}, whereas {\sc Shannon's Warning} concerns the semantic properties of source strings.
+Second, Dretske repeats Weaver's misquote of Shannon: ``\textit{the} semantic aspects'' instead of ``\textit{these} semantic aspects'' (strictly speaking, Dretske does not use quotation marks -- but earlier on the same page he repeats the misquote along with an endnote reference to Shannon's original statement).
+Influenced by Dretske, \citet{dennett1983intentional} repeated Bar-Hillel and Carnap's call for a distinction between mathematical and semantic information:
+
+\begin{myquote}
+A more or less standard way of introducing the still imperfectly understood distinction between these two concepts of information is to say that Shannon-Weaver theory measures the \emph{capacity} of information-transmission and information-storage vehicles, but is mute about the \emph{contents} of those channels and vehicles, which will be the topic of the still-to-be-formulated theory of semantic information.
+\par\hspace*{\fill}\citet[344]{dennett1983intentional}, emphasis original
+\end{myquote}
+
+\noindent Dennett speaks of ``channels and vehicles'', which would presumably include signals.
+Like Dretske, the version of the warning operative here is different from the original statement.
+\citet[$\S$6]{dennett2017bacteria} is still pursuing this line, and it is nowadays standard to distinguish between two senses of the term `information' in scientific applications.
+The Stanford encyclopedia entry `Biological Information' is organised around the distinction, using the labels ``Shannon's concept of information'' and ``Teleosemantic and other richer concepts'' \citep{godfrey-smith2016biological}.
+\citet[21]{piccinini2011information} say ``Shannon information does not capture, nor is it intended to capture, the semantic content, or meaning, of signals,'' again focusing on signals rather than source strings.
+It is accepted practice to refer to Shannon's formal tools as unrelated to semantic content without further argument: ``I will interpret ‘information’ as ‘semantic information’ (i.e. semantic content), not as Shannon information'' \citep[p. 12 n. 14]{artiga2020signals}; ``Shannon offers no analysis of the relation in virtue of which a sign carries information \textit{about} a state of affairs (his interest was in other issues)''  \citep[p. 7, emphasis original]{neander2017mark}; ``One of the most cited quotes by Shannon is that referred to the independence of his theory with respect to semantic issues [...] Shannon’s theory, taken in itself, is purely quantitative: it ignores any issue related to informational content'' \citep[1988-9]{lombardi2015shannon}; see also \citet[6]{cao2020new} and \citet[1]{kolchinsky2018semantic}.
+
+It could plausibly be argued that the distinction these scholars are aiming for is between semantic content and mutual information.
+Mutual information is a measure of correlation, related to surprisal but formally different from it.
+The authors cited above could be read as claiming that signals can bear mutual information without possessing semantic content.
+I discuss such claims in the second half of the paper; my point here is just that insofar as these writers appeal to Shannon and Weaver to justify their position, they have misinterpreted the communication theorists' remarks.
+Weaver's quote above uses `information' as synonymous with surprisal, not mutual information; both he and Shannon were referring to a property of source strings, not a correlation between signals and signifieds.
+To my knowledge, no explicit argument has been offered that moves from the original version of {\sc Shannon's Warning} to the conclusion that there exists a property of signals, invoked in communication theory, that is distinct from the concept sought by a philosophical theory of content.
+
+The collective misconstrual would not matter if not for the fact that the mutated form of {\sc Shannon's Warning} is false by the lights of communication theorists themselves.
+It is also false by the lights of teleosemantics, a popular theory of content.
+According to both teleosemantics and contemporary communication theory, signals in the central model have semantic content.
+What is more, their content is directly relevant to the engineering problem of communication, as we shall now see.
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\subsection{The content of a signal in the central model is a source string}\label{subsec:signalContent}
+
+Contemporary discussion of the relevance of communication theory for semantic content focuses on signals.
+But nothing about signals can be concluded directly from {\sc Shannon's Warning}, which concerns source strings only.
+The mathematical tools of communication theory are indeed blind to the meaning of source strings, but interpretations of the theory require that signals are meaningful: the content of a signal is the identity of a source string.
+(For simplicity I assume a one-to-one mapping between source strings and code strings; my substantive points are not affected by loosening this constraint.)
+Philosophers have conflated the true claim that source strings need not have semantic content with the false claim that well-functioning signals need not have semantic content.
+
+Why do I say central model signals have content?
+Because communication theorists say that they do.
+Describing Morse code, \citet[385]{shannon1948mathematicalc} says that letters are ``represented by'' sequences of dots and dashes.
+In their widely cited textbook \citet[105]{cover2006elements} say the same.
+Shannon further uses the locution ``represented by'' in this context on pages 402 and 405; Cover \& Thomas use this and related terms (including calling encodings ``representations'') on pages 5-6, 130, 134, 218-9, 221 and 301.
+Obviously the authors cannot be interpreted as taking a stance on philosophical theories of content.
+Nevertheless, their usage is evidence of a pretheoretic notion of representation at work -- perhaps something as weak as denotation or indication, but clearly a relation of signification linking signals with source strings.
+
+Furthermore, standard interpretations of the theorems of communication theory require that signals represent source strings.
+Consider the \textbf{first theorem of communication theory}, often called the source coding theorem \citep[$\S$5]{cover2006elements} \citep[$\S$4]{mackay2003information}.
+The theorem gives a lower bound on the average number of binary symbols required to encode source strings of a certain length.
+% This in turn can be used to define the minimum required size of a signal sent through a noiseless channel to perfectly reproduce the sequence of outcomes.
+The fewest binary symbols required is equal to a probabilistic measure of the source called its \textbf{entropy}.
+The theorem clearly embodies a notion of signification or reference: both the question that prompted the theorem (how many symbols are required?) and the result it offers (the entropy of the source) assume that the symbols are being used to record the outputs of the source.
+Cover \& Thomas make this clear:
+
+\begin{myquote}
+This theorem provides another justification for the definition of entropy rate -- it is the expected number of bits [i.e. code symbols] per [source] symbol required to describe the [source] process.
+\par\hspace*{\fill}\citet[115]{cover2006elements}
+\end{myquote}
+
+\begin{myquote}
+We can design source codes for the most efficient representation of the data. [...] The common representation for all kinds of data uses a binary alphabet. Most modern communication systems are digital, and data are reduced to a binary representation for transmission over the common channel.
+\par\hspace*{\fill}\citet[218]{cover2006elements}
+\end{myquote}
+
+\noindent The extent to which Cover \& Thomas's use of terms like ``describe'' and ``represent'' corresponds with philosophers' notions of semantic content has not to my knowledge been asked.
+Their usage is evidence that some notion of signification is required to make sense of the theorem.
+A similar sentiment is found in MacKay's textbook, wherein he models a scientist's experimental setup as a source and the results of the experiment as source outcomes:
+
+\begin{myquote}
+We now discuss the information content [entropy] of a source by considering how many bits [code symbols] are needed to describe the outcome of an experiment.
+\par\hspace*{\fill}\citet[73]{mackay2003information}
+\end{myquote}
+
+\noindent Again, the sense of the entropy measure is intimately bound up with representation, in this case in describing the outcome of the experiment.
+Similarly, in a discussion of a special case of the theorem, \citet[397]{shannon1948mathematicalc} speaks of ``the number of bits [code symbols] required to specify the sequence'' of outcomes of the source process.
+% It should be clear that ``specify[ing] the sequence'' means bearing the kind of relation teleosemantics requires a signal to bear to its signified.
+% What is more, communication theory provides tools for quantifying the severity of misrepresentation \citep{martinez2020information}.
+% \textit{Rate-distortion theory} describes trade-offs between sender effort and receiver accuracy \citep{shannon1959coding}.
+% Such results would be uninterpretable without appealing to misrepresentation, or falsity, in signals.
+% Sceptics might wish to argue that this is not the \emph{same} sense of falsity required for a theory of content, but they would have to deny teleosemantics.
+% Since rate-distortion theory has been all but ignored in the relevant philosophical literature, they would have to present novel arguments in order to do so.
+
+Communication theorists from Shannon to contemporary textbook authors make use of a notion of semantic content, as indicated by their use of words like `represent', `describe' and `specify'.
+There is an intuitive sense to this usage.
+It must be the case that signals in the central model bear some exploitable relation to source strings.
+If the decoder is to perform properly, it must be able to reconstruct the original string from the signal.
+There must therefore be some sense in which the signal indicates or refers to the source string.
+The specific mapping from signal to source -- the `semantics' of the signalling system -- is determined by the encoding scheme.
+
+Teleosemantics puts theoretical legs under this intuition.
+The central model (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}; here and throughout I refer to Millikan's \parencite*[$\S$6]{millikan2004varieties} teleosemantic theory).
+Teleosemantics attributes semantic content to signals when they are intermediaries between cooperating senders and receivers, such that receivers condition their behaviour on the form of the intermediary.
+Senders and receivers cooperate when they share a proper function, an outcome they have been designed to bring about.
+The content of a signal is the state of affairs that, together with the receiver's response to the signal, produces outcomes that satisfy the sender-receiver partnership's shared proper function.
+In figure \ref{fig:teleo} a distal state sits causally upstream of a target that the receiver has causal influence over.
+The signal has this distal state as its content, because the receiver can achieve greater success by conditioning its act on the signal.
+
+\input{fig_teleo}
+
+In the central model, source strings play the role of both distal and proximate states (though more recent models in communication theory distinguish them, e.g. \citet{berger1996ceo}).
+Signalling games typically collapse those states too (figure \ref{fig:sr}).
+Applying the basic teleosemantic model to the central model, the encoder is a sender and the decoder is a receiver.
+Sender and receiver share a proper function as a consequence of design: to reconstruct the source string.\footnote{To clarify: the sender's most immediate proper function is to produce a signal that bears a certain relation to the source sequence. But it has this function in part because of its slightly less immediate function, shared with the receiver, of reconstructing the source string at the target.}
+The basic teleosemantic model does not include noise, but adding a noise variable would not affect the definition of semantic content.
+The basic teleosemantic model makes explicit the fact that acts are judged successful or unsuccessful depending on a distal state.
+This `Success?' variable, and the causal link to it from the relevant distal state, is omitted from figures \ref{fig:central} and \ref{fig:sr}; nonetheless, in both the central model and cooperative signalling games the receiver's act together with a distal state determines the joint success of the signalling partnership (via an error measure or payoff matrix).
+
+\input{fig_sr}
+
+Every component of the basic teleosemantic model is present in the central model of communication theory.
+Teleosemantics therefore says that the content of a signal is the source string it encodes.
+That is not because the source string is causally upstream of the encoder, but because the source string is the distal state that determines whether or not the decoder-as-receiver is successful.
+% Different source strings require different decoder acts to achieve success.
+Consider a system that transmits outcomes of coin tosses $\{H,T\}$.
+Each time the coin is tossed at the source, the eventual task of the decoder is to produce the appropriate symbol $H$ or $T$ matching the result of the toss.
+Suppose the sender transmits signals according to the code $H\rightarrow1,\ T\rightarrow0$, and the result of three coin tosses is $H, T, H$.
+Then, assuming no noise, when the decoder receives the signal $101$ it correctly produces the sequence $HTH$.
+Communication is successful because the reproduced string is identical to the original sequence of outcomes.
+The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target. In general, teleosemantics claims not that content explains behaviour, but that content explains success. Figure \ref{fig:teleo} makes that explicit by distinguishing the Act variable from the Success? variable.}
+
+It might be objected that this is a very thin notion of `representation'.
+Surely philosophers who aim to give a naturalist account of representation are looking for something much richer than the relationship between simple electronic signals and their signifieds?
+Indeed, the liberality debate constitutes an ongoing discussion about this very question \citep{artiga2016liberal,artiga2022strong,desouzafilho2022dual}.
+Teleosemantics is particularly susceptible to the charge of being too liberal in its attribution of representational status, because the conditions implied by figure \ref{fig:teleo} are very easy to satisfy.
+
+My argument does not serve to defend teleosemantics against the charge of liberality.
+I am only trying to demonstrate that teleosemantics attributes content to central model signals.
+Detractors may treat this as a mark against teleosemantics; so be it.
+My point is just that the sceptic cannot appeal to {\sc Shannon's Warning} to make their case, because Shannon was talking about source strings rather than signals.
+The sceptic needs independent grounds on which to reject the claim that central model signals have content.
+Many sceptics do offer such grounds; that is what the liberality debate is about.
+
+In continuing to adopt a teleosemantic perspective, I will continue to speak of signals and representations more or less synonymously.
+I am assuming that some of the cognitive structures to which we want to attribute representational status can be described in terms of communication-theoretic models.
+Arguments to this effect can be found in \citet{martinez2019representations} (see also section \ref{sec:conclusion} below), but the broader point is that this assumption cannot be rejected out of hand: its truth or falsity can only be determined by actually doing cognitive science.\footnote{Someone could of course accept that cognitive structures can be modelled in terms of communication theory while rejecting teleosemantics. They would then have to disentangle which parts of Mart\'{i}nez's view they endorse and which they reject. I take the simpler position and endorse all of it.}
+
+% Furthermore, 
+% If a 1 is transmitted when the coin comes up tails, the signal is false.
+% The decoder will fail in its objective to match the symbol it produces with the outcome of the coin toss: it will produce an $H$ when it ought to have produced a $T$.
+% This failure is attributable to the signal being false.
+% In general, a signal is correct to the extent that it accords with the encoding procedure with which the system was designed.
+
+To sum up, by dint of joint design, encoder and decoder have a shared proper function to reconstruct the source string at the target.
+They do this by means of an intermediary -- the code string as signal.
+Teleosemantics identifies the relation between signal and source string as the basic form of semantic content.
+This cashes out the pretheoretic usage of terms like `represent', `describe' and `specify' used by communication theorists.
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Is it really a semantic relation?}
+
+% The relation that enables proper functioning of the decoder is sometimes taken to be purely syntactic.
+% But this view begs the question against teleosemantics.
+% It would be possible to run the argument given here as a modus tollens against teleosemantics, and thus make such a case.
+% But those scholars who deny the relevance of communication theory for the naturalist project do not typically push this line.
+% An exception is \citet[$\S$4]{hutto2013radicalizing}, who demand more than merely proper functioning from a definition of semantic content.
+% They assert that semantic content has \textit{intensionality}, a feature beyond the simple relation between signal and signified.
+% If semantic content requires intensionality, and the signal-source string relation in the central model does not possess intensionality, then teleosemantics is in trouble.
+% A similar idea is proposed by \citet{lean2014shannon}, who does not give specific conditions on semantic content but asserts that it is distinct from the notion of Shannon information, which he takes to be a relation borne between signals and world affairs that explains signals' proper functioning.
+
+% I have argued elsewhere that semantic content does not require intensionality, and that if distinctions like Lean's are to tell against teleosemantics, they must provide clear conditions on semantic content that teleosemantics fails to meet [CITATION REDACTED FOR ANONYMITY].
+% These objections are, I think, based on the broadly correct idea that paradigmatic examples of semantic content are far richer than signals in the central model.
+% Human linguistic utterances possess many more philosophically relevant features than do strings of 1s and 0s.
+% But these objections move from this observation to the conclusion that the teleosemantic approach to the naturalist project cannot be the correct one.
+% I claim this move is unjustified.
+% Of more relevance for the present paper is a similar move, to the conclusion that communication theory cannot aid the naturalist project.
+% This move is similarly unjustified -- and is outright denied by arguments that demonstrate the relevance of the theory for concepts of representation in cognitive science \citep{martinez2019representations}.
+
+% Let me conclude this section by zooming out slightly.
+% Bar-Hillel and Carnap, and many since them, have argued or assumed that the theory of semantic content sought by philosophers must be distinct from communication theory.
+% In the background of my rebuttal to their claims is the idea that the eventual semantic theory will instead be a \textit{generalisation} of communication theory.
+% Or to put it the other way round, communication theory will turn out to be a special case of a broader theory of representation.
+% If teleosemantics is to be that theory, it should eventually be translated into a formal language comparable with that of Shannon's theory.
+% Obviously I cannot pursue that project here, but its conception should at least give the reader a sense of the positive position underlying my negative assertions.
+
+\subsection{A sceptical riposte: symbol manipulation does not bestow content}
+
+Encoding, the sceptic will notice, is the transformation of symbols from one lexicon into another.
+Since I am claiming it is the encoding scheme that confers content, my position appears to entail that any process by which symbols of one lexicon are converted into symbols of another confers content.
+That is a big problem: it is implausible that manipulating symbols from lexicon $L_1$ into lexicon $L_2$ bestows the symbols of $L_2$ with the content `symbol such-and-such from $L_1$'.
+Symbol manipulation is a matter of syntax, not semantics.
+If that is all that is happening in an encoding scheme, then it is implausible that central model signals really do have the contents I ascribe.
+
+To respond, I accept the following premise:
+
+\begin{myquote}
+\smi{}: Converting symbols of lexicon $L_1$ into symbols of lexicon $L_2$ does not bestow the symbols of $L_2$ with content.
+\end{myquote}
+
+\noindent I think we can all agree on \smi{}.
+Teleosemantics is liberal, but not that liberal.
+The question is whether symbol manipulation is all there is to encoding.
+While the term `encoding' might be used in different ways in different branches of science and philosophy, including in ways that imply only symbol manipulation, I contend that its use in communication theory implies something stronger.
+Encoded strings are produced as part of a sender-receiver system, in order to be decoded during performance of a joint function.
+That makes a difference, because it ensures the system fits the teleosemantic template.
+Shuffling symbols does not bestow content, but joint design of sender and receiver does.
+
+Furthermore, although I have focused on symbols in the exposition so far, it turns out that source outcomes need not be symbols at all.
+They could be dance steps, military manoeuvres, restaurant locations; anything over which a probability distribution can be defined.
+It also turns out that the actions of the receiver need not be exact duplicates of the outcomes at the source; they need only be actions that, combined with source outcomes, yield a cost function for the system as a whole.
+If this sounds like the sender-receiver framework associated with \citet{skyrms2010signals} and \citet{lewis1969convention}, that's because it is formally equivalent to it \citep{martinez2019deception}; see again figures \ref{fig:central} and \ref{fig:sr}.
+Source and target need not be symbols.
+They are just commonly described as such because that is part of the typical use case of communication theory.
+The mathematics does not demand that signals be about symbols from a lexicon: they can be about anything at all.
+
+To summarise the entire section, arguments denying the relevance of communication theory for philosophy based on {\sc Shannon's Warning} do not hold water.
+A stronger argument adverts to the breadth of application of another of Shannon's mathematical measures: mutual information.
+It is to this point I now turn.
+
+%%%%
+%%%%
+%%%%
+
+\section{Agnostic information}\label{sec:agnostic}
+
+The second route to scepticism about the relevance of communication theory for naturalist representation begins with the claim that mathematical measures defined within communication theory cannot distinguish between representations and non-representations.
+In other words, information is agnostic to representational status.
+In this section I argue that although this is true of certain mathematical functions like mutual information, communication theory has many more tools at its disposal.
+Communication theory does distinguish between signals and non-signals -- it must do in order for its theorems to have sense.
+The theory is fundamentally about the costs and benefits of representation and how to trade them off judiciously.
+Philosophers undersell the resources available to communication theory by focusing solely on a small set of measures.
+
+\subsection{How scientists use information theory}\label{subsec:scientists}
+
+Around the same time Bar-Hillel \& Carnap were discussing the relevance of Shannon's work for philosophy, scientists began to notice that his mathematical tools were of use beyond the context of communications engineering.
+For example, entropy, originally devised as a measure of how many code symbols would be needed to represent a sequence of source outcomes, was given a more general interpretation as a measure of uncertainty.
+Derivative uses stem from this general interpretation; for example, the entropy of an ecological population captures an aspect of its population diversity, being a measure of uncertainty about which species would be observed if the population were randomly sampled from \citep{margalef1957information}.
+
+Shifts in the interpretation of entropy and other measures accompanied the emergence of the term \textbf{information theory} to describe Shannon's mathematical tools and their more general application across the sciences.
+Today, information theory comprises a set of concepts and measures common to many mathematical and scientific disciplines (see figure \ref{fig:info_theory}).
+For better or worse, it has become customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were devised.
+Since the claims I make below depend on this distinction being upheld, I will continue to use `information theory' and `communication theory' non-synonymously.
+
+\input{fig_info_theory}
+
+Perhaps the most well-known informational measure is \textbf{mutual information}, typically interpreted as the strength of correlation between two variables.
+Mutual information has been employed in a diverse range of sciences, including:
+
+\begin{itemize}
+    \item Behavioural ecology, to measure the correlation between the honeybee waggle dance and the location of food sources \citep{haldane1954statistical}
+    \item Cosmology, to measure the correlation between galaxies' internal morphology and their local environments \citep{pandey2017how}
+    \item Evolutionary biology, to show that the correlation between an environmental cue and a fitness-relevant state of affairs is an upper bound on the increased growth rate of an organism conditioning its behaviour on the cue \citep{donaldson-matasci2010fitness}
+    \item Linguistics, to measure the co-occurrence of words in a corpus \citep[$\S$4]{hunston2002corpora}
+    \item Molecular biology, to measure the correlation between inputs and outputs of a quorum-sensing bacterium \citep{mehta2009information}
+    \item Neuroscience, to measure the correlation between neural firings and environmental states \citep[][and references therein]{rathkopf2017neural}
+\end{itemize}
+
+% \noindent That many things correlate in the natural world is a useful fact for science to exploit.
+% Correlations increase the opportunity to discover features about a target phenomenon.
+% If the target is difficult to observe, it might more easily be studied by observing something that correlates with it. 
+% Furthermore, correlations play a special role in the functional sciences.
+% Biological and cognitive agents can condition their behaviour on cues and signals that correlate with success-relevant states of affairs, and scientists are therefore interested in how correlations are exploited in general.
+% Mutual information and related measures are some of the most common tools employed in these investigations.
+
+\noindent The breadth of application of mutual information is at the heart of a second source of scepticism about the relevance of communication theory for naturalist representation.
+Scholars usually move from a premise about mutual information to a conclusion about information theory as a whole -- which is then seen as encompassing communication theory.
+Because philosophers are rarely explicit about the dialectical moves required to reach this conclusion, in the next few subsections I have tried to tease apart the intended argument in order to refute it.
+As a result, my discussion focuses on one possible way of moving from claims about mutual information to scepticism about the relevance of communication theory.
+There may be other, better arguments that my account does not affect.
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\subsection{Mutual information cannot distinguish signals and cues}
+
+Let us begin with a premise that everyone should accept: mutual information cannot distinguish between \textbf{signals} and \textbf{cues}.
+
+Originating in behavioural ecology, the signal/cue distinction highlights the fact that some informational vehicles have the function to provide the information they do, whereas some are `accidentally' informational, used opportunistically by their receivers \citep[$\S$1.2]{maynardsmith2003animal}.
+Vehicles selected to serve a communicative role are called signals, while vehicles that fortuitously provide information are called cues.
+(In philosophy the term `natural sign' is sometimes used; I am here using `cue' to cover all cases described by that term.)
+The waggle dance is a signal because it evolved in the honeybee lineage to serve as an informational vehicle that enables workers to enjoy greater success at foraging or nest-finding \citep{gould1975honey,riley2005flight}.
+In contrast, bees' use of the position of the sun in the sky to navigate is a cue, because the sun's location is not an outcome of a process of selection that jointly produced both it and the bees' navigational behaviour.
+
+Mutual information quantifies the strength of a correlation no matter whether its vehicles are signals or cues.
+The sheer variety of scientific contexts in which mutual information is used emphasises this point.
+While the correlation between the waggle dance and food locations is due to the fact that the waggle dance is a signal, the correlation between galaxies' morphology and their local environment clearly is not.
+The vehicle in the evolutionary model of \citet{donaldson-matasci2010fitness} is definitionally a cue.
+The co-occurrence of words in a corpus is not a signal (though the words themselves are representations, or at least combine to produce representations).
+Without further detail, it is not clear whether the output of a quorum-sensing bacterium counts as a signal of its input; nonetheless, mutual information between the two can be measured.
+Neural firings are sometimes claimed to be representations, but simply measuring the correlation between them and environmental states is not sufficient to establish this \citep{rathkopf2017neural}.
+% That a vehicle has positive mutual information with an environmental state does not suffice to show that the vehicle is a signal.
+
+From the mere fact that two things bear a correlational relationship, no conclusion can be drawn about whether one is a signal of the other.
+% In other words, one cannot move from a claim about mutual information to a claim about signalhood.
+For the avoidance of doubt, I agree with this point, and suggest encapsulating it as follows:
+
+\begin{myquote}
+\ami: Mutual information cannot distinguish signals and cues.
+\end{myquote}
+
+\noindent The path to scepticism I want to explore is the move from \ami{} to one or both of the following claims:
+
+\begin{myquote}
+\ait: Information theory cannot distinguish signals and cues.
+\end{myquote}
+
+\begin{myquote}
+\act: Communication theory cannot distinguish signals and cues.
+\end{myquote}
+
+\noindent The latter claim would certainly challenge the relevance of communication theory for theories of representation.
+If communication theory cannot distinguish signals and cues, then there is little hope of it distinguishing any of the more sophisticated kinds of representation of interest to cognitive scientists and philosophers; if it cannot distinguish them, likely it cannot say anything philosophically interesting about them.
+
+I am going to argue firstly that \ami{} does not entail \act{}, and secondly that \act{} is false.
+Of course, the second conclusion would immediately entail the first (because we are treating \ami{} as uncontroversially true), but in laying out the first argument we can explore the intermediate claim \ait{}.
+This allows us to describe the contemporary philosophical landscape in relation to the account I am endorsing.
+Most philosophical approaches share a premise that I reject (and that I assume Mart\'{i}nez rejects): that the only way communication theory could be used to naturalise representation is by constructing semantic content from correlational relationships.
+
+The two arguments commence in the following two subsections.
+
+%%%%%%
+%%%%%%
+%%%%%%
+%%%%%%
+\subsection{\ami{} does not entail \act{}}
+
+\begin{myquote}
+Philosophy has understood information theory as a mostly definitional effort: for all philosophers have typically cared, the theory begins and ends with a presentation of what it takes for one random variable (or the worldly feature it models) to carry information about another.
+\par\hspace*{\fill}\citet[1216]{martinez2019representations}
+\end{myquote}
+
+\noindent Let me lay out my suspicions clearly: I suspect that philosophers move from \ami{} to the intermediate claim \ait{} by employing the term `Shannon information' to mean both `mutual information' and `all of the tools and concepts available to information theory'.
+I further suspect that philosophers move from \ait{} to \act{} by treating information theory and communication theory as identical.
+We shall take these moves in turn.
+
+`Shannon information' is given diverse definitions in philosophy (table \ref{tab:shannon}).
+By invoking it, demonstrably true claims about mutual information can be interpreted as unsupported claims about information theory as a whole.
+\citet[$\S$2]{godfrey-smith2016biological} define ``Shannon's concept of information'' (also using the hyphenated term ``Shannon-information'') in terms of correlational relationships like mutual information; they characterise it as ``the sense of information isolated by Claude Shannon and used in mathematical information theory'' \citep[1]{godfrey-smith2016biological}.
+\citet[759]{owren2010redefining} describe ``Shannon and Weaver's \parencite*{shannon1949mathematical} theory of information'' and say ``the associated concept of \textit{Shannon information} refers strictly and solely to observable correlations between events in the world.''
+\citet[106]{dennett2017bacteria} says that ``Shannon's theory is, at its most fundamental, about the statistical relationship between different states of affairs in the world: What can be gleaned (in principle) about state A from the observation of state B?'', later explicitly distinguishing Shannon information from semantic information.
+\citet[p. 12, n. 11]{shea2018representation} says that ``\citet{shannon1948mathematicalc} developed a formal treatment of correlational information -- as a theory of communication, rather than meaning -- which forms the foundation of (mathematical) information theory'', later invoking ``Shannon information'' to describe a correlational measure consistent with the definition of mutual information \citep[p. 78, n. 5]{shea2018representation}.
+These examples are admittedly cherry-picked; my claim is that the assumption underlying the above quotes is widely shared.
+Scholars may not assert \ait{} explicitly, but by running together mutual information with information theory as a whole they make the transition much easier to swallow.
+
+\input{tab_shannon}
+
+Although \ait{} is generally agreed upon, different authors draw very different conclusions from it.
+I want to mention three popular lines of thought in order to distinguish them from the account that this paper is ultimately designed to support:
+
+\begin{itemize}
+    \item Information theory cannot distinguish signals and cues, but since information theory is our best chance of naturalising semantic content, informational measures alone must define content (hence even cues are contentful) \citep{skyrms2010signals,isaac2018semantics}
+    \item Information theory cannot distinguish signals and cues, but since information theory is a promising route to naturalising semantic content, extra conditions should be added to informational measures to construct semantic content \citep[$\S$3-4]{shea2018representation}; \citep[pp. 6-9,34-36]{neander2017mark}
+    \item Information theory cannot distinguish signals and cues, therefore informational measures are not the right way to naturalise semantic content \citep{lean2014shannon}; \citep[$\S$4]{hutto2013radicalizing} 
+\end{itemize}
+
+\noindent These three views share a premise: that the only way Shannon's formal work could contribute to naturalistic representation is via measures of correlation.\footnote{\citet[$\S$5]{shea2018representation} discusses structural correspondence as a non-correlational source of semantic content, and suggests other possible sources \citep[p. 76 n. 1]{shea2018representation}. But he appears to share the premise that, among the tools devised by Shannon, measures of correlation are all that is relevant for naturalist representation.}
+I reject this assumption.
+The view I propose in the section on Shannon's Warning implies:
+
+\begin{itemize}
+    \item Regardless whether information theory can distinguish signals and cues, the semantic content of a signal is not defined in terms of measures of correlation.
+\end{itemize}
+
+\noindent This contradicts orthodoxy.
+My point is that this particular orthodoxy, though tempting, is wrong-headed.
+
+Before moving on, I recognise that these four projects -- the one I endorse, plus the three motivated by a premise I reject -- would be consistent with each other if only proponents agreed they meant different things by `semantic content'.
+The Skyrms-Isaac project is to assign to vehicles a formal object capturing their correlational relationships.
+Nobody thinks this is a bad idea; the controversial claim is that the property described by this formal object is the same property that philosophers seek under the name `semantic content'.
+The teleosemantic project is to define explanatorily relevant differences between signals and cues, rooted in the fact that signals have functions and cues do not.
+Again, presumably all philosophers of science would find this a valuable project; the controversial part is the assertion that the property that distinguishes signals is the same property that other philosophers have been calling `semantic content'.
+\citet{hutto2013radicalizing} are presumably correct that the set of properties characterising human socio-linguistic practices is different from the set of properties characterising biological and cognitive signals; the question is whether those sets overlap and, if they do, whether one of the properties in their intersection is the same property that other philosophers call `semantic content' (Hutto \& Myin think \textit{not}, Millikan thinks \textit{so}).
+A more cautious way of proceeding is demonstrated by \citet{shea2018representation} who defines representational content in a manner that does specific work in cognitive science, explicitly disavowing the claim that this notion should extend to other philosophical domains.
+Since much of the work that goes on under the rubric of figuring out what semantic content `really is' ends up delineating explanatorily interesting differences in the ways that vehicles can bear exploitable relations to the world, headway can perhaps be made by focusing more on the distinctions and less on their labels.
+All that being said, I reiterate that the assumption typically shared by scholars mentioned above is something I reject, and \textit{that} is not a verbal dispute -- however `semantic content' is defined.
+
+To return to the main argument, the sceptical claim in question is that all of the tools of information theory are insufficient to distinguish signals and cues.
+This may be true depending on how the limits of information theory are drawn, but it leads to a false conclusion when information theory is conflated with communication theory.
+In failing to distinguish the theories, most of the works cited in table \ref{tab:shannon} shorten the path to this further inference.
+Two exceptions are \citet[17-20]{piccinini2011information}, who explicitly distinguish the theories, and Rathkopf, who takes pains to distinguish communication-theoretic models of signals from cue-like ``idle correlations'' that could be measured by mutual information \citep[p. 324 passim]{rathkopf2017neural}.
+In the other works cited in table \ref{tab:shannon}, one finds the following terms labelling what I suggest is an indiscriminate hybrid of information theory and communication theory:
+
+\begin{itemize}
+    \item Information theory \citep[p. 3 passim]{adriaans2019information}, \citep[12]{shea2018representation}, \citep[614]{timpson2006grammar}, \citep[2]{baker2021natural}, \citep[3]{kirchhoff2021universal}, \citep[109]{dennett2017bacteria}, \citep[1]{isaac2018semantics}, \citep[8]{godfrey-smith2016biological}, \citep[p. 777 as ``this formal information theory'']{owren2010redefining}, \citep[p. 1991 as ``the theory of information'']{lombardi2015shannon}
+    % \item Mathematical information theory \citep[1]{godfrey-smith2016biological}
+    \item Communication theory \citep[592]{timpson2006grammar}, \citep[1987]{lombardi2015shannon}
+    \item The mathematical theory of communication \citep[1988]{lombardi2015shannon}
+    \item Shannon's theory \citep[2]{isaac2018semantics}, \citep[1984]{lombardi2015shannon}; Shannon information theory \citep[400]{lean2014shannon}; Shannon's theory of information \citep[p. 78, n. 5]{shea2018representation}, \citep[6]{isaac2018semantics}; Shannon's mathematical theory of information \citep[5, 106]{dennett2017bacteria}; ``the Shannon theory'' \citep[p. 599 n. 15]{timpson2006grammar}
+    \item ``[T]he Shannon-Weaver theory of communication'' \citep[p. 756 n. 3]{owren2010redefining}
+    \item ``Shannon and Weaver's \parencite*{shannon1949mathematical} theory of information'' \citep[759]{owren2010redefining}; ``Shannon and Weaver's quantitative-information theory'' \citep[761]{owren2010redefining}; ``Shannon-Weaver information theory'' \citep[344]{dennett1983intentional}
+    \item ``Shannon-Weiner theory'' \citep[19]{baker2021natural}, a typo (\textit{Weiner} instead of \textit{Wiener}) and perhaps a conflation of Norbert Wiener and Warren Weaver
+\end{itemize}
+
+\noindent In my opinion these varied terms reveal a tendency to conflate information theory with communication theory.
+The tendency is not universal, as \citet[17-20]{piccinini2011information} explicitly distinguish the theories and \citet{rathkopf2017neural} relies on the distinction too.
+The examples are cherry-picked and only indicative; I am treating them as evidence for the claim that philosophers slip easily between \ait{} and \act{} without sufficient argument.
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%% Expand on the above views something like as follows ONLY IF it seems necessary/interesting/useful for the paper as a whole.
+%% Finish the paper without the following, then consider whether it is improved by adding it back in.
+
+% I will briefly describe each in order to distinguish the view I am defending.
+
+% \citet{skyrms2010signals} and \citet{isaac2018semantics} flat-footedly assert that mutual information just \textit{is} semantic content, and that it turns out content inheres in vehicles other than signals after all.
+% Note that mutual information is a measure between types, while semantic content is typically construed as a relation between tokens.
+% To define one in terms of the other requires linking a type definition to a token definition.
+% Skyrms does this by defining a specific formal object, what Isaac calls an s-vector, that defines a property of a token vehicle and that bears a clear formal relationship to mutual information.
+% [REST OF THIS PARA: Why I disagree with the Skyrms-Isaac approach; why their project is quite different from naturalist representation]
+
+% \citet[SECTION]{shea2018representation} outlines a set of extra conditions that a vehicle must meet in order to be considered a representation.
+% \citet[$\S$4]{shea2018representation} carefully distinguishes token definitions from type definitions.
+% [REST OF THIS PARA: carefully give Shea's definition and distinguish his goals from those of Mart\'{i}nez]
+
+% \citet{lean2014shannon} and \citet[CHAPTER]{hutto2017evolving} accept that correlations between signalling vehicles and signifieds can do explanatory work in the functional sciences, but deny that functional correlations amount to semantic content.
+% [REST OF THIS PARA: concede that teleosemantics uses `semantic content' in a very liberal sense; tie back to the extreme liberality of Skyrms/Isaac. Upshot: perhaps we are ALL running different projects and using the term `semantic content' in different ways.]
+
+In sum, scepticism about the relevance of communication theory for naturalist representation results from two illicit moves: first, from \ami{} to \ait{} via the term `Shannon information'; second, from \ait{} to \act{} via treating the two disciplines as identical.
+The next section shows that the resultant claim about communication theory is simply false.
+Communication theory can and does distinguish signals and cues.
+
+
+%%%%%%
+%%%%%%
+%%%%%%
+%%%%%%
+\subsection{\act{} is false}\label{subsec:actFalse}
+
+Whereas information theory is a collection of mathematical tools with wide application across the sciences, communication theory is an engineering discipline with the specific goal of designing efficient signalling techniques.
+The vehicles transmitted in the central model are signals, not cues.
+The sender produces the vehicle in accordance with an encoding scheme shared with the receiver.
+This definition of `signal' is shared by several sciences \citep{shannon1948mathematicalc,maynardsmith2003animal} and philosophical accounts \citep[$\S$6]{millikan2004varieties} \citep{bergstrom2011transmission}.
+(The historical sciences sometimes use the word `signal' when referring to cues, but this is a terminological difference and not a substantive dispute over definitions.)
+
+Not only does the formal apparatus of communication theory distinguish signals and cues, its theorems distinguish them too.
+Consider, on the one hand, the \textbf{second theorem} and \textbf{third theorem} of communication theory, which require that the vehicles they address be signals, and on the other hand \textbf{Kelly's theorem}, which requires only that the vehicle be a cue.
+We shall introduce them in turn.
+
+The second theorem of communication theory (sometimes called the noisy channel theorem or the channel coding theorem) determines how accurately a receiver is able to reconstruct a source string thanks to the sender's encoding scheme.
+It is assumed that the channel over which signals are transmitted inserts noise into the signal.
+Better encodings combat noise by building redundancy into the signal, enabling the receiver to more accurately reconstruct the source.
+The theorem answers a question about receiver performance by attending to the sender's design of the vehicle: different encoding schemes would yield different performance levels.
+The vehicle mentioned in this theorem is definitionally a signal; the theorem does not apply to cues.
+
+The third theorem of communication theory (also known as the rate-distortion theorem) addresses a similar question, this time with the added benefit that the receiver need not achieve perfect performance.
+Suppose for example that the receiver only needs to correctly reconstruct four out of every five outcomes produced by the source.
+The third theorem states that it is possible to determine the minimum transmission rate that the sender must ensure in order for the receiver to perform at the specified level.
+Again, the theorem assumes that the transmission rate is tunable by the sender's choice of encoding scheme.
+By invoking a vehicle whose form can be adapted to performance specifications, both the second and third theorems employ a concept of signal rather than cue.
+
+Kelly's theorem, by contrast, concerns the performance of a receiver conditioning its behaviour on a vehicle that bears a fixed level of mutual information with a success-relevant distal state \citep{kelly1956new}.
+The theorem states that mutual information is an upper bound on the performance improvement a receiver can enjoy by using the vehicle rather than not using it.
+Because the emphasis is on receiver behaviour, and the mutual information is held fixed, the vehicle is conceptualised as a cue.
+The theorem has been applied in evolutionary biology \citep{donaldson-matasci2010fitness} where again the vehicle in question is treated as an environmental cue rather than a signal.
+
+Of course, nothing prevents us applying Kelly's theorem to signals too.
+My claim is not that theorems about cues do not apply to signals, but that theorems about signals do not apply to cues.
+There is an asymmetry in the definition of signals and cues, and the two kinds of theorem are asymmetric in a way that reflects that.
+Any vehicle can be treated as a cue simply by failing to specify whether or not it was designed for communicative use.
+That is what Kelly's theorem does, in the guise of keeping mutual information fixed and asking how the receiver can make use of it.
+(In fact Kelly's prose implies that the vehicle in question is a signal; close inspection reveals the theorem does not require it to be one.)
+The second and third theorems by contrast require that their vehicles be signals, because they ensure a level of functional performance that is only available when the sender tunes the vehicle's production to the features of the channel.
+By definition, the second and third theorems cannot be applied to cues.
+
+Furthermore, these points are reflected in the mathematical formalism of each theorem.
+The second theorem discusses maximising the transmission rate of a channel by changing the encoding scheme, thereby changing the distribution of input symbols.
+This can be written formally as $\max_{p(x)}I(X;Y)$.
+In this set-up, $X$ and $Y$ are causally connected at either end of a signalling channel.
+In contrast, Kelly's theorem keeps $I(X;Y)$ fixed and assumes nothing about the causal connection between $X$ and $Y$.
+There is no $\max_{p(x)}I(X;Y)$; in this set-up, $Y$ is a cue for $X$.
+As we have seen, measuring the mutual information between $X$ and $Y$ does not tell you whether one is a signal of the other -- it does not even tell you whether or how they are causally connected.
+And yet there exists formalism, in this case $\max_{p(x)}I(X;Y)$, that does distinguish whether a vehicle is being treated as a signal rather than a cue.
+The formalism reflects the signal-cue asymmetry: for vehicles for which it makes sense to speak of $\max_{p(x)}I(X;Y)$, it makes sense to speak of $I(X;Y)$ alone; for vehicles for which it makes sense to speak of $I(X;Y)$, it does not necessarily make sense to speak of $\max_{p(x)}I(X;Y)$.\footnote{To clarify: given the formal object $I(X;Y)$ one can state a well-formed imperative $\max_{p(x)}I(X;Y)$. But the imperative to maximise $I(X;Y)$ by changing $p(x)$ makes sense only when $X$ is causally upstream of $Y$. I am using a rather informal notion of `makes sense' here, but I hope the point is clear; \citet{calcott2020signals} make a similar point with reference to Skyrms's \citeyearpar{skyrms2010signals} definition of information in signals, arguing that signals do not just carry information about their effects but are difference-makers for their effects (compare: $X$ does not just carry information about $Y$ but is a difference-maker for $Y$). 
+\citet{rathkopf2017neural} makes a similar argument in the specific case of neurobiology.}
+
+In sum, communication theory distinguishes signals from cues both by providing the means to define signals and by employing theorems that require the vehicles in question to be signals.
+The fact that communication theory also contains theorems like Kelly's whose vehicles need only be cues serves to sharpen the point.
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+%%%%%%%%%%%
+%%%%%%%%%%%
+\subsection{A sceptical riposte: channel capacity is agnostic about content}
+
+Alarm bells are ringing in sceptical ears: I just talked about the second theorem, and how its use of $\max_{p(x)}I(X;Y)$ confirms its vehicles are signals.
+But the sceptic knows that $\max_{p(x)}I(X;Y)$ is the \textbf{capacity} of the channel.
+The capacity is defined only in terms of the signal before noise ($X$) and the signal after noise ($Y$); it is oblivious to the source and target strings -- oblivious to what the signal is actually about.
+If the second theorem and the channel capacity it defines are agnostic to the content of signals, is not the sceptic justified in asserting that the definition of semantic content must be found elsewhere than communication theory?
+\citet[344]{dennett1983intentional} seems to be making this point when he distinguishes between the ``\textit{capacity} of information-transmission and information-storage vehicles'' and their contents, stating that Shannon's theory deals only with capacity.
+More recently he reasserts the claim:
+
+\begin{myquote}
+Shannon devised a way of \textit{measuring} information, independently of what the information was \textit{about}, rather like measuring \textit{volume} of liquid, independently of which liquid was being measured. (Imagine someone bragging about owning lots of quarts and gallons and not having an answer when asked, ``Quarts of what -- paint, wine, milk, gasoline?'')
+\par\hspace*{\fill}\citet[106]{dennett2017bacteria}, emphasis original
+\end{myquote}
+
+\noindent The present author has heard similar arguments from philosophers in conversation, moving from a claim about channel capacity to the claim that communication theory cannot specify the contents of signals.
+
+Before responding, I accept that one of the premises of the sceptical riposte is true:
+
+\begin{myquote}
+\cia{}: Channel capacity can be measured without specifying the contents of signals transmitted through the channel.
+\end{myquote}
+
+\noindent Channels, characterised by the conditional distribution of signal-after-noise given signal-before-noise $p(y|x)$, are general-purpose in that the outcomes of any source can be encoded by the code symbols $X$.
+Storage devices like hard drives and transmission media like fibre-optic cables can be assigned measures of capacity without regard to what they are storing or transmitting.
+Any channel can in principle be used to communicate anything.
+The honeybee waggle dance could be used to communicate military instructions if the field commander sending the message had sufficiently fine-grained control over the placement of food sources in the bees' locale.
+Measuring the capacity of the dance cannot tell you what, on a given occasion, is being communicated by it.
+
+However, the general-purpose nature of channels does not entail that communication theory cannot attribute content to signals.
+Signals in the central model (for example) do have content as soon as a source and an encoding scheme are specified: the contents of signals are the different outcomes of the source.
+If an army managed to employ the waggle dance to transmit military instructions, each dance would gain a specific instruction as its one of its semantic contents in accordance with the code devised ahead of time by the human communicators.
+As discussed in the section on Shannon's Warning, communication theory and teleosemantics both deliver this result.
+That a channel can be used to transmit anything does not mean communication theory remains forever agnostic about what is actually being transmitted in a given circumstance.
+In terms of Dennett's analogy, the theory both measures the volume of a liquid and tells you what liquid is being measured.
+Dennett really does appear to be saying that Shannon's formal work encompasses only measures like mutual information and channel capacity.
+If he means to say this, he is wrong.
+
+To summarise the entire section, true premises about the broad application of mutual information in science and the general-purpose nature of channels provide no reason to be sceptical about the relevance of communication theory for naturalist approaches to content.
+
+%%%
+%%%
+%%%
+
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+\section{Concluding remarks: communication theory for cognitive science}\label{sec:conclusion}
+
+I hope to have dispelled some of the scepticism that leads philosophers to disregard communication theory as a mathematical treatment that deals only with `Shannon information'.
+However, the overall point of this paper is more specific: I am trying to remove obstacles to the application of communication theory in cognitive science.
+A few words are therefore in order addressing that application.
+
+What do we actually gain by studying the brain in the light of an engineering discipline?
+Engineering models sometimes prove to be apt descriptions of evolved objects because natural selection sometimes produces objects that achieve goals while being subject to performance constraints.
+Communication theory is ultimately a theory about the cost of representation -- the effort required to send and receive signals -- and how those costs trade off against the benefits of representation -- the performance improvement a receiver enjoys by conditioning its behaviour on the signal.
+There is no reason why such a theory should be limited to binary symbols in digital channels.
+Its concepts ought to be universally valid.
+If the brain represents at all, its ability to improve the accuracy of its representations must be subject to performance constraints.
+Communication theory is the theoretical framework within which that trade-off is defined and optimally achieved.
+
+Can cognitive science apply the principles of communication theory to understand the brain?
+It already does.
+\citet{sims2016ratedistortion} describes human performance in perceptual tasks in terms of a trade-off between the capacity of perceptual information transmission and the cost of perceptual error.
+This is the same trade-off at the heart of the third theorem of communication theory (introduced above in section \ref{subsec:actFalse}).
+Perceptual information rate can be increased, lowering the chance of perceptual error, by expending more metabolic resources.
+This might occur over evolutionary time, with developmental processes that devote more resources to perceptual capacity resulting in more successful phenotypes.
+Whether it is worth investing resources to increase perceptual accuracy depends on the costs of inaccuracy.
+Sims derives a cost function assumed to be operative in human subjects from experiments that push the limits of their perceptual capacity.
+The pattern of errors made by subjects reveals a consistent cost function used across experimental conditions \citep[188]{sims2016ratedistortion}.
+Sims situates the role of the theory at the computational level of explanation:
+
+\begin{myquote}
+Rate-distortion theory [i.e. the third theorem and related results] combines the central elements of both information theory and decision theory, and is uniquely situated for explaining biological computation as a principled, but capacity-limited system. As a computational-level theory, the goal is not to contradict explanations formulated at the neural or algorithmic level, but rather provide an explanation for the `why' of behavior, and provide inspiration for the development of mechanistic theories.
+\par\hspace*{\fill}\citet[193]{sims2016ratedistortion}
+\end{myquote}
+
+\citet{martinez2019representations} explores the role of representation in cognitive science at the computational level too.
+He argues that mainstream accounts of representation -- in particular, robust-tracking accounts due to \citet{sterelny2003thought,burge2010origins}, and reference-magnet accounts due to \citet{ryder2004sinbad,lewis1984putnam} -- should be understood in terms of rate-distortion theory.
+In brief, robust tracking is a cognitive capacity enabling a creature to use multiple perceptual sources of information to infer the presence of some success-relevant distal state (say, the presence of a predator); Mart\'{i}nez argues that the informational structure of the world -- how the predator's presence generates those varied perceptual inputs -- defines a characteristic rate-distortion relationship within which there is a \textit{sweet spot}.
+Representations result from compressing those percepts in a way that exploits this sweet spot.
+Reference-magnetism translates into communication-theoretic language in a similar way \citep[1223]{martinez2019representations}.
+
+Interested readers should pursue Mart\'{i}nez's work.
+Here my goal has been to forestall popular lines of dissent to the very possibility of his project.
+The fact that cognitive scientists themselves apply principles of communication theory to understand the brain should be a warning sign that contemporary philosophical understanding of the theory is misshapen.
+In this article I have shown exactly where I think the problem lies: with a misinterpretation of one of Shannon's statements, and with a false conclusion about the theory drawn from a true premise about correlational relationships.
+
 
 \printbibliography
 \end{document}
