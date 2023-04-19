@@ -12,7 +12,7 @@
 
 %TC:ignore
 \begin{abstract}
-\noindent Prominent views about cognitive representations share a premise: that the only relevance communication theory could have for representational content is via measures of correlation. Here I challenge that premise by rejecting two common misconceptions: that Claude Shannon said that the meanings of signals are irrelevant for communication theory (he didn't and they aren't), and that since correlational measures can't distinguish representations from natural signs, communication theory can't distinguish them either (the premise is true but the conclusion is false and the argument is invalid).
+\noindent Prominent views about cognitive representations share a premise: that mathematical communication theory is blind to representational content. Here I challenge that premise by rejecting two common misconceptions: that Claude Shannon said that the meanings of signals are irrelevant for communication theory (he didn't and they aren't), and that since correlational measures can't distinguish representations from natural signs, communication theory can't distinguish them either (the premise is true but the conclusion is false and the argument is invalid).
 \end{abstract}
 %TC:endignore
 
@@ -35,6 +35,11 @@ Shannon-Weaver theory measures the \emph{capacity} of information-transmission a
 \end{myquote}
 
 \begin{myquote}
+Shannon information does not capture, nor is it intended to capture, the semantic content, or meaning, of signals.
+\par\hspace*{\fill}\citet[21]{piccinini2011information}
+\end{myquote}
+
+\begin{myquote}
 Shannon’s theory, taken in itself, is purely quantitative: it ignores any issue related to informational content.
 \par\hspace*{\fill}\citet[1989]{lombardi2015shannon}
 \end{myquote}
@@ -44,12 +49,52 @@ Shannon offers no analysis of the relation in virtue of which a sign carries inf
 \par\hspace*{\fill}\citet[7]{neander2017mark}, emphasis original
 \end{myquote}
 
-The quotes refer to signals and signs, and it is nowadays commonplace to extend the same idea to cognitive representations.
-Although cognitive scientists apply mathematical tools derived from communication theory to study representations in the brain [CITES], these applications are in some important sense orthogonal to the determination of representational content.
+\noindent The problem with these claims -- the tension that this paper will attempt to resolve -- is that they are directly contradicted by the words of communication theorists themselves:
 
-This paper rejects the orthodox separation of communication theory from theories of representational content, by undercutting its two primary justifications.
-I'll refer to my opponents as "sceptics", by which is meant scepticism about the relevance of communication theory for philosophical theories of content.
-The remainder of this introduction outlines the two main ways this scepticism is justified and indicates where each goes wrong.
+\begin{myquote}
+[Efficiency is achieved] in telegraphy by using the shortest channel symbol, a dot, for the most common English letter E; while the infrequent letters, Q, X, Z are \textit{represented by} longer sequences of dots and dashes. This idea is carried still further in certain commercial codes where common words and phrases are \textit{represented by} four- or five-letter code groups with a considerable saving in average time.
+\par\hspace*{\fill}\citet[385]{shannon1948mathematicalc}, emphasis added
+\end{myquote}
+
+\begin{myquote}
+Thus the messages of high probability are \textit{represented by} short codes and those of low probability by long codes.
+\par\hspace*{\fill}\citet[402]{shannon1948mathematicalc}, emphasis added
+\end{myquote}
+
+\begin{myquote}
+We may interpret $\log{n(q)}$ as the number of bits required to \textit{specify} the sequence when we consider only the most probable sequences with a total probability $q$.
+\par\hspace*{\fill}\citet[397]{shannon1948mathematicalc}, emphasis added
+\end{myquote}
+
+\begin{myquote}
+[The source coding theorem] provides another justification for the definition of entropy rate -- it is the expected number of bits per symbol required to \textit{describe} the process.
+\par\hspace*{\fill}\citet[115]{cover2006elements}, emphasis added
+\end{myquote}
+
+\begin{myquote}
+We can design source codes for the most efficient representation of the data. [...] The common representation for all kinds of data uses a binary alphabet. Most modern communication systems are digital, and data are reduced to a binary representation for transmission over the common channel.
+\par\hspace*{\fill}\citet[218]{cover2006elements}
+\end{myquote}
+
+\begin{myquote}
+We now discuss the information content of a source by considering how many bits are needed to \textit{describe} the outcome of an experiment.
+\par\hspace*{\fill}\citet[73]{mackay2003information}, emphasis added
+\end{myquote}
+
+\noindent Philosophers say that communication theory ignores the content of signals, but communication theorists habitually refer to signal content, using verbs such as `represent', `describe' and `specify'.
+These locutions play a role in interpreting theorems and justifying mathematical results.
+What's going on?
+
+One solution is that the philosophers are talking about a different phenomenon than the communication theorists.
+Perhaps terms like `signal' and `representation' are being used to talk about systems at different levels of sophistication.
+On this view, talk of representation in communication theory is really talk of simple signalling systems, and talk of content is really talk of some exploitable relation that is weaker/simpler/less sophisticated than representational content.
+Meanwhile, philosophers are concerned with richer, genuine representational content that those simple signals don't satisfy the conditions for.
+The philosophers' claims would then be true if they could establish a premise that communication theory remains silent about genuine representational content.
+I'll return to this point at the end of the paper, where I will argue that we don't have good reason to believe that premise: whatever conditions we add to define the stronger category of genuine cognitive representations, nobody has yet given us reason to believe communication theory won't apply to them.
+
+Before then, the main bulk of the paper deals with my preferred resolution to this puzzle, which is that philosophers have misunderstood communication theory.
+There are two popular justifications for the sceptical claim that communication theory ignores (or is ``mute'' about, or ``does not capture'') representational content.
+I argue against both of them.
 
 First, scholars often appeal to a warning given by Claude Shannon, the founder of communication theory, that the term `information' as applied in the theory should be sharply distinguished from the colloquial term `meaning'.
 While Shannon certainly did make this claim, philosophers have come to interpret him as saying something stronger: that signals in communication-theoretic models need not mean anything.
@@ -68,7 +113,12 @@ I emphasise that the use of communication-theoretic tools in cognitive science i
 Rather, sceptical assertions imply that all of the theoretical and practical work of communication theory could go on without any reference to the contents of representations, and without any consideration of the way in which representations acquire their contents.
 It is this that I take to be orthodoxy, and it is the justification of this kind of claim that I argue against here.
 
-[STRUCTURE OF PAPER]
+The structure of the paper is as follows.
+In section \ref{sec:positive}, I offer a positive account of representational content.
+It is a teleosemantic account that defines content in terms of function.
+I argue that teleosemantics attributes content to artificial signalling systems described by communication theory.
+In sections \ref{sec:warning} and \ref{sec:agnostic} I refute the two main justifications for the sceptical claim.
+In section \ref{sec:sophisticated} I address the objection that philosophers are talking about sophisticated representations while communication theorists are talking about simple signals.
 
 
 %%%
