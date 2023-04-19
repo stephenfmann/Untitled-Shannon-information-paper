@@ -76,7 +76,11 @@ It is this that I take to be orthodoxy, and it is the justification of this kind
 %%%
 %%%
 \section{The positive view}\label{sec:positive}
-\subsection{Liberal teleosemantics}
+
+Before arguing against the sceptical view, it can be useful to have a positive account on the table.
+In this section I describe Millikan's teleosemantics, show that it attributes content to communication-theoretic signals, and highlight existing applications of communication theory to cognitive science that make explicit appeal to the contents of representations.
+
+\subsection{Teleosemantics}
 I adopt a liberal teleosemantic theory of representation.
 This view attributes representational content to a wide range of artificial and natural systems.
 Anything that satisfies the framework depicted in figure \ref{fig:teleo} is a representation.
@@ -96,6 +100,9 @@ When it cannot do this directly, but uses an intermediary as a proxy, increased 
 Liberal teleosemantics says that when these conditions are met, the intermediary is a representation, and the distal state is its content.
 
 What does this have to do with communication theory?
+
+\subsection{Teleosemantics attributes content to communication-theoretic signals}
+
 The central engineering model of communication is a special case of the teleosemantic framework (figure \ref{fig:central}).
 Teleosemantics therefore attributes content to signals in the communication-theoretic models, and asserts that this content explains the success of engineered communication systems.
 I argue in section \ref{sec:warning} that communication theorists endorse this view by referring to engineered signals as representations.
@@ -103,6 +110,34 @@ If communication theorists refer to signal content, and teleosemantics asserts t
 Of course, it is possible to reject teleosemantics -- but sceptics do not typically use this premise to support their claim.
 
 \input{fig_central.tex}
+
+The central model (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}).
+Teleosemantics attributes semantic content to signals when they are intermediaries between cooperating senders and receivers, such that receivers condition their behaviour on the form of the intermediary.
+Senders and receivers cooperate when they share a proper function, an outcome they have been designed to bring about.
+The content of a signal is the state of affairs that, together with the receiver's response to the signal, produces outcomes that satisfy the sender-receiver partnership's shared proper function.
+In figure \ref{fig:teleo} a distal state sits causally upstream of a target that the receiver has causal influence over.
+The signal has this distal state as its content, because the receiver can achieve greater success by conditioning its act on the signal.
+
+In the central model, source strings play the role of both distal and proximate states (though more recent models in communication theory distinguish them, e.g. \citet{berger1996ceo}).
+% Signalling games typically collapse those states too (figure \ref{fig:sr}).
+Applying the basic teleosemantic model to the central model, the encoder is a sender and the decoder is a receiver.
+Sender and receiver share a proper function as a consequence of design: to reconstruct the source string.\footnote{To clarify: the sender's most immediate proper function is to produce a signal that bears a certain relation to the source sequence. But it has this function in part because of its slightly less immediate function, shared with the receiver, of reconstructing the source string at the target.}
+The basic teleosemantic model does not include noise, but adding a noise variable would not affect the definition of semantic content.
+The basic teleosemantic model makes explicit the fact that acts are judged successful or unsuccessful depending on a distal state.
+This `Success?' variable, and the causal link to it from the relevant distal state, is omitted from figures \ref{fig:central} and \ref{fig:sr}; nonetheless, in both the central model and cooperative signalling games the receiver's act together with a distal state determines the joint success of the signalling partnership (via an error measure or payoff matrix).
+
+% \input{fig_sr}
+
+Every component of the basic teleosemantic model is present in the central model of communication theory.
+Teleosemantics therefore says that the content of a signal is the source string it encodes.
+That is not because the source string is causally upstream of the encoder, but because the source string is the distal state that determines whether or not the decoder-as-receiver is successful.
+% Different source strings require different decoder acts to achieve success.
+Consider a system that transmits outcomes of coin tosses $\{H,T\}$.
+Each time the coin is tossed at the source, the eventual task of the decoder is to produce the appropriate symbol $H$ or $T$ matching the result of the toss.
+Suppose the sender transmits signals according to the code $H\rightarrow1,\ T\rightarrow0$, and the result of three coin tosses is $H, T, H$.
+Then, assuming no noise, when the decoder receives the signal $101$ it correctly produces the sequence $HTH$.
+Communication is successful because the reproduced string is identical to the original sequence of outcomes.
+The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target. In general, teleosemantics claims not that content explains behaviour, but that content explains success. Figure \ref{fig:teleo} makes that explicit by distinguishing the Act variable from the Success? variable.}
 
 What does all this have to do with cognitive science?
 
@@ -152,12 +187,13 @@ The next two sections describe and refute two motivations for scepticism about t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Shannon's Warning}\label{sec:warning}
+\section{First sceptical argument: Shannon's Warning}\label{sec:warning}
 
 The first route to scepticism about the relevance of communication theory for naturalist representation begins with the claim that Claude Shannon, the founder of communication theory, warned that his theory had nothing to do with meaning.
 In this section I argue that what Shannon actually said has been misconstrued by philosophers.
-He was not talking about signals, but about a different aspect of his model.
-As it turns out, Shannon asserted a pretheoretic notion of content for communication-theoretic signals, which contemporary communication theorists still endorse, and which teleosemantics captures.
+He was not talking about signals, but about sources, a different aspect of his model.
+When Shannon did turn to signals, he called them representations and explicitly referred to them as contentful.
+Contemporary communication theorists endorse this pretheoretic attribution of content, and teleosemantics accounts for it.
 
 \subsection{The central model of communication theory}\label{subsec:central}
 
@@ -249,7 +285,7 @@ The point of {\sc Shannon's Warning} is not to rule this out, but to circumscrib
 Weaver's remarks include an extensive discussion of such issues \citep[$\S$2]{shannon1949mathematical}.)
 
 Philosophers took heed of {\sc Shannon's Warning}.
-But Weaver's misquote led to widespread misinterpretation.
+But Weaver's misquote led to misinterpretation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -308,7 +344,7 @@ Weaver's quote above uses `information' as synonymous with surprisal, not mutual
 To my knowledge, no explicit argument has been offered that moves from the original version of {\sc Shannon's Warning} to the conclusion that there exists a property of signals, invoked in communication theory, that is distinct from the concept sought by a philosophical theory of content.
 
 Perhaps the strongest argument in favour of my claim here is that the mutated form of {\sc Shannon's Warning} is false by the lights of communication theorists themselves.
-It is also false by the lights of teleosemantics, a popular theory of content.
+It is also false by the lights of teleosemantics.
 According to both teleosemantics and contemporary communication theory, signals in the central model have semantic content.
 What is more, their content is directly relevant to the engineering problem of communication, as we shall now see.
 
@@ -370,7 +406,7 @@ Similarly, in a discussion of a special case of the theorem, \citet[397]{shannon
 % Sceptics might wish to argue that this is not the \emph{same} sense of falsity required for a theory of content, but they would have to deny teleosemantics.
 % Since rate-distortion theory has been all but ignored in the relevant philosophical literature, they would have to present novel arguments in order to do so.
 
-Communication theorists from Shannon to contemporary textbook authors make use of a notion of semantic content, as indicated by their use of words like `represent', `describe' and `specify'.
+Overall, communication theorists from Shannon to contemporary textbook authors make use of a notion of semantic content, as indicated by their use of words like `represent', `describe' and `specify'.
 There is an intuitive sense to this usage.
 It must be the case that signals in the central model bear some exploitable relation to source strings.
 If the decoder is to perform properly, it must be able to reconstruct the original string from the signal.
@@ -378,49 +414,26 @@ There must therefore be some sense in which the signal indicates or refers to th
 The specific mapping from signal to source -- the `semantics' of the signalling system -- is determined by the encoding scheme.
 
 Teleosemantics puts theoretical legs under this intuition.
-The central model (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}; here and throughout I refer to Millikan's \parencite*[$\S$6]{millikan2004varieties} teleosemantic theory).
-Teleosemantics attributes semantic content to signals when they are intermediaries between cooperating senders and receivers, such that receivers condition their behaviour on the form of the intermediary.
-Senders and receivers cooperate when they share a proper function, an outcome they have been designed to bring about.
-The content of a signal is the state of affairs that, together with the receiver's response to the signal, produces outcomes that satisfy the sender-receiver partnership's shared proper function.
-In figure \ref{fig:teleo} a distal state sits causally upstream of a target that the receiver has causal influence over.
-The signal has this distal state as its content, because the receiver can achieve greater success by conditioning its act on the signal.
-
-In the central model, source strings play the role of both distal and proximate states (though more recent models in communication theory distinguish them, e.g. \citet{berger1996ceo}).
-Signalling games typically collapse those states too (figure \ref{fig:sr}).
-Applying the basic teleosemantic model to the central model, the encoder is a sender and the decoder is a receiver.
-Sender and receiver share a proper function as a consequence of design: to reconstruct the source string.\footnote{To clarify: the sender's most immediate proper function is to produce a signal that bears a certain relation to the source sequence. But it has this function in part because of its slightly less immediate function, shared with the receiver, of reconstructing the source string at the target.}
-The basic teleosemantic model does not include noise, but adding a noise variable would not affect the definition of semantic content.
-The basic teleosemantic model makes explicit the fact that acts are judged successful or unsuccessful depending on a distal state.
-This `Success?' variable, and the causal link to it from the relevant distal state, is omitted from figures \ref{fig:central} and \ref{fig:sr}; nonetheless, in both the central model and cooperative signalling games the receiver's act together with a distal state determines the joint success of the signalling partnership (via an error measure or payoff matrix).
-
-\input{fig_sr}
-
-Every component of the basic teleosemantic model is present in the central model of communication theory.
-Teleosemantics therefore says that the content of a signal is the source string it encodes.
-That is not because the source string is causally upstream of the encoder, but because the source string is the distal state that determines whether or not the decoder-as-receiver is successful.
-% Different source strings require different decoder acts to achieve success.
-Consider a system that transmits outcomes of coin tosses $\{H,T\}$.
-Each time the coin is tossed at the source, the eventual task of the decoder is to produce the appropriate symbol $H$ or $T$ matching the result of the toss.
-Suppose the sender transmits signals according to the code $H\rightarrow1,\ T\rightarrow0$, and the result of three coin tosses is $H, T, H$.
-Then, assuming no noise, when the decoder receives the signal $101$ it correctly produces the sequence $HTH$.
-Communication is successful because the reproduced string is identical to the original sequence of outcomes.
-The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target. In general, teleosemantics claims not that content explains behaviour, but that content explains success. Figure \ref{fig:teleo} makes that explicit by distinguishing the Act variable from the Success? variable.}
+As we saw in section \ref{sec:positive}, the central model is a special case of the teleosemantic framework.
+In order to explain how a receiver can successfully reconstruct a source string, we must appeal to a relation between the signal and the source string.
+This relation is the signal's representational content, and it is defined by the encoding scheme.
 
 It might be objected that this is a very thin notion of `representation'.
 Surely philosophers who aim to give a naturalist account of representation are looking for something much richer than the relationship between simple electronic signals and their signifieds?
 Indeed, the liberality debate constitutes an ongoing discussion about this very question \citep{artiga2016liberal,artiga2022strong,desouzafilho2022dual}.
 Teleosemantics is particularly susceptible to the charge of being too liberal in its attribution of representational status, because the conditions implied by figure \ref{fig:teleo} are very easy to satisfy.
 
-My argument does not serve to defend teleosemantics against the charge of liberality.
-I am only trying to demonstrate that teleosemantics attributes content to central model signals.
+I will return to the question of more sophisticated representations at the end of the paper.
+For now, I note that my argument is not intended to defend teleosemantics against the charge of liberality.
+I am only trying to demonstrate that teleosemantics attributes content to central model signals, and that this accounts for the locutions of actual communication theorists.
 Detractors may treat this as a mark against teleosemantics; so be it.
 My point is just that the sceptic cannot appeal to {\sc Shannon's Warning} to make their case, because Shannon was talking about source strings rather than signals.
 The sceptic needs independent grounds on which to reject the claim that central model signals have content.
-Many sceptics do offer such grounds; that is what the liberality debate is about.
+Of course, they would then have to account for the locutions of communication theorists themselves.
 
-In continuing to adopt a teleosemantic perspective, I will continue to speak of signals and representations more or less synonymously.
-I am assuming that some of the cognitive structures to which we want to attribute representational status can be described in terms of communication-theoretic models.
-Arguments to this effect can be found in \citet{martinez2019representations} (see also section \ref{sec:positive}), but the broader point is that this assumption cannot be rejected out of hand: its truth or falsity can only be determined by actually doing cognitive science.\footnote{Someone could of course accept that cognitive structures can be modelled in terms of communication theory while rejecting teleosemantics. They would then have to disentangle which parts of Mart\'{i}nez's view they endorse and which they reject. I take the simpler position and endorse all of it.}
+% In continuing to adopt a teleosemantic perspective, I will continue to speak of signals and representations more or less synonymously.
+% I am assuming that some of the cognitive structures to which we want to attribute representational status can be described in terms of communication-theoretic models.
+% Arguments to this effect can be found in \citet{martinez2019representations} (see also section \ref{sec:positive}), but the broader point is that this assumption cannot be rejected out of hand: its truth or falsity can only be determined by actually doing cognitive science.\footnote{Someone could of course accept that cognitive structures can be modelled in terms of communication theory while rejecting teleosemantics. They would then have to disentangle which parts of Mart\'{i}nez's view they endorse and which they reject. I take the simpler position and endorse all of it.}
 
 % Furthermore, 
 % If a 1 is transmitted when the coin comes up tails, the signal is false.
@@ -488,10 +501,14 @@ Shuffling symbols does not bestow content, but joint design of sender and receiv
 Furthermore, although I have focused on symbols in the exposition so far, it turns out that source outcomes need not be symbols at all.
 They could be dance steps, military manoeuvres, restaurant locations; anything over which a probability distribution can be defined.
 It also turns out that the actions of the receiver need not be exact duplicates of the outcomes at the source; they need only be actions that, combined with source outcomes, yield a cost function for the system as a whole.
-If this sounds like the sender-receiver framework associated with \citet{skyrms2010signals} and \citet{lewis1969convention}, that's because it is formally equivalent to it \citep{martinez2019deception}; see again figures \ref{fig:central} and \ref{fig:sr}.
-Source and target need not be symbols.
+If this sounds like the sender-receiver framework associated with \citet{skyrms2010signals} and \citet{lewis1969convention} that's because it is formally equivalent to it \citep{martinez2019deception}.
+Sender-receiver games (figure \ref{fig:sr}) are an implementation of the teleosemantic framework, and the central model is a sender-receiver game.
+In general, source and target need not be symbols.
 They are just commonly described as such because that is part of the typical use case of communication theory.
-The mathematics does not demand that signals be about symbols from a lexicon: they can be about anything at all.
+The mathematics does not demand that signals be about symbols from a lexicon.
+They can be about anything at all.
+
+\input{fig_sr}
 
 To summarise the entire section, arguments denying the relevance of communication theory for philosophy based on {\sc Shannon's Warning} do not hold water.
 A stronger argument adverts to the breadth of application of another of Shannon's mathematical measures: mutual information.
@@ -501,7 +518,7 @@ It is to this point I now turn.
 %%%%
 %%%%
 
-\section{Agnostic information}\label{sec:agnostic}
+\section{Second sceptical argument: Agnostic information}\label{sec:agnostic}
 
 The second route to scepticism about the relevance of communication theory for naturalist representation begins with the claim that mathematical measures defined within communication theory cannot distinguish between representations and non-representations.
 In other words, information is agnostic to representational status.
@@ -784,7 +801,7 @@ To summarise the entire section, true premises about the broad application of mu
 %%%%%%%%%%%%%
 %%%%%%%%%%%%%
 %%%%%%%%%%%%%
-\section{More sophisticated representations}\label{sec:sophisticated}
+\section{What about more sophisticated representations?}\label{sec:sophisticated}
 
 Liberal teleosemantics identifies representational content with a particular kind of exploitable relation, but much of the discussion about cognitive representations focuses on more sophisticated features than that.
 For example, Burge focuses on perceptual constancies, holding that ...
