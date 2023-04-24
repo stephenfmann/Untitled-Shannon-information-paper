@@ -151,6 +151,19 @@ What does this have to do with communication theory?
 The central engineering model of communication (figure \ref{fig:central}) is a special case of the teleosemantic framework (figure \ref{fig:teleo}).
 Teleosemantics therefore attributes content to signals in the communication-theoretic models, and asserts that this content explains the success of engineered communication systems.
 I argue in section \ref{sec:warning} that communication theorists endorse the view of signals as contentful representations.
+First let's investigate the relationship between the two models.
+
+The central model construes the goal of communication as reproducing, at a target location, a symbol string produced at a spatiotemporally distant source.
+The goal is achieved by encoding the source string, which means converting it into a sequence of physical events (typically electrical pulses) that can be transmitted as a signal across a channel.
+At the far end of the channel the signal is decoded, producing a target string.
+Communication is deemed successful when the target string is sufficiently similar to the source string.
+How similar the two strings need to be to count as `sufficiently similar' will differ depending on the context.
+% What is important is that communication is pitched as a \textit{syntactic} enterprise: it is the transmission and reconstruction of symbol strings, not the conveyance of their meanings, that is in question.
+
+For example, the lexicon from which the source string is constructed might be the set of symbols of the Latin alphabet $\{A,B,C...\}$ plus a full stop and a space.
+The code lexicon might be the binary symbols $\{0,1\}$ that are instantiated by electrical on/off pulses.
+Given an encoding scheme, any string of Latin symbols can be converted into a sequence of 0s and 1s, and thus transmitted as a signal across a wire.
+The decoder has a duplicate set of Latin symbols from which it must pick out the right symbols in the right order; the signal enables it to perform this task successfully.
 
 \input{fig_central.tex}
 
@@ -229,7 +242,7 @@ The next two sections describe and refute two motivations for scepticism about t
 
 \section{First sceptical argument: Shannon's Warning}\label{sec:warning}
 
-The first route to scepticism about the relevance of communication theory for naturalist representation begins with the claim that Claude Shannon, the founder of communication theory, warned that his theory had nothing to do with meaning.
+The first route to scepticism about the relevance of communication theory for theories of representational content begins with the claim that Claude Shannon, the founder of communication theory, warned that his theory had nothing to do with meaning.
 In this section I argue that what Shannon actually said has been misconstrued by philosophers.
 He was not talking about signals, but about sources, a different aspect of his model.
 When Shannon did turn to signals, he called them representations and explicitly referred to them as contentful.
@@ -238,23 +251,16 @@ Contemporary communication theorists endorse this pretheoretic attribution of co
 \subsection{The central model of communication theory}\label{subsec:central}
 
 The heavy cryptographic and communicative demands of the Second World War led mathematicians and engineers, spearheaded by Claude Shannon, to develop the discipline known today as communication theory.
-Published soon after the war's conclusion, the insights of Shannon's foundational text \parencite*{shannon1948mathematicalc} are predicated on a picture of communication we shall call the \textbf{central model} (figure \ref{fig:central}).
-The central model construes the goal of communication as reproducing, at a target location, a symbol string produced at a spatiotemporally distant source.
-The goal is achieved by \textbf{encoding} the source string, which means converting it into a sequence of physical events (typically electrical pulses) that can be transmitted as a signal across a channel.
-At the far end of the channel the signal is decoded, producing a target string.
-Communication is deemed successful when the target string is sufficiently similar to the source string.
-How similar the two strings need to be to count as `sufficiently similar' will differ depending on the context.
+Published soon after the war's conclusion, the insights of Shannon's foundational text \parencite*{shannon1948mathematicalc} are predicated on the central model (figure \ref{fig:central}).
+As we saw above, the goal of communication in this model is to reproduce a source string at a target location.
 What is important is that communication is pitched as a \textit{syntactic} enterprise: it is the transmission and reconstruction of symbol strings, not the conveyance of their meanings, that is in question.
-
-For example, the lexicon from which the source string is constructed might be the set of symbols of the Latin alphabet $\{A,B,C...\}$ plus a full stop and a space.
-The code lexicon might be the binary symbols $\{0,1\}$ that are instantiated by electrical on/off pulses.
-Given an encoding scheme, any string of Latin symbols can be converted into a sequence of 0s and 1s, and thus transmitted as a signal across a wire.
-The decoder has a duplicate set of Latin symbols from which it must pick out the right symbols in the right order; the signal enables it to perform this task successfully.
 
 It is costly to transmit encoded symbols.
 Electrical wires require power and time to operate.
 Communication theory can be thought of as a collection of tools and methods enabling an optimal trade-off between signalling effort and the benefits of accurate string reconstruction.
-In the simple case of the central model, the most efficient coding schemes are those that use short sequences of 0s and 1s to represent highly probable source strings.
+We saw some applications of this trade-off to cognitive science earlier.
+But it applies even in the simple case of the central model.
+The most efficient coding schemes are those that use short sequences of 0s and 1s to represent highly probable source strings.
 That is because minimising signalling effort means minimising the number of code symbols transmitted, on average.
 Pairing probable source strings with short code strings -- short signals -- is the most efficient procedure.
 Therefore, in order to devise a good code, you need to know the probabilities of each source string being produced.
