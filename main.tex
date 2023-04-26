@@ -570,7 +570,7 @@ Without further detail, it is not clear whether the output of a quorum-sensing b
 Neural firings are sometimes claimed to be representations, but simply measuring the correlation between them and environmental states is not sufficient to establish this \citep{rathkopf2017neural}.
 
 From the mere fact that two things bear a correlational relationship, no conclusion can be drawn about whether one is a signal of the other.
-For the avoidance of doubt, I agree with this point, and suggest encapsulating it as follows:
+For the avoidance of doubt, I agree with this premise, and suggest encapsulating it as follows:
 
 \begin{myquote}
 \ami: Mutual information cannot distinguish signals and cues.
@@ -586,7 +586,7 @@ For the avoidance of doubt, I agree with this point, and suggest encapsulating i
 \act: Communication theory cannot distinguish signals and cues.
 \end{myquote}
 
-\noindent The latter claim would certainly challenge the relevance of communication theory for theories of representation.
+\noindent The latter claim would certainly challenge the relevance of communication theory for theories of representational content.
 If communication theory cannot distinguish signals and cues, then there is little hope of it distinguishing any of the more sophisticated kinds of representation of interest to cognitive scientists and philosophers; if it cannot distinguish them, likely it cannot say anything philosophically interesting about them.
 
 I am going to argue firstly that \ami{} does not entail \act{}, and secondly that \act{} is false.
@@ -617,15 +617,12 @@ By invoking it, demonstrably true claims about mutual information can be interpr
 \citet[106]{dennett2017bacteria} says that ``Shannon's theory is, at its most fundamental, about the statistical relationship between different states of affairs in the world: What can be gleaned (in principle) about state A from the observation of state B?'', later explicitly distinguishing Shannon information from semantic information.
 \citet[p. 12, n. 11]{shea2018representation} says that ``\citet{shannon1948mathematicalc} developed a formal treatment of correlational information -- as a theory of communication, rather than meaning -- which forms the foundation of (mathematical) information theory'', later invoking ``Shannon information'' to describe a correlational measure consistent with the definition of mutual information \citep[p. 78, n. 5]{shea2018representation}.
 These examples are admittedly cherry-picked; my claim is that the assumption underlying the above quotes is widely shared.
-Scholars may not assert \ait{} explicitly, but by running together mutual information with information theory as a whole they make the transition much easier to swallow.
+Scholars run together mutual information with information theory as a whole.
+They thereby imply \ait{} can be concluded from \ami{}.
 
 \input{tab_shannon}
 
-The underlying idea seems to be that the only way Shannon's formal work could contribute to theories of representation is via measures of correlation.\footnote{\citet[$\S$5]{shea2018representation} discusses structural correspondence as a non-correlational source of semantic content, and suggests other possible sources \citep[p. 76 n. 1]{shea2018representation}. But he appears to share the premise that, among the tools devised by Shannon, measures of correlation are all that is relevant for theories of content.}
-I reject this assumption.
-The positive view I proposed earlier implies that regardless whether information theory can distinguish signals and cues, the semantic content of a signal is \textit{not} defined in terms of measures of correlation: it is defined in terms of the encoding scheme shared by sender and receiver.
-
-To return to the main argument, the sceptical claim in question is that all of the tools of information theory are insufficient to distinguish signals and cues.
+\ait{} says that all of the tools of information theory are insufficient to distinguish signals and cues.
 This may be true depending on how the limits of information theory are drawn, but it leads to a false conclusion when information theory is conflated with communication theory.
 In failing to distinguish the theories, most of the works cited in table \ref{tab:shannon} shorten the path to this further inference.
 Two exceptions are \citet[17-20]{piccinini2011information}, who explicitly distinguish the theories, and Rathkopf, who takes pains to distinguish communication-theoretic models of signals from cue-like ``idle correlations'' that could be measured by mutual information \citep[p. 324 passim]{rathkopf2017neural}.
@@ -644,6 +641,10 @@ In the other works cited in table \ref{tab:shannon}, one finds the following ter
 \noindent In my opinion these varied terms reveal a tendency to conflate information theory with communication theory.
 The tendency is not universal, as \citet[17-20]{piccinini2011information} explicitly distinguish the theories and \citet{rathkopf2017neural} relies on the distinction too.
 The examples are cherry-picked and only indicative; I am treating them as evidence for the claim that philosophers slip easily between \ait{} and \act{} without sufficient argument.
+
+The idea underlying the quotes and terminology I have canvassed in this section seems to be that the only way Shannon's formal work could contribute to theories of representation is via measures of correlation.\footnote{\citet[$\S$5]{shea2018representation} discusses structural correspondence as a non-correlational source of semantic content, and suggests other possible sources \citep[p. 76 n. 1]{shea2018representation}. But he appears to share the premise that, among the tools devised by Shannon, measures of correlation are all that is relevant for theories of content.}
+I reject this assumption.
+The positive view I proposed earlier implies that regardless whether information theory can distinguish signals and cues, the semantic content of a signal is \textit{not} defined in terms of measures of correlation: it is defined in terms of the encoding scheme shared by sender and receiver.
 
 In sum, scepticism about the relevance of communication theory for naturalist representation results from two illicit moves: first, from \ami{} to \ait{} via the term `Shannon information'; second, from \ait{} to \act{} via treating the two disciplines as identical.
 The next section shows that the resultant claim about communication theory is simply false.
@@ -670,7 +671,8 @@ The vehicle mentioned in this theorem is definitionally a signal; the theorem do
 The third theorem of communication theory (also known as the rate-distortion theorem) addresses a similar question, this time with the added benefit that the receiver need not achieve perfect performance.
 Suppose for example that the receiver only needs to correctly reconstruct four out of every five outcomes produced by the source.
 The third theorem states that it is possible to determine the minimum transmission rate that the sender must ensure in order for the receiver to perform at the specified level.
-Again, the theorem assumes that the transmission rate is tunable by the sender's choice of encoding scheme.
+(This `rate-distortion' trade-off is another name for the resource-success trade-off discussed earlier.)
+The third theorem assumes that the transmission rate is tunable by the sender's choice of encoding scheme.
 By invoking a vehicle whose form can be adapted to performance specifications, both the second and third theorems employ a concept of signal rather than cue.
 
 Kelly's theorem, by contrast, concerns the performance of a receiver conditioning its behaviour on a vehicle that bears a fixed level of mutual information with a success-relevant distal state \citep{kelly1956new}.
