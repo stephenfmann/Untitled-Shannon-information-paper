@@ -106,8 +106,9 @@ These theoretical results apply specifically to signalling systems, not just any
 % My argument depends on the premise that representation systems are in some sense continuous with simpler signalling systems.
 
 I emphasise that the use of measures like mutual information in cognitive science is already commonplace, and sceptics are not generally complaining about that.
+Mutual information is used to quantify correlations in many sciences, including cognitive science, and nobody is suggesting that this usage is illicit.
 Rather, sceptical assertions imply that all of the theoretical and practical work of communication theory could go on without any reference to the contents of representations, and without any consideration of the way in which representations acquire their contents.
-It is this that I take to be orthodoxy, and it is the justification of this kind of claim that I argue against here.
+It is this that I take to be orthodoxy, and it is the justification of this kind of claim that I argue against here.\footnote{A commentator urged me to distinguish between two sceptical views: a strong view which denies Shannon information or closely related ideas are relevant \textit{at all} to understanding content in cognitive systems, and a weaker view which grants the relevance of Shannon information with respect to considerations of effective coding schemes, but denies that Shannon information has anything to say about the \textit{content} of representations in cognitive systems. I wish to explicitly clarify: nobody (as far as I know) holds the strong view, because everybody accepts the legitimate use of at least some information theoretic tools in cognitive science. In contrast, very many people hold the weak view. It is therefore the weak view that I am arguing against in this paper, especially its implication that efficient coding schemes can be discussed without reference to content.}
 
 The structure of the paper is as follows.
 In section \ref{sec:positive}, I offer a positive account of representational content.
@@ -375,17 +376,14 @@ The Stanford encyclopedia entry `Biological Information' is organised around the
 \citet[21]{piccinini2011information} say ``Shannon information does not capture, nor is it intended to capture, the semantic content, or meaning, of signals,'' again focusing on signals rather than source strings.
 It is accepted practice to refer to Shannon's formal tools as unrelated to semantic content without further argument: ``I will interpret ‘information’ as ‘semantic information’ (i.e. semantic content), not as Shannon information'' \citep[p. 12 n. 14]{artiga2020signals}; ``Shannon offers no analysis of the relation in virtue of which a sign carries information \textit{about} a state of affairs (his interest was in other issues)''  \citep[p. 7, emphasis original]{neander2017mark}; ``One of the most cited quotes by Shannon is that referred to the independence of his theory with respect to semantic issues [...] Shannon’s theory, taken in itself, is purely quantitative: it ignores any issue related to informational content'' \citep[1988-9]{lombardi2015shannon}; see also \citet[6]{cao2020new} and \citet[1]{kolchinsky2018semantic}.
 
-It could plausibly be argued that the distinction these scholars are aiming for is between semantic content and \textbf{mutual information}.
-Mutual information is a measure of correlation, related to surprisal but formally different from it.
+It could plausibly be argued that the distinction these scholars are aiming for is between semantic content and correlational measures like mutual information.
 The authors cited above could be read as claiming that signals can bear mutual information without possessing semantic content.
 I discuss such claims in section \ref{sec:agnostic}; my point here is just that these writers cannot appeal to Shannon and Weaver to justify their position.
 Weaver's quote above uses `information' as synonymous with surprisal, not mutual information; both he and Shannon were referring to a property of source strings, not a correlation between signals and signifieds.
 To my knowledge, no explicit argument has been offered that moves from the original version of {\sc Shannon's Warning} to the conclusion that there exists a property of signals, invoked in communication theory, that is distinct from the concept sought by a philosophical theory of content.
 
 Perhaps the strongest argument in favour of my claim here is that the mutated form of {\sc Shannon's Warning} is false by the lights of communication theorists themselves.
-It is also false by the lights of teleosemantics.
-According to both teleosemantics and contemporary communication theory, signals in the central model have semantic content.
-What is more, their content is directly relevant to the engineering problem of communication, as we shall now see.
+Signals in the central model have semantic content, and their content is directly relevant to the engineering problem of communication, as we shall now see.
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -440,13 +438,11 @@ Similarly, in a discussion of a special case of the theorem, \citet[397]{shannon
 
 Overall, communication theorists from Shannon to contemporary textbook authors make use of a notion of semantic content, as indicated by their use of words like `represent', `describe' and `specify'.
 There is an intuitive sense to this usage.
-It must be the case that signals in the central model bear some exploitable relation to source strings.
-If the decoder is to perform properly, it must be able to reconstruct the original string from the signal.
-There must therefore be some sense in which the signal indicates or refers to the source string.
+It must be the case that signals in the central model bear some exploitable relation to source strings, because the decoder is using the signals to reconstruct the original strings.
 The specific mapping from signal to source -- the `semantics' of the signalling system -- is determined by the encoding scheme.
 
 Teleosemantics puts theoretical legs under this intuition.
-As we saw in section \ref{sec:positive}, the central model is a special case of the teleosemantic framework.
+As we saw in section \ref{sec:positive}, the central model is a special case of the basic teleosemantic model.
 In order to explain how a receiver can successfully reconstruct a source string, we must appeal to a relation between the signal and the source string.
 This relation is the signal's representational content, and it is defined by the encoding scheme.
 
@@ -463,10 +459,10 @@ My point is just that the sceptic cannot appeal to {\sc Shannon's Warning} to ma
 The sceptic needs independent grounds on which to reject the claim that central model signals have content.
 Of course, they would then have to account for the locutions of communication theorists themselves.
 
-To sum up, by dint of joint design, encoder and decoder have a shared proper function to reconstruct the source string at the target.
-They do this by means of an intermediary -- the code string as signal.
-Teleosemantics identifies the relation between signal and source string as the basic form of semantic content.
-This cashes out the pretheoretic usage of terms like `represent', `describe' and `specify' used by communication theorists.
+% To sum up, by dint of joint design, encoder and decoder have a shared proper function to reconstruct the source string at the target.
+% They do this by means of an intermediary -- the code string as signal.
+% Teleosemantics identifies the relation between signal and source string as the basic form of semantic content.
+% This cashes out the pretheoretic usage of terms like `represent', `describe' and `specify' used by communication theorists.
 
 \subsection{A sceptical riposte: symbol manipulation does not bestow content}
 
@@ -476,7 +472,7 @@ That is a big problem: it is implausible that manipulating symbols from lexicon 
 Symbol manipulation is a matter of syntax, not semantics.
 If that is all that is happening in an encoding scheme, then it is implausible that central model signals really do have the contents I ascribe.
 
-To respond, I accept the following premise:
+To respond, I begin by accepting the premise:
 
 \begin{myquote}
 \smi{}: Converting symbols of lexicon $L_1$ into symbols of lexicon $L_2$ does not bestow the symbols of $L_2$ with content.
@@ -494,15 +490,15 @@ Furthermore, although I have focused on symbols in the exposition so far, it tur
 They could be dance steps, military manoeuvres, restaurant locations; anything over which a probability distribution can be defined.
 It also turns out that the actions of the receiver need not be exact duplicates of the outcomes at the source; they need only be actions that, combined with source outcomes, yield a cost function for the system as a whole.
 If this sounds like the sender-receiver framework associated with \citet{skyrms2010signals} and \citet{lewis1969convention} that's because it is formally equivalent to it \citep{martinez2019deception}.
-Sender-receiver games (figure \ref{fig:sr}) are an implementation of the teleosemantic framework, and the central model is a sender-receiver game.
-In general, source and target need not be symbols.
+Sender-receiver games (figure \ref{fig:sr}) are also a special case of the basic teleosemantic model, and the central model just is a sender-receiver game.
+Source and target -- state and act -- need not be symbols.
 They are just commonly described as such because that is part of the typical use case of communication theory.
 The mathematics does not demand that signals be about symbols from a lexicon.
 They can be about anything at all.
 
 \input{fig_sr}
 
-To summarise the entire section, arguments denying the relevance of communication theory for philosophy based on {\sc Shannon's Warning} do not hold water.
+To summarise the entire section, arguments denying the relevance of communication theory for theories of content based on {\sc Shannon's Warning} do not hold water.
 A stronger argument adverts to the breadth of application of another of Shannon's mathematical measures: mutual information.
 It is to this point I now turn.
 
@@ -544,7 +540,7 @@ Mutual information has been employed in a diverse range of sciences, including:
     \item Neuroscience, to measure the correlation between neural firings and environmental states \citep[][and references therein]{rathkopf2017neural}
 \end{itemize}
 
-\noindent The breadth of application of mutual information is at the heart of a second source of scepticism about the relevance of communication theory for naturalist representation.
+\noindent The breadth of application of mutual information is at the heart of a second source of scepticism about the relevance of communication theory for theories of content.
 Scholars seem to move from a premise about mutual information to a conclusion about information theory as a whole -- which is then seen as encompassing communication theory.
 Because philosophers are rarely explicit about the dialectical moves required to reach this conclusion, in the next few subsections I try to tease apart the intended argument in order to refute it.
 As a result, my discussion focuses on one possible way of moving from claims about mutual information to scepticism about the relevance of communication theory for content.
