@@ -12,7 +12,7 @@
 
 %TC:ignore
 \begin{abstract}
-\noindent Prominent views about cognitive representations share a premise: that mathematical communication theory is blind to representational content. Here I challenge that premise by rejecting two common misconceptions: that Claude Shannon said that the meanings of signals are irrelevant for communication theory (he didn't and they aren't), and that since correlational measures can't distinguish representations from natural signs, communication theory can't distinguish them either (the premise is true but the conclusion is false and the argument is invalid).
+\noindent Prominent views about cognitive representations share a premise: that mathematical communication theory is blind to representational content. Here I challenge that premise by rejecting two common misconceptions: that Claude Shannon said that the meanings of signals are irrelevant for communication theory (he didn't and they aren't), and that since correlational measures can't distinguish representations from natural signs, communication theory can't distinguish them either (the premise is true but the conclusion is false; no valid argument can link them).
 \end{abstract}
 %TC:endignore
 
@@ -49,7 +49,7 @@ Shannon offers no analysis of the relation in virtue of which a sign carries inf
 \par\hspace*{\fill}\citet[7]{neander2017mark}, emphasis original
 \end{myquote}
 
-\noindent The problem with these claims -- the tension that this paper will attempt to resolve -- is that they are directly contradicted by the words of communication theorists themselves:
+\noindent The problem with these claims -- the tension that this paper will attempt to resolve -- is that they appear to be contradicted by the words of communication theorists themselves:
 
 \begin{myquote}
 [Efficiency is achieved] in telegraphy by using the shortest channel symbol, a dot, for the most common English letter E; while the infrequent letters, Q, X, Z are \textit{represented by} longer sequences of dots and dashes. This idea is carried still further in certain commercial codes where common words and phrases are \textit{represented by} four- or five-letter code groups with a considerable saving in average time.
@@ -67,8 +67,8 @@ Thus the messages of high probability are \textit{represented by} short codes an
 \end{myquote}
 
 \begin{myquote}
-We can design source codes for the most efficient representation of the data. [...] The common representation for all kinds of data uses a binary alphabet. Most modern communication systems are digital, and data are reduced to a binary representation for transmission over the common channel.
-\par\hspace*{\fill}\citet[218]{cover2006elements}
+We can design source codes for the most efficient \textit{representation} of the data. [...] The common representation for all kinds of data uses a binary alphabet. Most modern communication systems are digital, and data are reduced to a binary representation for transmission over the common channel.
+\par\hspace*{\fill}\citet[218]{cover2006elements}, emphasis added
 \end{myquote}
 
 \begin{myquote}
@@ -81,31 +81,31 @@ These locutions play a role in interpreting theorems and justifying mathematical
 What's going on?
 
 One solution is that the philosophers are talking about a different phenomenon than the communication theorists.
-Perhaps terms like `signal' and `representation' are being used to talk about systems at different levels of sophistication.
-On this view, talk of representation in communication theory is really talk of simple signalling systems, and talk of content is really talk of some exploitable relation that is weaker (simpler; less sophisticated) than representational content.
+On this view, terms like `signal' and `representation' are being used to talk about systems at different levels of sophistication.
+Perhaps talk of representation in communication theory is really talk of simple signalling systems, and talk of content is really talk of some exploitable relation that is weaker (simpler; less sophisticated) than representational content.
 Meanwhile, philosophers are concerned with richer, genuine representational content that those simple signals don't satisfy the conditions for.
 The philosophers' claims would then be true if they could establish a premise that communication theory remains silent about genuine representational content.
 I'll return to this point at the end of the paper, where I will argue that we don't have good reason to believe that premise: whatever conditions we add to define the stronger category of genuine cognitive representations, nobody has yet given us reason to believe communication theory won't apply to them.
 
 Before then, the main bulk of the paper deals with my preferred resolution to this puzzle, which is that philosophers have misunderstood communication theory.
-This is the right way to understand the tension because it respects the justifications philosophers themselves give for their claims.
+This is the right way to resolve the tension because it respects the justifications philosophers themselves give for their claims.
 There are two popular justifications for the sceptical claim that communication theory ignores (or is ``mute'' about, or ``does not capture'') representational content, and both fail to support that claim -- or so I will argue.
 
 First, scholars often appeal to a warning given by Claude Shannon, the founder of communication theory, that the term `information' as applied in the theory should be sharply distinguished from the colloquial term `meaning'.
 While Shannon certainly did make this claim, philosophers have come to interpret him as saying something stronger: that signals in communication-theoretic models need not mean anything.
 Properly interpreted, Shannon's warning does not justify that sceptical claim.
-As we've just seen, Shannon made use of a pretheoretic notion of content in describing signals.
+In the above quotes, Shannon makes use of a pretheoretic notion of content in discussing signals.
 Contemporary communication theorists continue to use terms like `represent' and `describe' in these contexts.
 % I argue that teleosemantics captures their usage because it treats signals in communication-theoretic models as representations.
 
-Second, many authors note that certain mathematical tools developed by Shannon can be applied in contexts far removed from representation systems.
+Second, many authors note that certain mathematical tools developed by Shannon can be applied in contexts far removed from signalling systems.
 They conclude that these tools are insufficient on their own to capture representational content.
 I argue that although it is true that measures like entropy and mutual information cannot distinguish the signal-signified relationship from other correlational relationships, sceptics undersell the resources available to communication theory.
 The theory involves models that define signals, and theorems that describe the costs and benefits of transmitting and responding to signals.
 These theoretical results apply specifically to signalling systems, not just any correlational relationship, and can therefore describe more interesting properties of representations than just quantities of mutual information.
 % My argument depends on the premise that representation systems are in some sense continuous with simpler signalling systems.
 
-I emphasise that the use of communication-theoretic tools in cognitive science is commonplace, and sceptics are not generally complaining about that.
+I emphasise that the use of measures like mutual information in cognitive science is already commonplace, and sceptics are not generally complaining about that.
 Rather, sceptical assertions imply that all of the theoretical and practical work of communication theory could go on without any reference to the contents of representations, and without any consideration of the way in which representations acquire their contents.
 It is this that I take to be orthodoxy, and it is the justification of this kind of claim that I argue against here.
 
@@ -129,70 +129,74 @@ In this section I describe Millikan's teleosemantics, show that it attributes co
 \subsection{Teleosemantics}
 I adopt a liberal teleosemantic theory of representation.
 This view attributes representational content to a wide range of artificial and natural systems.
-Anything that satisfies the framework depicted in figure \ref{fig:teleo} is a representation.
-I'll briefly describe this view and how it motivates the claim that representational content is essential to communication theory.
+Anything that satisfies the model depicted in figure \ref{fig:teleo} is a representation system, and anything that plays the signal role in that system is a representation.
+I'll briefly describe teleosemantics and how it motivates the claim that representational content is essential to communication theory.
 
 \input{fig_teleo}
 
 Some artificial and natural devices have the structure and dispositions they do because of causal effects they are supposed to bring about.
-For artificial devices such as communication systems, this link between a device's features (its structure and dispositions) and its proper effects (those it is supposed to bring about) is established by intentional design: a human designer wanted certain effects to occur, and created the system so as to reliably produce those effects.
-For natural devices such as neurons, the link between features and proper effects is established by natural selection (operating over phylogenetic lineages) and perhaps ontogenic selection (operating within an organism during development).
+For artificial devices such as clawhammers, pumps, and communication systems, this link between a device's features (its structure and dispositions) and its proper effects (those it is supposed to bring about) is established by intentional design: a human engineer wanted certain effects to occur, and created the system so as to reliably produce those effects.
+For natural devices such as claws, hearts, and neurons, the link between features and proper effects is established by natural selection (operating over phylogenetic lineages) and perhaps ontogenic selection (operating within an organism during development).
 Whichever way the link is established, a device that was designed or selected for producing certain causal effects has a proper function, and its features can be at least partly explained by reference to its function \citep[$\SS$1-2]{millikan1984language}, \citep[$\S$2]{millikan1993white}.
 
 When two devices -- call them sender and receiver -- are designed or selected to assist each other in producing an outcome (as in figure \ref{fig:teleo}), an intermediary may enable coordination between them by bearing a relation to a distal state.
 The distal state causally influences the outcome sender and receiver are trying to bring about, so the receiver could be more successful by conditioning its activity on the distal state.
 When the receiver uses the intermediary as a proxy and enjoys greater success as a result, its improvement must be explained by reference to a relation between the intermediary and the distal state.
-Liberal teleosemantics says that when these conditions are met, the intermediary is a representation, and the distal state is its content.
+Teleosemantics says that when these conditions are met, the intermediary is a representation, and the distal state is its content.
 
 What does this have to do with communication theory?
 
 \subsection{Teleosemantics attributes content to communication-theoretic signals}
 
-The central engineering model of communication (figure \ref{fig:central}) is a special case of the teleosemantic framework (figure \ref{fig:teleo}).
-Teleosemantics therefore attributes content to signals in the communication-theoretic models, and asserts that this content explains the success of engineered communication systems.
-I argue in section \ref{sec:warning} that communication theorists endorse the view of signals as contentful representations.
+The central engineering model of communication (figure \ref{fig:central}) is a special case of the basic teleosemantic model (figure \ref{fig:teleo}).
+Teleosemantics therefore attributes content to signals in the communication-theoretic model, and asserts that this content explains the success of engineered communication systems.
+Drawing on the quotes in the introduction, I argue in section \ref{sec:warning} that communication theorists endorse the view of signals as contentful representations.
 First let's investigate the relationship between the two models.
 
 The central model construes the goal of communication as reproducing, at a target location, a symbol string produced at a spatiotemporally distant source.
 The goal is achieved by \textbf{encoding} the source string, which means converting it into a sequence of physical events (typically electrical pulses) that can be transmitted as a signal across a channel.
 At the far end of the channel the signal is decoded, producing a target string.
 Communication is deemed successful when the target string is sufficiently similar to the source string.
-How similar the two strings need to be to count as `sufficiently similar' will differ depending on the context.
-% What is important is that communication is pitched as a \textit{syntactic} enterprise: it is the transmission and reconstruction of symbol strings, not the conveyance of their meanings, that is in question.
-
-For example, the lexicon from which the source string is constructed might be the set of symbols of the Latin alphabet $\{A,B,C...\}$ plus a full stop and a space.
-The code lexicon might be the binary symbols $\{0,1\}$ that are instantiated by electrical on/off pulses.
-Given an encoding scheme, any string of Latin symbols can be converted into a sequence of 0s and 1s, and thus transmitted as a signal across a wire.
-The decoder has a duplicate set of Latin symbols from which it must pick out the right symbols in the right order; the signal enables it to perform this task successfully.
+(How similar the two strings need to be to count as `sufficiently similar' will differ depending on the context.)
 
 \input{fig_central.tex}
 
-In the teleosemantic framework, a distal state sits causally upstream of a target that the receiver has causal influence over.
+How does the central model map onto the teleosemantic model? 
+In the teleosemantic model, a distal state sits causally upstream of a target that the receiver has causal influence over.
 The signal has this distal state as its content, because the receiver can achieve greater success by conditioning its act on the signal.
 In the central model, source strings play the role of both distal and proximate states (though more recent models in communication theory distinguish them, e.g. \citet{berger1996ceo}).
 Applying the basic teleosemantic model to the central model, the encoder is a sender and the decoder is a receiver.
-Sender and receiver share a proper function as a consequence of design: to reconstruct the source string.\footnote{To clarify: the sender's most immediate proper function is to produce a signal that bears a certain relation to the source sequence. But it has this function in part because of its slightly less immediate function, shared with the receiver, of reconstructing the source string at the target.}
+Sender and receiver share a proper function as a consequence of design: to reconstruct the source string.\footnote{To clarify: the sender's most immediate proper function is to produce a signal that bears a certain relation to the source string. But it has this function in part because of its slightly less immediate function, shared with the receiver, of reconstructing the source string at the target.}
 They achieve this goal by means of a signal whose form is determined by a code.
 Source strings are encoded into signals, and signals are decoded into target strings.
 Since the encoding defines the relation the signal must bear to the source string in order for the receiver to be successful, teleosemantics says the code gives the content for each signal.
 The content of a signal is the source string it encodes.
-This accounts for the communication theorists' attributions of representational content to signals listed in the introduction to this paper.
-
+This accounts for the communication theorists' attributions of representational content to signals.
+% To give an example, suppose the lexicon from which the source string is constructed is the Latin script $\{A,B,C...\}$ plus a full stop and a space.
+% The code lexicon might be the binary symbols $\{0,1\}$ that are instantiated by electrical on/off pulses.
+% Given an encoding scheme, any string of Latin symbols can be converted into a sequence of 0s and 1s, and thus transmitted as a signal across a wire.
+% The decoder has a duplicate set of Latin symbols from which it must pick out the right symbols in the right order; the signal enables it to perform this task successfully.
 The basic teleosemantic model does not include noise, but adding a noise variable would not affect the definition of semantic content.
 % The basic teleosemantic model makes explicit the fact that acts are judged successful or unsuccessful depending on a distal state.
 This `Success?' variable, and the causal link to it from the relevant distal state, is omitted from the central model (figure \ref{fig:central}); nonetheless, in the central model the receiver's act together with a distal state determines the joint success of the signalling partnership via an error measure.
 
 % \input{fig_sr}
 
-Every component of the teleosemantic framework is present in the central model of communication theory.
-Teleosemantics therefore says that the content of a signal is the source string it encodes.
-That is not because the source string is causally upstream of the encoder, but because the source string is the distal state that determines whether or not the decoder-as-receiver is successful.
-Consider a system that transmits outcomes of coin tosses $\{H,T\}$.
+% Every component of the teleosemantic framework is present in the central model of communication theory.
+% Teleosemantics therefore says that the content of a signal is the source string it encodes.
+% That is not because the source string is causally upstream of the encoder, but because the source string is the distal state that determines whether or not the decoder-as-receiver is successful.
+To give an example, consider a system that transmits outcomes of coin tosses $\{H,T\}$.
 Each time the coin is tossed at the source, the eventual task of the decoder is to produce the appropriate symbol $H$ or $T$ matching the result of the toss.
 Suppose the sender transmits signals according to the code $H\rightarrow1,\ T\rightarrow0$, and the result of three coin tosses is $H, T, H$.
 Then, assuming no noise, when the decoder receives the signal $101$ it correctly produces the sequence $HTH$.
 Communication is successful because the reproduced string is identical to the original sequence of outcomes.
 The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target. In general, teleosemantics claims not that content explains behaviour, but that content explains success. Figure \ref{fig:teleo} makes that explicit by distinguishing the Act variable from the Success? variable.}
+
+Nothing has yet been said about mathematical measures like mutual information or entropy.
+Neither teleosemanticists nor communication theorists are claiming that content is identified with, or constructed from, correlational relationships.
+Rather, it is the encoding scheme that determines the content of a signal.
+The reason the encoding scheme determines content is that it is the encoding scheme that enables the receiver to enjoy improved success in its goal of reproducing the source string.
+Without a shared code, the receiver would be guessing blindly; thanks to the code, the receiver enjoys increased success; therefore, the code determines the content of the signal, which is the source string.
 
 What does all this have to do with cognitive science?
 
@@ -202,19 +206,18 @@ What does all this have to do with cognitive science?
 \subsection{Communication theory in cognitive science requires content}
 
 \citet{martinez2019deception,martinez2019representations} argues for using communication theory to understand cognitive representations.
-His view is predicated on treating cognitive devices as subject to design constraints, such that representations are under selective pressure to be accurate without consuming too many cognitive resources.
-\citet{martinez2019representations} argues that mainstream accounts of representation -- in particular, robust-tracking accounts due to \citet{sterelny2003thought,burge2010origins}, and reference-magnet accounts due to \citet{ryder2004sinbad,lewis1984putnam} -- should be understood in terms of these resource/accuracy trade-offs.
+His view is predicated on treating cognitive devices as subject to design constraints, such that representations are under selective pressure to guide successful behaviour without consuming too many cognitive resources.
+\citet{martinez2019representations} argues that mainstream accounts of representation -- in particular, robust-tracking accounts due to \citet{sterelny2003thought,burge2010origins}, and reference-magnet accounts due to \citet{ryder2004sinbad,lewis1984putnam} -- should be understood in terms of these resource-success trade-offs.
 In brief, robust tracking is a cognitive capacity enabling a creature to use multiple perceptual sources of information to infer the presence of some success-relevant distal state (say, the presence of a predator).
-Mart\'{i}nez argues that the informational structure of the world -- how the predator's presence generates those varied perceptual inputs -- defines a characteristic resource-accuracy relationship within which there is a \textit{sweet spot}.
+Mart\'{i}nez argues that the informational structure of the world -- how the predator's presence generates those varied perceptual inputs -- defines a characteristic resource-success relationship within which there is a \textit{sweet spot}.
 Representations result from compressing those percepts in a way that exploits this sweet spot.
 Reference-magnetism translates into communication-theoretic language in a similar way \citep[1223]{martinez2019representations}.
 
-Could such an analysis -- describing a trade-off between accuracy and resource consumption -- proceed \textit{without} reference to the contents of representations?
-It's difficult to see how, since the accuracy of a representation depends upon its content.
-Furthermore, cognitive science already applies these communication-theoretic principles to understand the brain.
-\citet{sims2016ratedistortion} describes human performance in perceptual tasks in terms of a trade-off between the capacity of perceptual information transmission and the cost of perceptual error.
-% This is the same trade-off at the heart of the third theorem of communication theory (introduced above in section \ref{subsec:actFalse}).
-Perceptual information rate can be increased, lowering the chance of perceptual error, by expending more metabolic resources.
+Could such an analysis -- describing a trade-off between success and resource consumption -- proceed \textit{without} reference to the contents of representations?
+It's difficult to see how, since the success of representation-driven behaviour depends on the accuracy of the representations in question.
+Indeed, cognitive science already applies these communication-theoretic principles to understand the brain.
+\citet{sims2016ratedistortion} describes human performance in perceptual tasks in terms of a trade-off between the capacity of perceptual information transmission (the resource factor) and the cost of perceptual error (the success factor).
+Perceptual capacity can be increased, lowering the chance of perceptual error, by expending more metabolic resources.
 % This might occur over evolutionary time, with developmental processes that devote more resources to perceptual capacity resulting in more successful phenotypes.
 Whether it is worth investing resources to increase perceptual accuracy depends on the costs of inaccuracy.
 Sims derives a cost function assumed to be operative in human subjects from experiments that push the limits of their perceptual capacity.
@@ -227,10 +230,10 @@ The pattern of errors made by subjects reveals a consistent cost function used a
 % \end{myquote}
 
 
-So far, I have briefly surveyed positive reasons for thinking communication theory is \textit{not} orthogonal to or irrelevant for representational content, and that communication theory (including its treatment of content) can be utilised in cognitive science.
+So far, I have briefly surveyed positive reasons for thinking communication theory involves considerations of representational content, and that communication theory (including its treatment of content) can be utilised in cognitive science.
 This conflicts with the orthodox, sceptical view, which takes communication theory to be mute or ignorant about content.
 If we stopped here, we would be left with a puzzle: how to reconcile orthodox scepticism with the claims of communication theorists and the practice of cognitive science?
-Instead of adding support to the positive view, the rest of the paper aims to undercut the scepticism.
+Instead of fleshing out my positive view, the rest of the paper aims to undercut the scepticism.
 The next two sections describe and refute two motivations for scepticism about the relationship between communication theory and representational content.
 
 
