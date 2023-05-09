@@ -544,7 +544,7 @@ Derivative uses stem from this general interpretation; for example, the entropy 
 
 Shifts in the interpretation of entropy and other measures accompanied the emergence of the term \textbf{information theory} to describe Shannon's mathematical tools and their more general application across the sciences.
 Today, information theory comprises a set of concepts and measures common to many mathematical and scientific disciplines (see figure \ref{fig:info_theory}).
-For better or worse, it has become customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were devised.
+For better or worse, it has become customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were developed.
 Since the claims I make below depend on this distinction being upheld, I will continue to use `information theory' and `communication theory' non-synonymously.
 
 \input{fig_info_theory}
@@ -562,7 +562,7 @@ Mutual information has been employed in a diverse range of sciences, including:
 \end{itemize}
 
 \noindent The breadth of application of mutual information is at the heart of a second source of scepticism about the relevance of communication theory for theories of content.
-Scholars seem to move from a premise about mutual information to a conclusion about information theory as a whole -- which is then seen as encompassing communication theory.
+Sceptics move from a premise about mutual information to a conclusion about information theory as a whole -- which is then seen as encompassing communication theory.
 Because philosophers are rarely explicit about the dialectical moves required to reach this conclusion, in the next few subsections I try to tease apart the intended argument in order to refute it.
 As a result, my discussion focuses on one possible way of moving from claims about mutual information to scepticism about the relevance of communication theory for content.
 There may be other, better arguments that my account does not affect.
@@ -591,7 +591,7 @@ Without further detail, it is not clear whether the output of a quorum-sensing b
 Neural firings are sometimes claimed to be representations, but simply measuring the correlation between them and environmental states is not sufficient to establish this \citep{rathkopf2017neural}.
 
 From the mere fact that two things bear a correlational relationship, no conclusion can be drawn about whether one is a signal of the other.
-For the avoidance of doubt, I agree with this premise, and suggest encapsulating it as follows:
+I fully agree with this premise and suggest encapsulating it as follows:
 
 \begin{myquote}
 \ami: Mutual information cannot distinguish signals and cues.
@@ -608,10 +608,11 @@ For the avoidance of doubt, I agree with this premise, and suggest encapsulating
 \end{myquote}
 
 \noindent The latter claim would certainly challenge the relevance of communication theory for theories of representational content.
-If communication theory cannot distinguish signals and cues, then there is little hope of it distinguishing any of the more sophisticated kinds of representation of interest to cognitive scientists and philosophers; if it cannot distinguish them, likely it cannot say anything philosophically interesting about them.
+If communication theory cannot distinguish signals and cues, then there is little hope of it distinguishing any of the more sophisticated kinds of representation of interest to cognitive scientists and philosophers.
+And if it cannot distinguish those, it probably cannot say anything philosophically interesting about them.
 
 I am going to argue firstly that \ami{} does not entail \act{}, and secondly that \act{} is false.
-Of course, the second conclusion would immediately entail the first (because we are treating \ami{} as uncontroversially true), but in laying out the first argument we can explore the intermediate claim \ait{}.
+Of course, the second result would immediately deliver the first (because we are treating \ami{} as uncontroversially true), but in laying out the first argument we can explore the intermediate claim \ait{}.
 % This allows us to describe the contemporary philosophical landscape in relation to the account I am endorsing.
 % Most philosophical approaches share a premise that I reject (and that I assume Mart\'{i}nez rejects): that the only way communication theory could be used to naturalise representation is by constructing semantic content from correlational relationships.
 The two arguments commence in the following two subsections.
@@ -631,7 +632,7 @@ Philosophy has understood information theory as a mostly definitional effort: fo
 I further suspect that philosophers move from \ait{} to \act{} by treating information theory and communication theory as identical.
 We shall take these moves in turn.
 
-`Shannon information' is given diverse definitions in philosophy (table \ref{tab:shannon}).
+`Shannon information' is given different definitions in philosophy (table \ref{tab:shannon}).
 By invoking it, demonstrably true claims about mutual information can be interpreted as unsupported claims about information theory as a whole.
 \citet[$\S$2]{godfrey-smith2016biological} define ``Shannon's concept of information'' (also using the hyphenated term ``Shannon-information'') in terms of correlational relationships like mutual information; they characterise it as ``the sense of information isolated by Claude Shannon and used in mathematical information theory'' \citep[1]{godfrey-smith2016biological}.
 \citet[759]{owren2010redefining} describe ``Shannon and Weaver's \parencite*{shannon1949mathematical} theory of information'' and say ``the associated concept of \textit{Shannon information} refers strictly and solely to observable correlations between events in the world.''
@@ -665,7 +666,7 @@ The examples are cherry-picked and only indicative; I am treating them as eviden
 
 The idea underlying the quotes and terminology I have canvassed in this section seems to be that the only way Shannon's formal work could contribute to theories of representation is via measures of correlation.\footnote{\citet[$\S$5]{shea2018representation} discusses structural correspondence as a non-correlational source of semantic content, and suggests other possible sources \citep[p. 76 n. 1]{shea2018representation}. But he appears to share the premise that, among the tools devised by Shannon, measures of correlation are all that is relevant for theories of content.}
 I reject this assumption.
-The positive view I proposed earlier implies that regardless whether information theory can distinguish signals and cues, the semantic content of a signal is \textit{not} defined in terms of measures of correlation: it is defined in terms of the encoding scheme shared by sender and receiver.
+The positive view I proposed earlier implies that the semantic content of a signal is \textit{not} defined in terms of measures of correlation: it is defined in terms of the encoding scheme shared by sender and receiver.\footnote{This is one way in which my positive account differs from that of \citet{isaac2018semantics} and \citet[$\S$3]{skyrms2010signals}, who similarly argue that communication theory has relevance for theories of content, but define content in terms of correlational relationships. They carefully deconstruct the formal components of correlational measures to determine relational properties of individual signals. Space precludes discussion of this ingenious alternative. What I will say is that their definition cross-cuts the signal/cue distinction whereas the teleosemantic approach upholds it, attributing semantic content to signals only. My theoretical commitments lead me to prefer teleosemantics; the reader may have different inclinations.}
 
 In sum, scepticism about the relevance of communication theory for naturalist representation results from two illicit moves: first, from \ami{} to \ait{} via the term `Shannon information'; second, from \ait{} to \act{} via treating the two disciplines as identical.
 The next section shows that the resultant claim about communication theory is simply false.
@@ -683,8 +684,7 @@ The vehicles transmitted in the central model are signals and the main theorems 
 Consider, on the one hand, the \textbf{second theorem} and \textbf{third theorem} of communication theory, which require that the vehicles they address be signals, and on the other hand \textbf{Kelly's theorem}, which requires only that the vehicle be a cue.
 We shall introduce them in turn.
 
-The second theorem of communication theory (sometimes called the noisy channel theorem or the channel coding theorem) determines how accurately a receiver is able to reconstruct a source string thanks to the sender's encoding scheme.
-It is assumed that the channel over which signals are transmitted inserts noise into the signal.
+The second theorem of communication theory (sometimes called the noisy channel theorem or the channel coding theorem) determines how accurately a receiver is able to reconstruct a source string given a signal that has been corrupted by noise.
 Better encodings combat noise by building redundancy into the signal, enabling the receiver to more accurately reconstruct the source.
 The theorem answers a question about receiver performance by attending to the sender's design of the vehicle: different encoding schemes would yield different performance levels.
 The vehicle mentioned in this theorem is definitionally a signal; the theorem does not apply to cues.
@@ -706,7 +706,7 @@ My claim is not that theorems about cues do not apply to signals, but that theor
 There is an asymmetry in the definition of signals and cues, and the two kinds of theorem are asymmetric in a way that reflects that.
 Any vehicle can be treated as a cue simply by failing to specify whether or not it was designed for communicative use.
 That is what Kelly's theorem does, in the guise of keeping mutual information fixed and asking how the receiver can make use of it.
-(In fact Kelly's prose implies that the vehicle in question is a signal; close inspection reveals the theorem does not require it to be one.)
+(In fact Kelly's prose implies that the vehicle in question is a signal; closer inspection reveals the theorem does not require it to be one.)
 The second and third theorems by contrast require that their vehicles be signals, because they ensure a level of functional performance that is only available when the sender tunes the vehicle's production to the features of the channel.
 By definition, the second and third theorems cannot be applied to cues.
 
@@ -760,7 +760,7 @@ Measuring the capacity of the dance cannot tell you what, on a given occasion, i
 However, the general-purpose nature of channels does not entail that communication theory cannot attribute content to signals.
 Signals in the central model (for example) do have content as soon as a source and an encoding scheme are specified: the contents of signals are the different outcomes of the source.
 If an army managed to employ the waggle dance to transmit military instructions, each dance would gain a specific instruction as its one of its semantic contents in accordance with the code devised ahead of time by the human communicators.
-As discussed in the section on Shannon's Warning, communication theory and teleosemantics both deliver this result.
+Communication theory and teleosemantics both deliver this result.
 That a channel can be used to transmit anything does not mean communication theory remains forever agnostic about what is actually being transmitted in a given circumstance.
 In terms of Dennett's analogy, the theory both measures the volume of a liquid and tells you what liquid is being measured.
 Dennett really does appear to be saying that Shannon's formal work encompasses only measures like mutual information and channel capacity.
@@ -775,34 +775,28 @@ To summarise the entire section, true premises about the broad application of mu
 \section{What about more sophisticated representations?}\label{sec:sophisticated}
 
 Let me close the paper with a comment on the most obvious gap in my discussion.
-Teleosemantics identifies representational content with a particular kind of exploitable relation. 
-Yet much of the discussion on cognitive representations focuses on more sophisticated features than that.
-It would be easy for a sceptic to retreat only slightly, and retrench their position further up the hierarchy of sophistication: ``sure, teleosemantics accounts for simple signalling relations in communication theory, but it cannot account for X'' where X is some favoured set of conditions that a cognitive state has to meet to be called a representation.
+The central model concerns very simple signals, and liberal teleosemantics identifies representational content with a very simple kind of exploitable relation. 
+Yet much of the discussion on cognitive representations focuses on far more sophisticated entities.
+It would be easy for a sceptic to retreat only slightly, and retrench their position further up the hierarchy of sophistication: sure, teleosemantics accounts for simple signalling relations in communication theory, but it cannot account for X -- where X is some favoured set of conditions that a cognitive state has to meet to be called a representation.
 
-For example, Burge focuses on perceptual constancies, holding that ...
-Burge seems happy that the apparent dispute can be read as terminological:
-
-\begin{myquote}
-There is nothing wrong with a broad notion of differential sensitivity and responsiveness that is associated with function. Such a notion describes the sensory capacities of many organisms, including the sensitivities of plants. One can use any term to express such a notion that one likes, including ‘representation'. Many biologists and psychologists, and some philosophers, do use the term ‘representation' in this way.
-\par\hspace*{\fill}\citet[293]{burge2010origins}
-\end{myquote}
-
-What Burge demands is that there is a difference in \textit{kind}, rather than degree, between these simple states and genuine representation.
-He argues that teleosemantics, by employing the term `representation' liberally, implies that there is no such difference in kind; that the differences between sensory registration and genuine representation are a matter of degree.
-
-My basic response to this sceptical retrenchment is, first, that my arguments in sections \ref{sec:warning} and \ref{sec:agnostic} still hold (the two main sceptical justifications are still left wanting), and second, that our ignorance about the breadth of application of communication theory does not warrant scepticism.
-
-First, since scepticism has up until now been motivated by the two justifications I have spent the bulk of the paper dismantling, there's little reason left to cling to it.
-
-Second, I admit there are aspects of genuine representation that just are not present in the central model (e.g. no perceptual constancies, nothing offline).
-However, it's difficult to see how communication theory could \textit{fail} to extend to more sophisticated states.
-Its mathematical core is about trading off effort for accuracy.
-Genuine representations are physical entities, they are produced and maintained by a cognitive system, and they guide behaviour to be more or less successful depending on their accuracy.
-It's difficult to motivate the idea that mathematics would simply \textit{stop describing that trade-off} at a certain level of sophistication, even when, as Burge demands, increased sophistication leads to a difference in kind rather than a difference in degree.
-We are ignorant about whether communication theory could be extended to these more sophisticated systems because nobody has yet tried it.
-
-Another author who offers a stronger notion of representation is Piccinini [CITE].
-He distinguishes natural and nonnatural representation.
+The special `factor X' that distinguishes genuine representations from simpler signals differs from philosopher to philosopher.
+For reasons of space, I will focus on Piccinini's recent account.
+% I'll here just canvas two recent proposals, from Burge and Piccinini, in order to show that even if we accepted the distinctions they draw, we would not be warranted in concluding that communication theory cannot describe the representations they define.
+%
+% Burge focuses on perceptual constancies, holding that ...
+% Burge seems happy that the apparent dispute can be read as terminological:
+%
+% \begin{myquote}
+% There is nothing wrong with a broad notion of differential sensitivity and responsiveness that is associated with function. Such a notion describes the sensory capacities of many organisms, including the sensitivities of plants. One can use any term to express such a notion that one likes, including ‘representation'. Many biologists and psychologists, and some philosophers, do use the term ‘representation' in this way.
+% \par\hspace*{\fill}\citet[293]{burge2010origins}
+% \end{myquote}
+%
+% What Burge demands is that there is a difference in \textit{kind}, rather than degree, between these simple states and genuine representation.
+% He argues that teleosemantics, by employing the term `representation' liberally, implies that there is no such difference in kind; that the differences between sensory registration and genuine representation are a matter of degree.
+%
+% I admit there are aspects of Burge's genuine representation (e.g. perceptual constancies) that are not present in the central model.
+%
+\citet{piccinini2020nonnatural} introduces a distinction between natural and nonnatural representation.
 Natural representations raise the probability of the states of affairs they are representations of.
 By contrast, nonnatural representations represent states of affairs without necessarily raising their probability.
 Since the brain can represent things without raising their probability (e.g. I can think about a unicorn without raising the probability that unicorns exist), there must be something more to representation than just probability-raising.
@@ -833,6 +827,22 @@ But would it be true to say communication theory \textit{cannot} describe them?
 These other representations are still physical.
 They still have a job to do, and must expend resources to do it.
 Presumably there are mathematical relationships between the structural resemblance borne by such representations, the successful behaviour they engender, and the costs of constructing and maintaining them.
+
+IN OTHER WORDS:
+
+It's difficult to see how communication theory could \textit{fail} to extend to more sophisticated states.
+Its mathematical core is about trading off effort for accuracy.
+Genuine representations are physical entities, they are produced and maintained by a cognitive system, and they guide behaviour to be more or less successful depending on their accuracy.
+It's difficult to motivate the idea that mathematics would simply \textit{stop describing that trade-off} at a certain level of sophistication, even when, as Burge demands, increased sophistication leads to a difference in kind rather than a difference in degree.
+We are ignorant about whether communication theory could be extended to these more sophisticated systems because nobody has yet tried it.
+
+IN YET OTHER WORDS:
+
+My general response to this move is to point out that we have no real idea whether communication-theoretic models could be built of those more sophisticated relationships.
+Nobody has tried.
+Communications engineers have not tried because they are not typically interested in cognitive systems; philosophers have not tried because they have been told that communication theory is irrelevant to their endeavour.
+Yet the few forays that have been made into cognitive science from this perspective have yielded positive results \citep{sims2016ratedistortion,martinez2019representations}; see section \ref{sec:positive}.
+Now that the two most prominent reasons for rejecting communication theory have been overturned, it is time to take seriously the possibility that the theory can be extended to describe representations in cognitive systems.
 
 In sum, considerations of more sophisticated representations should motivate us to extend communication theory, not limit it.
 
