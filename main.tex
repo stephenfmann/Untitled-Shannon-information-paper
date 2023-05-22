@@ -12,7 +12,7 @@
 
 %TC:ignore
 \begin{abstract}
-\noindent Prominent views about cognitive representations share a premise: that mathematical communication theory is blind to representational content. Here I challenge that premise by rejecting two common misconceptions: that Claude Shannon said that the meanings of signals are irrelevant for communication theory (he didn't and they aren't), and that since correlational measures can't distinguish representations from natural signs, communication theory can't distinguish them either (the premise is true but the conclusion is false; no valid argument can link them).
+\noindent Prominent views about representation share a premise: that mathematical communication theory is blind to representational content. Here I challenge that premise by rejecting two common misconceptions: that Claude Shannon said that the meanings of signals are irrelevant for communication theory (he didn't and they aren't), and that since correlational measures can't distinguish representations from natural signs, communication theory can't distinguish them either (the premise is true but the conclusion is false; no valid argument can link them).
 \end{abstract}
 %TC:endignore
 
@@ -81,8 +81,9 @@ As we will see, these locutions play a role in interpreting theorems and justify
 What's going on?
 
 This paper resolves the puzzle by arguing that philosophers have misunderstood communication theory.
-This is the right solution because it respects the justifications philosophers themselves give for their claims.
-Philosophers appeal to two lines of justification which are unsupportable given a proper understanding of the theory -- or so I will argue.
+This resolution should be taken seriously because it respects the justifications philosophers themselves give for their claims.
+Philosophers typically appeal to two lines of justification for claims of the sort above.
+I argue that both lines of justification are unsupportable given a proper understanding of communication theory.
 
 First, scholars often appeal to a warning given by Claude Shannon, the founder of communication theory, that the term `information' as applied in the theory should be sharply distinguished from the colloquial term `meaning'.
 While Shannon certainly did make this claim, philosophers have come to interpret him as saying something stronger: that signals in communication-theoretic models need not mean anything.
@@ -100,22 +101,10 @@ These theoretical results apply specifically to signalling systems, not just any
 The structure of the paper is as follows.
 In section \ref{sec:positive} I offer a positive account of representational content.
 It is a teleosemantic account that defines content in terms of function.
-I argue that teleosemantics accounts for the representation-talk of communication theorists, and illuminates the application of communication theory to the study of cognitive representations.
+I argue that the central model of communication theory is a special case of the basic teleosemantic model, and that teleosemantics therefore endorses and accounts for the content-talk of communication theorists.
 In sections \ref{sec:warning} and \ref{sec:agnostic} I refute the two main justifications for the sceptical claim.
 My refutations do not depend strictly on the positive view, but I've found it helps to have an account of content on the table.
 
-\subsection{A clarification}
-
-A commentator urged me to distinguish between two sceptical views: a strong view which denies Shannon information or closely related ideas are relevant \textit{at all} to understanding representation in cognitive systems, and a weaker view which grants the relevance of Shannon information with respect to considerations of effective coding schemes, but denies that Shannon information has anything to say about the \textit{content} of representations in cognitive systems.
-I wish to explicitly clarify: nobody (as far as I know) holds the strong view, because everybody accepts the legitimate use of at least some information theoretic tools in cognitive science, including the study of representational phenomena.
-The use of measures like mutual information in cognitive science is commonplace.
-Mutual information is used to quantify correlations in many sciences, including cognitive science, and nobody is suggesting that this usage is illicit.
-In contrast, very many people hold the weak view.
-Sceptical assertions imply that all of the theoretical and practical work of communication theory could go on without any reference to the contents of representations, and without any consideration of the way in which representations acquire their contents.
-It is this that I take to be orthodoxy, and it is the justification of this claim that I argue against.
-
-If there is any residual doubt that at least some philosophers hold the view I am challenging, let me say that I intend to refute the claims of the philosophers quoted at the beginning of this paper.
-The success of the paper can be measured by how plausible the reader finds those quotes at the end.
 
 
 %%%
@@ -124,7 +113,8 @@ The success of the paper can be measured by how plausible the reader finds those
 \section{The positive view}\label{sec:positive}
 
 Before arguing against the sceptical claim, it can be useful to have a positive account on the table.
-In this section I describe Millikan's teleosemantics, show that it attributes content to communication-theoretic signals, and highlight existing applications of communication theory to cognitive science that make explicit appeal to the contents of representations.
+In this section I describe Millikan's teleosemantics and show that it attributes content to communication-theoretic signals.
+These attributions agree with the contents communication theorists themselves ascribe to their signals.
 
 \subsection{Teleosemantics}
 I adopt a liberal teleosemantic theory of representation.
@@ -144,10 +134,11 @@ The distal state causally influences the outcome sender and receiver are trying 
 When the receiver uses the intermediary as a proxy and enjoys greater success as a result, its improvement must be explained by reference to a relation between the intermediary and the distal state.
 Teleosemantics says that when these conditions are met, the intermediary is a representation, and the distal state is its content.
 
-What does this have to do with communication theory?
 
-\subsection{Teleosemantics attributes content to communication-theoretic signals}
-
+%%%
+%%%
+%%%
+\subsection{Teleosemantics attributes content to engineered signals}
 
 The central engineering model of communication (figure \ref{fig:central}) construes the goal of communication as reproducing, at a target location, a symbol string produced at a spatiotemporally distant source.
 The goal is achieved by \textbf{encoding} the source string, which means converting it into a sequence of physical events (typically electrical pulses) that can be transmitted as a signal across a channel.
@@ -194,43 +185,9 @@ Rather, it is the encoding scheme that determines the content of a signal.
 The reason the encoding scheme determines content is that it is the encoding scheme that enables the receiver to enjoy improved success in its goal of reproducing the source string.
 Without a shared code, the receiver would be guessing blindly; thanks to the code, the receiver enjoys increased success; therefore, the code determines the content of the signal, which is the source string.
 
-%%%
-%%%
-%%%
-\subsection{Communication theory in cognitive science requires content}
-
-\citet{martinez2019deception,martinez2019representations} argues for using communication theory to understand cognitive representations.
-His view is predicated on treating cognitive devices as subject to design constraints, such that representations are under selective pressure to guide successful behaviour without consuming too many cognitive resources.
-\citet{martinez2019representations} argues that mainstream accounts of representation -- in particular, robust-tracking accounts due to \citet{sterelny2003thought,burge2010origins}, and reference-magnet accounts due to \citet{ryder2004sinbad,lewis1984putnam} -- should be understood in terms of these resource-success trade-offs.
-In brief, robust tracking is a cognitive capacity enabling a creature to use multiple perceptual sources of information to infer the presence of some success-relevant distal state (say, the proximity of a predator).
-Mart\'{i}nez argues that the informational structure of the world -- how the predator's presence generates those varied perceptual inputs -- defines a characteristic resource-success relationship within which there is a \textit{sweet spot}.
-Representations result from compressing those percepts in a way that exploits this sweet spot.
-Reference-magnetism translates into communication-theoretic language in a similar way \citep[1223]{martinez2019representations}.
-
-Could such an analysis -- describing a trade-off between success and resource consumption -- proceed \textit{without} reference to the contents of representations?
-It's difficult to see how, since the success of representation-driven behaviour depends on the accuracy of the representations in question.
-Whether or not a receiver is successful depends upon whether the representation guiding it is true or false (more broadly, the extent to which it is accurate).
-The accuracy of a representation depends ineliminably on its content.
-
-Cognitive scientists themselves have applied these communication-theoretic principles to understand the brain.
-\citet{sims2016ratedistortion} describes human performance in perceptual tasks in terms of a trade-off between the capacity of perceptual information transmission (the resource factor) and the cost of perceptual error (the success factor).
-Perceptual capacity can be increased, lowering the chance of perceptual error, by expending more metabolic resources.
-% This might occur over evolutionary time, with developmental processes that devote more resources to perceptual capacity resulting in more successful phenotypes.
-Whether it is worth investing resources to increase perceptual accuracy depends on the costs of inaccuracy.
-Sims derives a cost function assumed to be operative in human subjects from experiments that push the limits of their perceptual capacity.
-The pattern of errors made by subjects reveals a consistent cost function used across experimental conditions \citep[188]{sims2016ratedistortion}.
-% Sims situates the role of the theory at the computational level of explanation:
-Again content must be invoked as part of the mathematical analysis: accuracy is an essential part of the resource-success trade-off, and content is essential to determining accuracy.
-
-% \begin{myquote}
-% Rate-distortion theory [i.e. the third theorem and related results] combines the central elements of both information theory and decision theory, and is uniquely situated for explaining biological computation as a principled, but capacity-limited system. As a computational-level theory, the goal is not to contradict explanations formulated at the neural or algorithmic level, but rather provide an explanation for the `why' of behavior, and provide inspiration for the development of mechanistic theories.
-% \par\hspace*{\fill}\citet[193]{sims2016ratedistortion}
-% \end{myquote}
-
-
-So far, I have briefly surveyed positive reasons for thinking communication theory involves considerations of representational content, and that communication theory (including its treatment of content) can be utilised in cognitive science.
+So far, I have briefly surveyed positive reasons for thinking communication theory involves considerations of representational content.
 This conflicts with the orthodox, sceptical view, which takes communication theory to be mute or ignorant about content.
-If we stopped here, we would be left with a puzzle: how to reconcile orthodox scepticism with the claims of communication theorists and the practice of cognitive science?
+If we stopped here, we would be left with a puzzle: how to reconcile orthodox scepticism with the practice of communication theory?
 Instead of fleshing out the positive view, the rest of the paper aims to undercut the scepticism.
 The next two sections describe and refute two popular sceptical arguments about the relationship between communication theory and representational content.
 
@@ -268,8 +225,7 @@ The decoder has a duplicate set of Latin symbols from which it must pick out the
 As an engineering science, communication theory is concerned with reconstructing symbol strings \textit{efficiently}, which means encoding and transmitting signals with as little cost as possible.
 Electrical wires require power and time to operate.
 Communication theory can be thought of as a collection of tools and methods enabling an optimal trade-off between signalling effort and the benefits of accurate string reconstruction.
-We saw some applications of this trade-off in cognitive science earlier \citep{martinez2019representations,martinez2019deception,sims2016ratedistortion}.
-It applies to the central model too, where the most efficient coding schemes are those that use short sequences of 0s and 1s to represent highly probable source strings.
+In the central model the most efficient coding schemes are those that use short sequences of 0s and 1s to represent highly probable source strings.
 That is because minimising signalling effort means minimising the number of code symbols transmitted, on average.
 Pairing probable source strings with short code strings -- short signals -- is the most efficient procedure.
 Therefore, in order to devise a good code, you need to know the probabilities of each source string being produced.
@@ -523,16 +479,6 @@ Philosophers undersell the resources available to communication theory by focusi
 \subsection{How scientists use information theory}\label{subsec:scientists}
 
 Soon after Shannon's original text, scientists began to notice that his mathematical tools were of use beyond the context of communications engineering.
-For example, entropy, originally devised as a measure of how many code symbols would be needed to represent a sequence of source outcomes, was given a more general interpretation as a measure of uncertainty.
-Derivative uses stem from this general interpretation; for example, the entropy of an ecological population captures an aspect of its population diversity, being a measure of uncertainty about which species would be observed if the population were randomly sampled from \citep{margalef1957information}.
-
-Shifts in the interpretation of entropy and other measures accompanied the emergence of the term \textbf{information theory} to describe Shannon's mathematical tools and their more general application across the sciences.
-Today, information theory comprises a set of concepts and measures common to many mathematical and scientific disciplines (see figure \ref{fig:info_theory}).
-For better or worse, it has become customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were developed.
-Since the claims I make below depend on this distinction being upheld, I will continue to use `information theory' and `communication theory' non-synonymously.
-
-\input{fig_info_theory}
-
 Perhaps the most well-known informational measure is \textbf{mutual information}, typically interpreted as the strength of correlation between two variables.
 Mutual information has been employed in a diverse range of sciences, including:
 
@@ -545,10 +491,16 @@ Mutual information has been employed in a diverse range of sciences, including:
     \item Neuroscience, to measure the correlation between neural firings and environmental states \citep[][and references therein]{rathkopf2017neural}
 \end{itemize}
 
-\noindent The breadth of application of mutual information is at the heart of a second source of scepticism about the relevance of communication theory for theories of content.
+\noindent This multifaceted role for mutual information accompanied the emergence of the term \textbf{information theory} to describe Shannon's mathematical tools and their more general application across the sciences.
+Today, information theory comprises a set of concepts and measures common to many mathematical and scientific disciplines (see figure \ref{fig:info_theory}).
+For better or worse, it has become customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were developed.
+Since the claims I make below depend on this distinction being upheld, I will continue to use `information theory' and `communication theory' non-synonymously.
+
+\input{fig_info_theory}
+
+The breadth of application of mutual information is at the heart of a second source of scepticism about the relevance of communication theory for theories of content.
 Sceptics move from a premise about mutual information to a conclusion about information theory as a whole -- which is then seen as encompassing communication theory.
-Because philosophers are rarely explicit about the dialectical moves required to reach this conclusion, in the next subsection I formulate one possible version of the intended argument.
-There may be other, better arguments that my account does not affect.
+In the next two subsections I argue that the premise is true but the conclusion is false; no valid argument can link them.
 
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
@@ -587,12 +539,21 @@ I fully agree with this premise and suggest encapsulating it as follows:
 \end{myquote}
 
 \noindent The latter claim would certainly challenge the relevance of communication theory for theories of representational content.
-If communication theory cannot distinguish signals and cues, then there is little hope of it distinguishing any of the more sophisticated kinds of representation of interest to cognitive scientists and philosophers.
+If communication theory cannot distinguish signals and cues, then there is little hope of it distinguishing more sophisticated kinds of representation like those invoked in cognitive science.
 And if it cannot distinguish those, it probably cannot say anything philosophically interesting about them.
 
 I am going to argue that \act{} is false.
 Communication theory can and does distinguish signals and cues.
+If space permitted I would attempt to reconstruct the arguments of philosophers who appear to move from the true premise to the false conclusion.
+Space does not permit, so I will instead note that several writers appear to trade on an ambiguity in the term `Shannon information', treating it as both a synonym for mutual information and a catch-all that exhausts the conceptual repertoire of communication theory \citep[p. 1 and $\S$2]{godfrey-smith2016biological}, \citep[759]{owren2010redefining}, \citep[106]{dennett2017bacteria}, \citep[p. 12, n. 11 and p. 78, n. 5]{shea2018representation}.
+The same point has been made by Mart\'{i}nez, using the term `information theory' to cover communication theory too:
 
+\begin{myquote}
+Philosophy has understood information theory as a mostly definitional effort: for all philosophers have typically cared, the theory begins and ends with a presentation of what it takes for one random variable (or the worldly feature it models) to carry information about another.
+\par\hspace*{\fill}\citet[1216]{martinez2019representations}
+\end{myquote}
+
+\noindent There is no valid argument linking the premise \ami{} to the conclusion \act{}, because that conclusion is false.
 
 %%%%%%
 %%%%%%
