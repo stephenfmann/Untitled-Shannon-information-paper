@@ -185,7 +185,7 @@ Consider a system that transmits outcomes of coin tosses $\{H,T\}$.
 Each time the coin is tossed at the source, the task of the decoder is to produce the appropriate symbol $H$ or $T$ matching the result of the toss.
 Suppose the sender transmits signals according to the code $H\rightarrow1,\ T\rightarrow0$, and the result of three coin tosses is $H, T, H$.
 Then, assuming no noise, when the decoder receives the signal $101$ it correctly produces the sequence $HTH$.
-Communication is successful because the reproduced string is identical to the original sequence of outcomes.
+Communication is successful because the reproduced string matches the original sequence of outcomes.
 The signal $101$ represents the source sequence $HTH$, and that is how the decoder successfully reproduces it.\footnote{The claim is not that the content of the signal explains how the receiver produces the string `HTH' at the target. The claim is that the content of the signal explains how the receiver successfully reproduces the source string at the target. In general, teleosemantics claims not that content explains behaviour, but that content explains success. Figure \ref{fig:teleo} makes that explicit by distinguishing the Act variable from the Success? variable.}
 
 Nothing has yet been said about mathematical measures like mutual information or entropy.
