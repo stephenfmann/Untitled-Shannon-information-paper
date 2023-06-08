@@ -19,10 +19,12 @@
 %%%
 %%%
 %%%
-\section{Introduction: blocking the path to scepticism}\label{sec:intro}
+\section{Introduction}\label{sec:intro}
+
+\subsection{A tension}
 
 Communication theory measures the costs and benefits of representation, and describes judicious representational trade-offs. 
-There is a popular idea that the aspects of representation communication theory deals with are strictly distinct from representational content:
+There is a popular idea that the aspects of representation the theory deals with are strictly distinct from representational content:
 
 \begin{myquote}
 [Communication theory] ignores questions having to do with the \emph{content} of signals, what \emph{specific information} they carry, in order to describe \emph{how much} information they carry.
@@ -49,7 +51,7 @@ Shannon offers no analysis of the relation in virtue of which a sign carries inf
 \par\hspace*{\fill}\citet[7]{neander2017mark}, emphasis original
 \end{myquote}
 
-\noindent The problem with these claims -- the tension that this paper will attempt to resolve -- is that they appear to be contradicted by the words of communication theorists themselves:
+\noindent The problem with these claims -- the tension this paper will try to resolve -- is that they are contradicted by the words of communication theorists themselves:
 
 \begin{myquote}
 [Efficiency is achieved] in telegraphy by using the shortest channel symbol, a dot, for the most common English letter E; while the infrequent letters, Q, X, Z are \textit{represented by} longer sequences of dots and dashes. This idea is carried still further in certain commercial codes where common words and phrases are \textit{represented by} four- or five-letter code groups with a considerable saving in average time.
@@ -80,11 +82,57 @@ We now discuss the information content of a source by considering how many bits 
 As we will see, these locutions play a role in interpreting theorems and justifying mathematical concepts.
 What's going on?
 
-This paper resolves the puzzle by arguing that philosophers have misunderstood communication theory.
-This resolution should be taken seriously because it respects the justifications philosophers themselves give for their claims.
-Philosophers typically appeal to two lines of justification for claims of the sort above.
-I argue that both lines of justification are unsupportable given a proper understanding of communication theory.
+One could of course assert that the tension is only apparent.
+Philosophers are aiming for a theory of representation that would attribute content to paradigmatic representations (mental states, neurocognitive processes, linguistic utterances; perhaps also biological signals) while communications engineers are talking about the encoding of digital data.
+That they both use the term `representation' does not imply that the engineers' statements are relevant for philosophical theorising.
+The problem with this resolution is that the explanatory practices of communication theorists require a relation between signal and signified that looks a lot like representational content (see sections \ref{sec:positive} and \ref{subsec:signalContent}).
+Representationalists take the explanatory roles of representation in (for example) cognitive science to warrant realism about content, and design theories to 
+account for those roles \citep{burge2010origins,shea2018representation}.
+Prima facie, the representationalist should be trying to account for representational explanations in communication theory too.\footnote{Theories of representation in the philosophy of cognitive science typically assert conditions that a cognitive state must meet before it counts as a genuine representation \citep{shea2018representation,burge2010origins,piccinini2020nonnatural,desouzafilho2022dual}. Many such accounts would exclude the communication-theoretic signals discussed in this paper: they are more like simple sensory states than cognitive maps. My contention is that this rejection should take place, if it must, after these signals are recognised as candidates, just as sensory states are.}
 
+Why then do philosophers habitually assert the opposite -- that communication theory ``ignores'', ``is mute about'', ``does not capture'', or ``offers no analysis of'' representational content?
+It would help to know what exactly they are asserting.
+
+\subsection{The target claim}
+Clearly the philosophers are talking about the same thing.
+Reference to `Shannon' in this context is reference to his theory: the mathematical theory of communication that spun off into the mathematical theory of information.
+And clearly they are asserting some kind of negative claim about the connection between that theory and representational content.
+The precise nature of that negative claim seems to differ from scholar to scholar; however (as will become clear) they are all influenced by the same lines of reasoning, and they all intend to assert a commonly accepted truism about communication theory.
+It's worth coming up with a precisification of the claims, then it will at least be clear what I am denying when I deny it.
+
+Philosophers typically use this kind of claim to justify giving theories of representation that don't involve communication theory.
+Dretske [CITE] gives a new definition of what it is for an individual signal to carry information, a definition which isn't found in communication theory, and on which he bases a definition of semantic information [CITE].
+Neander [CITE] gives a new definition of information on which she bases an account of representational content [CITE].
+Dennett calls for a theory of semantic information which would be distinct from the tools and concepts of communication theory [CITE].
+Scarantino and Piccinini define ``non-natural semantic information'' [CITE] which is not found in communication theory.
+All these authors are justifying giving accounts (or at least calling for accounts) of representational content that are not constrained by communication theory.
+So this paper concerns the following claim:
+
+\begin{myquote}
+\tic{}: Communication theory places no constraints on theories of representation.
+\end{myquote}
+
+\noindent By `theories of representation' I mean those that are or include a \textit{metasemantic} theory: one that says in virtue of what a representation has the content it does, and perhaps also in virtue of what a putative representation \textit{is} a representation.
+If \tic{} is true, then no theory of representation is ruled out by the practice of communication theory.
+I think that at least some philosophers would endorse this claim and I think the quotes heading the paper are evidence of this.
+
+This paper will argue that \tic{} is false.
+Communication theory places constraints on metasemantic theories in just the same way other representation-involving sciences do.
+The theory therefore rules out any metasemantic theory that fails to attribute the correct representational content to communication-theoretic signals (or which at least gives a revisionary or deflationary account of the content-talk of communication theorists).
+The representationalist had better account for the content-talk of communications engineers, especially where that talk is doing demonstrable explanatory work. 
+My sections \ref{sec:positive} and \ref{sec:warning} argue that content-talk is doing demonstrable explanatory and conceptual work in communication theory.
+So a putative metasemantic theory had better account for it -- even if it just means being revisionary about such talk.
+Of course, philosophers don't typically offer revisionist claims about content-talk in communication theory, because they don't typically realise there is such talk in the first place. 
+
+\subsection{Structure of the paper}
+
+In section \ref{sec:positive} I offer a positive account of representational content.
+It is a teleosemantic account that defines content in terms of function.
+I argue that the central model of communication theory is a special case of the basic teleosemantic model, and that teleosemantics therefore endorses the content-talk of communication theorists.
+My refutations of \tic{} do not depend strictly on the positive view, but I've found it helps to have an account of content on the table.
+
+In sections \ref{sec:warning} and \ref{sec:agnostic} I examine two lines of justification philosophers typically offer in defence of their sceptical claims.
+I argue that both lines of justification are unsupportable given a proper understanding of communication theory.
 First, scholars often appeal to a warning given by Claude Shannon, the founder of communication theory, that the term `information' as applied in the theory should be sharply distinguished from the colloquial term `meaning'.
 We'll see in section \ref{sec:warning} that Shannon did make this claim.
 However, philosophers have come to interpret him as saying something stronger: that signals in communication-theoretic models need not mean anything.
@@ -98,19 +146,13 @@ I argue in section \ref{sec:agnostic} that although it is true that mathematical
 The theory involves models that define signals, and theorems that describe the costs and benefits of transmitting and responding to signals.
 These theoretical results apply specifically to signalling systems, not just any correlational relationship, and can therefore describe more interesting properties of signals than just quantities of mutual information.
 
-Before all that, in section \ref{sec:positive} I offer a positive account of representational content.
-It is a teleosemantic account that defines content in terms of function.
-I argue that the central model of communication theory is a special case of the basic teleosemantic model, and that teleosemantics therefore endorses the content-talk of communication theorists.
-My refutations in subsequent sections do not depend strictly on the positive view, but I've found it helps to have an account of content on the table.
-
-
 
 %%%
 %%%
 %%%
 \section{The positive view}\label{sec:positive}
 
-Before arguing against the sceptical claim, it can be useful to have a positive account on the table.
+Before arguing against \tic{}, it can be useful to have a positive account on the table.
 In this section I describe Millikan's teleosemantics and show that it attributes content to communication-theoretic signals.
 These attributions agree with the contents communication theorists themselves ascribe to their signals.
 
@@ -205,7 +247,7 @@ The next two sections describe and refute two popular sceptical arguments about 
 
 \section{First sceptical argument: Shannon's Warning}\label{sec:warning}
 
-The first route to scepticism about the relevance of communication theory for theories of representational content begins with the claim that Claude Shannon, the founder of communication theory, warned that his theory had nothing to do with meaning.
+The first route to justifying \tic{} begins with the claim that Claude Shannon, the founder of communication theory, warned that his theory had nothing to do with meaning.
 In this section I argue that what Shannon actually said has been misconstrued by philosophers.
 He was not talking about signals, but about sources, a different aspect of his model.
 When Shannon did turn to signals, he called them representations and explicitly referred to them as contentful.
@@ -342,8 +384,9 @@ Weaver's quote above uses `information' as synonymous with surprisal, not mutual
 To my knowledge, no explicit argument has been offered that moves from the premise embodied by {\sc Shannon's Warning} to the conclusion that there exists a property of signals, invoked in communication theory, that is distinct from the concept sought by a philosophical theory of content.
 Most likely there is no valid argument of this kind.
 Dretske misinterpreted the ambiguous comments of Bar-Hillel and Carnap, and as a result philosophers have conflated the true claim that source strings need not have semantic content with the false claim that signals need not have semantic content.
+It is this conflation that makes it appear \tic{} follows from \sw{}.
 
-Perhaps the strongest argument for my position is that the mutated form of {\sc Shannon's Warning} is false by the lights of communication theorists themselves.
+Perhaps the strongest argument for my position is that the mutated form of \sw{} is false by the lights of communication theorists themselves.
 Signals in the central model have semantic content, and their content is directly relevant to the engineering problem of communication, as we shall now see.
 
 
@@ -536,7 +579,7 @@ I fully agree with this premise and suggest encapsulating it as follows:
 \act: Communication theory cannot distinguish signals and cues.
 \end{myquote}
 
-\noindent The latter claim would certainly challenge the relevance of communication theory for theories of representational content.
+\noindent The latter claim would lend strong support to \tic{}.
 If communication theory cannot distinguish signals and cues, then there is little hope of it distinguishing more sophisticated kinds of representation like those invoked in cognitive science.
 And if it cannot distinguish those, it probably cannot say anything philosophically interesting about them.
 
@@ -544,7 +587,7 @@ I am going to argue that \act{} is false.
 Communication theory can and does distinguish signals and cues.
 If space permitted I would attempt to reconstruct the arguments of philosophers who appear to move from the true premise to the false conclusion.
 Space does not permit, so I will instead note that several writers appear to trade on an ambiguity in the term `Shannon information', treating it as both a synonym for mutual information and a catch-all that exhausts the conceptual repertoire of communication theory \citep[p. 1 and $\S$2]{godfrey-smith2016biological}, \citep[759]{owren2010redefining}, \citep[106]{dennett2017bacteria}, \citep[p. 12, n. 11 and p. 78, n. 5]{shea2018representation}.
-The same point has been made by Mart\'{i}nez, using the term `information theory' to cover communication theory too:
+The same point has been made by Mart\'{i}nez, who also uses the term `information theory' to cover communication theory:
 
 \begin{myquote}
 Philosophy has understood information theory as a mostly definitional effort: for all philosophers have typically cared, the theory begins and ends with a presentation of what it takes for one random variable (or the worldly feature it models) to carry information about another.
@@ -641,7 +684,20 @@ If he means to say this, he is wrong.
 
 To summarise the entire section, true premises about the broad application of mutual information in science and the general-purpose nature of channels provide no reason to be sceptical about the relevance of communication theory for theories of content.
 
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+\section{Conclusion}
 
+\tic{} says that communication theory places no constraints on theories of representational content.
+Many philosophers try to establish this claim, or others in its vicinity, by following two routes that each begin with a true claim.
+\sw{} and \ami{} are both true.
+However, neither of them suffices to establish the sceptical conclusion.
+
+% I have relied on teleosemantics to give a flavour of a representationalist account of signals.
+% This positive account is too liberal for some, who would reject teleosemantics on the grounds that it attributes representational content to states that are too simple to bear it.
+% That's fine: my contention in this paper has been that communication-theoretic signals should be recognised as candidates for content attribution.
+% All sides of the liberality debate should accept this.
 
 
 \printbibliography
