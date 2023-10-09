@@ -96,7 +96,7 @@ What we actually find in the literature is the view I target here.
 \subsection{The target view}
 
 In this paper I attempt to account for the tension between representation-talk in communication theory and the apparently contradictory assertions of philosophers.
-I will eventually claim that philosophers have misunderstood communication theory.
+I will eventually claim that philosophers haven't properly distinguished two bearers of representational content in the models of communication theory.
 To get to that point it would help to first identify a precise claim that the philosophers are making.
 Clearly they are asserting some kind of negative claim about the connection between communication theory and representational content.
 The form of that negative claim seems to differ slightly from scholar to scholar: in the quotes above, the theory either ``ignores'', ``is mute about'', ``does not capture'', or ``offers no analysis of'' representational content.
@@ -134,8 +134,8 @@ It is a teleosemantic account that defines content in terms of function.
 I argue that the central model of communication theory is a special case of the basic teleosemantic model, and that teleosemantics therefore agrees with communication theorists on the representational content of signals in their models.
 My refutation of arguments for \tic{} does not depend strictly on the positive view, but I've found it helps to have an account of content on the table.
 
-The majority of the paper focuses on two lines of justification philosophers typically offer in defence of their sceptical claims.
-I argue that both lines of justification are unsupportable given a proper understanding of communication theory.
+The majority of the paper focuses on two lines of justification philosophers typically offer in defence of \tic{} or claims in its vicinity.
+I argue that both lines of justification are unsupportable once the formal tools of communication theory, and their contexts of application, are laid out explicitly.
 In section \ref{sec:warning} I examine a warning given by Claude Shannon, the founder of communication theory, that the term `information' as applied in the theory should be sharply distinguished from the colloquial term `meaning'.
 Shannon did indeed make this claim, but it does not imply \tic{}, because Shannon was talking about sources, not signals.
 In section \ref{sec:agnostic}, I discuss the fact that certain mathematical tools developed by Shannon can be applied in contexts far removed from signalling systems.
@@ -198,7 +198,7 @@ Communication theory concerns devices that have the function of transmitting and
 In this sense it deals with the very same kinds of system as teleosemantics.
 The difference between the two theories lies in the questions they attempt to answer: teleosemantics tries to define representations and state their contents, while communication theory tries to devise methods for improving the performance of sender and receiver functions.
 These questions are typically treated as orthogonal to each other.
-In section \ref{subsec:signalContent} I'll argue this is misguided: improving performance of a signalling system ineliminably involves considerations of signal content.
+In section \ref{subsec:signalContent} I'll argue they are in fact related: improving performance of a signalling system ineliminably involves considerations of signal content.
 Here I introduce communication theory.
 
 The central engineering model of communication (figure \ref{fig:central}) construes the goal of communication as reproducing, at a target location, a symbol string produced at a spatiotemporally distant source.
@@ -225,7 +225,7 @@ How similar the two strings need to be to count as `sufficiently similar' will d
 
 Setting aside noise, the central model is a special case of the basic teleosemantic model.
 In the teleosemantic model a distal state sits causally upstream of a target that the receiver has causal influence over.
-The signal has this distal state as its truth condition, because the receiver can achieve greater success by conditioning its act on the signal.
+The signal has this distal state as its truth condition because the receiver can achieve greater success by conditioning its act on the signal.
 In the central model, source strings play the role of both distal and proximate states (though more recent models in communication theory distinguish them, e.g. \citet{berger1996ceo}).
 Applying the basic teleosemantic model to the central model, the encoder is a sender and the decoder is a receiver.
 Sender and receiver share a proper function as a consequence of design: to reconstruct the source string.
@@ -274,8 +274,7 @@ The next two sections describe and refute two popular sceptical arguments about 
 \section{First sceptical argument: Shannon's Warning}\label{sec:warning}
 
 The first route to justifying \tic{} begins with a warning given by Claude Shannon, the founder of communication theory, that his theory had nothing to do with meaning.
-In this section I argue that what Shannon actually said has been misconstrued by philosophers.
-He was not talking about signals, but about sources, a different aspect of his model.
+In this section I demonstrate that Shannon's warning pertains to sources, not signals.
 When Shannon did turn to signals, he called them representations and explicitly referred to them as contentful.
 Contemporary communication theorists endorse this pretheoretic attribution of content, and the standard interpretation of one of the theory's fundamental theorems requires it.
 
@@ -522,7 +521,7 @@ The second route to \tic{} begins with the idea that mathematical measures defin
 In other words, information is agnostic to representational status.
 In this section I argue that although this is true of certain mathematical functions like mutual information, communication theory as a whole does distinguish between signals and non-signals -- it must do in order for its theorems to have sense.
 The theory is fundamentally about the costs and benefits of representation and how to trade them off judiciously.
-Philosophers undersell the resources available to communication theory by focusing on a small set of measures.
+Focusing on mutual information obscures this wider theoretical perspective.
 
 \subsection{How scientists use information theory}\label{subsec:scientists}
 
@@ -554,7 +553,7 @@ Since the claims I make below depend on this distinction being upheld, I will co
 \end{myfig}
 
 The breadth of application of mutual information is at the heart of a second source of scepticism about the relevance of communication theory for theories of content.
-Sceptics move from a premise about mutual information to a conclusion about information theory as a whole -- which is then seen as encompassing communication theory.
+Sceptics seem to move from a premise about mutual information to a conclusion about information theory as a whole -- which is then seen as encompassing communication theory.
 In the next two subsections I argue that the premise is true but the conclusion is false; no valid argument can link them.
 
 %%%%%%%%%%%%%%%%%%
@@ -594,13 +593,13 @@ I fully agree with this premise and suggest encapsulating it as follows:
 \end{myquote}
 
 \noindent The latter claim would lend strong support to \tic{}.
-If communication theory cannot distinguish signals and cues, then there is little hope of it saying anything about content.\footnote{Here I assume cues do not have semantic content. This assumption is popular but has recently been challenged by \citet{isaac2018semantics} and \citet[$\S$3]{skyrms2010signals} who define content in terms of correlational relationships. They carefully deconstruct the formal components of correlational measures to determine relational properties of individual signs. Space precludes discussion of this ingenious alternative. My theoretical commitments lead me to assign content to signals only; the reader may have different inclinations.}
+If communication theory cannot distinguish signals and cues, there is little hope of it saying anything about content.\footnote{Here I assume cues do not have semantic content. This assumption is popular but has recently been challenged by \citet{isaac2018semantics} and \citet[$\S$3]{skyrms2010signals} who define content in terms of correlational relationships. They carefully deconstruct the formal components of correlational measures to determine relational properties of individual signs. Space precludes discussion of this ingenious alternative. My theoretical commitments lead me to assign content to signals only; the reader may have different inclinations.}
 
 I am going to argue that \act{} is false.
 Communication theory can and does distinguish signals and cues.
 If space permitted I would attempt to reconstruct the arguments of philosophers who appear to move from the true premise to the false conclusion.
 Space does not permit, so I will instead note that several writers appear to trade on an ambiguity in the term `Shannon information', treating it as both a synonym for mutual information and a catch-all that exhausts the conceptual repertoire of communication theory \citep[p. 1 and $\S$2]{godfrey-smith2016biological}, \citep[759]{owren2010redefining}, \citep[106]{dennett2017bacteria}, \citep[p. 12, n. 11 and p. 78, n. 5]{shea2018representation}.
-\citet[1216]{martinez2019representations} has similarly argued that philosophers routinely and erroneously treat communication theory as providing no more conceptual tools than measures of correlation.
+\citet[1216]{martinez2019representations} has similarly argued that philosophers routinely treat communication theory as providing no more conceptual tools than measures of correlation.
 
 %%%%%%
 %%%%%%
@@ -664,9 +663,7 @@ Shannon devised a way of \textit{measuring} information, independently of what t
 \par\hspace*{\fill}\citet[106]{dennett2017bacteria}, emphasis original
 \end{myquote}
 
-\noindent The present author has heard similar arguments from philosophers in conversation, moving from a claim about channel capacity to the claim that communication theory cannot specify the contents of signals.
-
-To respond, I begin by accepting one of the premises of the sceptical riposte.
+\noindent To respond, I begin by accepting one of the premises of the sceptical riposte.
 It is true that channel capacity can be measured without specifying the contents of signals transmitted through the channel.
 Channels, characterised by the conditional distribution of signal-after-noise given signal-before-noise, are general-purpose in that the outcomes of any source can be encoded by the code symbols.
 Storage devices like hard drives and transmission media like fibre-optic cables can be assigned measures of capacity without regard to what they are storing or transmitting.
