@@ -159,7 +159,22 @@ It attributes representational content to a wide range of artificial and natural
 Anything that satisfies the model depicted in figure \ref{fig:teleo} is a representation system, and anything that plays the signal role in that system is a representation.
 I'll briefly describe teleosemantics and how it motivates the claim that representational content is essential to communication theory.
 
-\input{fig_teleo}
+\begin{myfig}
+    {img_teleoBasic} % filename
+    {1} % width
+    {fig:teleo} % label
+    {\textbf{The basic teleosemantic model}. 
+    A \textbf{Sender} and \textbf{Receiver} have a joint goal they must achieve. 
+    This is modelled as the requirement of setting the \textbf{Success?} variable to a certain value. 
+    The receiver can exercise some control by \textbf{Act}ing, but a \textbf{Distal State} also has causal influence over the target. 
+    The sender can produce a \textbf{Signal} that bears an exploitable relation to the distal state.
+    When the receiver can condition its behaviour on the signal and achieve greater success than otherwise, teleosemantics claims that explaining this improvement requires appealing to a relation between signal and distal state (dashed line).
+    This is a relation of semantic content: the signal's truth condition is the distal state that must obtain in order for the receiver's act, guided by the signal, to be successful.
+    Finally, how the sender actually produces such a signal is usually by conditioning on one or more upstream \textbf{Proximate States}.
+    In special cases, the proximate and distal states are identical (see figures \ref{fig:central} and \ref{fig:sr}).
+    Adapted from \citet[fig. 6.3, p. 78]{millikan2004varieties}.
+    } % caption
+\end{myfig}
 
 Some artificial and natural devices have the structure and dispositions they do because of causal effects they are supposed to bring about.
 For artificial devices such as claw hammers, pumps, and communication systems, this link between a device's features (its structure and dispositions) and its proper effects (those it is supposed to bring about) is established by intentional design: a human engineer wanted certain effects to occur, and created the device so as to reliably produce those effects.
@@ -192,7 +207,20 @@ At the far end of the channel the signal is decoded, producing a target string.
 Communication is deemed successful when the target string is sufficiently similar to the source string.
 How similar the two strings need to be to count as `sufficiently similar' will differ depending on the context.
 
-\input{fig_central.tex}
+\begin{myfig}
+    {img_centralModel} % filename
+    {0.9} % width
+    {fig:central} % label
+    {\textbf{The central model of communication theory} \citep[adapted from][p. 381 fig. 1]{shannon1948mathematicalc}. 
+    The \textbf{Source} is a process that generates strings from a lexicon, within which symbols have a certain probability of appearing. 
+    The \textbf{Encoder} converts strings of the source lexicon into strings of the code lexicon. 
+    The \textbf{Channel} is the medium through which code strings are transmitted. 
+    During transmission, the code strings are subject to \textbf{Noise}, potentially changing their constituent symbols in a non-deterministic way. 
+    The \textbf{Decoder} attempts to convert code strings back into strings of the original lexicon. 
+    Finally, the \textbf{Target} is the reconstructed string. 
+    The success of communication in this model is measured in terms of the probability of error; specifically, the probability that a symbol in the target string will differ from the corresponding symbol in the source string.
+    } % caption
+\end{myfig}
 
 
 Setting aside noise, the central model is a special case of the basic teleosemantic model.
@@ -464,7 +492,20 @@ They are just commonly described as such because that is part of the typical use
 The mathematics does not demand that signals be about symbols from a lexicon.
 They can be about anything at all.
 
-\input{fig_sr}
+\begin{myfig}
+    {img_srBasic} % filename
+    {0.9} % width
+    {fig:sr} % label
+    {\textbf{A signalling game}.
+    In cooperative settings, \textbf{Sender} and \textbf{Receiver} must collaborate to achieve a shared payoff.
+    The payoff depends on the receiver's \textbf{Act} and the \textbf{State} observed by the sender.
+    Since only the sender has access to the state, it must guide the receiver with a \textbf{Signal}.
+    Here, the state plays both roles that teleosemantics distinguishes as proximate and distal states (see figure \ref{fig:teleo}): it is a proximate state because the sender conditions its choice of signal on it, and it is a distal state because the value of the target (the payoff) depends on it.
+    Teleosemantics says that the truth condition of a signal is the corresponding state (dashed line).
+    Signalling games include payoff matrices that yield reward values from combinations of states and acts; these could instead be represented by a downstream Success? variable as in figure \ref{fig:teleo}.
+    See also \citet{martinez2019deception} for the close formal links between communication theory and signalling games.
+    } % caption
+\end{myfig}
 
 To summarise the entire section, arguments denying the relevance of communication theory for theories of content based on {\sc Shannon's Warning} do not hold water.
 This route to \tic{} is blocked.
@@ -503,7 +544,14 @@ Today, information theory comprises a set of concepts and measures common to man
 It has become customary for philosophers to use the term `information theory' to describe both these more general applications and the original context of communications engineering in which they were developed.
 Since the claims I make below depend on this distinction being upheld, I will continue to use `information theory' and `communication theory' non-synonymously.
 
-\input{fig_info_theory}
+\begin{myfig}
+    {img_info_theory} % filename
+    {0.65} % width
+    {fig:info_theory} % label
+    {The relationship between communication theory, information theory, and other mathematical and scientific endeavours.
+    From \citet[p. 2, fig. 1.1]{cover2006elements}.
+    } % caption
+\end{myfig}
 
 The breadth of application of mutual information is at the heart of a second source of scepticism about the relevance of communication theory for theories of content.
 Sceptics move from a premise about mutual information to a conclusion about information theory as a whole -- which is then seen as encompassing communication theory.
