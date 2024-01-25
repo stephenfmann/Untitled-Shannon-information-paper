@@ -1,2 +1,1 @@
-# Untitled-Shannon-information-paper
-A standalone paper derived ultimately from chapter 3 of [my PhD thesis](https://openresearch-repository.anu.edu.au/handle/1885/204860).
+Edit history for Mann, S. F. (2023). The relevance of communication theory for theories of representation. *Philosophy and the Mind Sciences*, 4. [https://doi.org/10.33735/phimisci.2023.10992](https://doi.org/10.33735/phimisci.2023.10992)
